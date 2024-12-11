@@ -1,0 +1,40 @@
+name: Feature Request
+description: Suggest a new feature or enhancement for this project.
+labels: enhancement
+body:
+  - type: markdown
+    attributes:
+      value: |
+        We appreciate your ideas for improving this project! Please fill in the following:
+  - type: input
+    id: title
+    attributes:
+      label: Feature title
+      description: A short title summarizing the feature.
+      placeholder: Add X functionality
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Provide a detailed description of the requested feature.
+      placeholder: Describe the feature, its use cases, and benefits.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives
+      description: Describe any alternative solutions or approaches you've considered.
+      placeholder: Provide some alternative solutions, if applicable.
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: How important is this feature?
+      options:
+        - Low
+        - Medium
+        - High
+        - Critical

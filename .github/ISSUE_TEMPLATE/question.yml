@@ -1,0 +1,24 @@
+name: Question
+description: Ask a question related to this project.
+labels: question
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Have a question? Please provide as much context as possible.
+  - type: input
+    id: title
+    attributes:
+      label: Question title
+      description: A brief summary of your question.
+      placeholder: Question about {feature}
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Question details
+      description: A little Elaboration of your question.
+      placeholder: Provide additional detailed information.
+    validations:
+      required: true

@@ -1,10 +1,17 @@
-# RepoLate
+# Awesome
 
-GitHub **Repository Template** for my future projects
+Awesome 😎 is a curated collection of awesome resources, tools, and projects across various categories.
+
+## Features:
+
+- Modern UI
+- Browse awesome resources
+- Responsive design
+- Dark mode support
 
 ## Contributing
 
-We welcome contributions! Please check the [CONTRIBUTING.md](https://github.com/MFM-347/RepoLate/blob/main/CONTRIBUTING.md) for guidelines.
+We welcome contributions! Please check the [CONTRIBUTING.md](https://github.com/MFM-347/Awesome/blob/main/CONTRIBUTING.md) for guidelines.
 
 ## Credits
 
