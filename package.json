@@ -8,9 +8,10 @@
     "build": "vite build",
     "preview": "vite preview",
     "format": "prettier -w .",
-    "start": "cls && npm run format && npm run dev"
+    "start": "clear && npm run format && npm run dev"
   },
   "dependencies": {
+    "@vercel/analytics": "^1.4.1",
     "@vueuse/core": "^12.0.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",

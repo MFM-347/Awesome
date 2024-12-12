@@ -89,5 +89,5 @@ label,
   font-family: 'Lato', sans-serif !important;
 }
 .title {
-  @apply text-3xl font-bold mb-6 text-gray-800 dark:text-gray-200;
+  @apply text-4xl text-center font-bold mb-6 text-gray-800 dark:text-gray-200;
 }

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 class="title">About Awesome</h1>
+    <h1 class="title">About</h1>
     <Card>
       <CardHeader>
         <CardTitle>Project Information</CardTitle>
