@@ -2,7 +2,7 @@
   <header class="border-b">
     <Menubar class="container mx-auto px-4 py-2">
       <MenubarMenu>
-        <MenubarTrigger class="font-bold text-xl">Awesome List</MenubarTrigger>
+        <MenubarTrigger class="font-bold text-xl">Awesome</MenubarTrigger>
       </MenubarMenu>
       <MenubarMenu>
         <router-link to="/" class="flex items-center">
@@ -46,15 +46,15 @@
 
 <script setup>
 import { Menubar, MenubarMenu, MenubarTrigger } from '@/components/ui/menubar'
-import { ref, onMounted, watch } from 'vue'
+import { ref, onMounted } from 'vue'
 import { HomeIcon, SearchIcon, InfoIcon, SunIcon, MoonIcon } from 'lucide-vue-next'
 
 const isDarkMode = ref(false)
 
 const toggleTheme = () => {
   isDarkMode.value = !isDarkMode.value
-  localStorage.setItem('theme', isDarkMode.value ? 'dark' : 'light')
   document.documentElement.classList.toggle('dark', isDarkMode.value)
+  localStorage.setItem('theme', isDarkMode.value ? 'dark' : 'light')
 }
 
 onMounted(() => {

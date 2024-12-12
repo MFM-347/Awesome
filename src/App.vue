@@ -1,5 +1,5 @@
 <template>
-  <div :class="{ dark: isDarkMode }">
+  <div>
     <NavBar />
     <main class="container mx-auto px-4 py-8">
       <router-view></router-view>
@@ -8,13 +8,5 @@
 </template>
 
 <script setup>
-import NavBar from '@/components/NavBar.vue'
-import { ref, onMounted } from 'vue'
-
-const isDarkMode = ref(false)
-
-onMounted(() => {
-  const theme = localStorage.getItem('theme')
-  isDarkMode.value = theme === 'dark'
-})
+import NavBar from '@/components/navBar.vue'
 </script>

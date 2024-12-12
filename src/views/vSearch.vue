@@ -6,7 +6,7 @@
     </div>
     <div
       v-if="searchResults.length > 0"
-      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5"
     >
       <Card v-for="item in searchResults" :key="item.name" class="flex flex-col">
         <CardHeader>

@@ -18,8 +18,12 @@
           <li>Dark mode support</li>
         </ul>
         <div class="lnks">
-          <a href="https://github.com/MFM-347/Awesome" class="ico"> <Github /> Source Code </a>
-          <a href="https://github.com/MFM-347" class="ico"> <User /> Author </a>
+          <Button @click="openUrl('https://github.com/MFM-347/Awesome/')" class="w-auto">
+            <GithubIcon class="w-4 h-4 mr-2" /> Source Code
+          </Button>
+          <Button @click="openUrl('https://github.com/MFM-347/')" class="w-auto">
+            <GithubIcon class="w-4 h-4 mr-2" /> Author
+          </Button>
         </div>
       </CardContent>
     </Card>
@@ -28,14 +32,16 @@
 
 <script setup>
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card'
-import { Github, User } from 'lucide-vue-next'
+import { Button } from '@/components/ui/button'
+import { GithubIcon, User } from 'lucide-vue-next'
+
+const openUrl = (url) => {
+  window.open(url, '_blank')
+}
 </script>
 
 <style scoped>
 .lnks {
-  @apply relative bottom-2 flex flex-row gap-4;
-}
-.ico {
-  @apply block text-blue-400 hover:text-blue-600;
+  @apply relative right-2 bottom-2 flex flex-row gap-4;
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1 class="title">Awesome List</h1>
-    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
       <Card v-for="item in items" :key="item.name" class="flex flex-col">
         <CardHeader>
           <CardTitle>{{ item.name }}</CardTitle>
