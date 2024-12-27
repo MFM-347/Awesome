@@ -1,10 +1,10 @@
 # Awesome
 
-Awesome 😎 is a curated collection of awesome resources, tools, and projects across various categories.
+Awesome347 is a curated collection of awesome resources, tools, and projects across various categories.
 
 ## Features:
 
-- Modern UI
+- Up to Date UI
 - Browse awesome resources
 - Responsive design
 - Dark mode support

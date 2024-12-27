@@ -6,71 +6,48 @@
   :root {
     --background: 0 0% 100%;
     --foreground: 240 10% 3.9%;
-
     --card: 0 0% 100%;
     --card-foreground: 240 10% 3.9%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 3.9%;
-
-    --primary: 240 5.9% 10%;
-    --primary-foreground: 0 0% 98%;
-
-    --secondary: 240 4.8% 95.9%;
-    --secondary-foreground: 240 5.9% 10%;
-
-    --muted: 240 4.8% 95.9%;
+    --primary: 239, 91%, 59%;
+    --primary-foreground: 355.7 100% 97.3%;
+    --secondary: 239 4.8% 95.9%;
+    --secondary-foreground: 239 5.9% 10%;
+    --secondary-hover: 239 4.8% 85.9%;
     --muted-foreground: 240 3.8% 46.1%;
-
-    --accent: 240 4.8% 95.9%;
-    --accent-foreground: 240 5.9% 10%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
-
-    --border: 240 5.9% 90%;
-    --input: 240 5.9% 90%;
-    --ring: 240 5.9% 10%;
+    --border: 239 5.9% 90%;
+    --input: 239 5.9% 90%;
+    --ring: 242.1 76.2% 36.3%;
     --radius: 0.5rem;
   }
   .dark {
-    --background: 240 10% 3.9%;
-    --foreground: 0 0% 98%;
-
-    --card: 240 10% 3.9%;
-    --card-foreground: 0 0% 98%;
-
-    --popover: 240 10% 3.9%;
-    --popover-foreground: 0 0% 98%;
-
-    --primary: 0 0% 98%;
-    --primary-foreground: 240 5.9% 10%;
-
-    --secondary: 240 3.7% 15.9%;
+    --background: 20 14.3% 4.1%;
+    --foreground: 0 0% 95%;
+    --card: 24 9.8% 10%;
+    --card-foreground: 0 0% 95%;
+    --primary: 239, 91%, 64%;
+    --primary-foreground: 144.9 80.4% 10%;
+    --secondary: 239 3.7% 15.9%;
     --secondary-foreground: 0 0% 98%;
-
-    --muted: 240 3.7% 15.9%;
+    --secondary-hover: 239 4.8% 5.9%;
     --muted-foreground: 240 5% 64.9%;
-
-    --accent: 240 3.7% 15.9%;
-    --accent-foreground: 0 0% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
-    --ring: 240 4.9% 83.9%;
+    --border: 234 3.7% 15.9%;
+    --input: 234 3.7% 15.9%;
+    --ring: 242.4 71.8% 29.2%;
   }
 }
 @layer base {
   * {
     @apply border-border;
+    font-optical-sizing: auto;
   }
   body {
     @apply bg-background text-foreground;
+    max-width: 100vw;
+    min-height: 100vh;
+    overflow-x: hidden;
   }
 }
+
 h1,
 h2,
 h3,
@@ -78,7 +55,7 @@ h4,
 h6,
 .heading,
 .title {
-  font-family: 'Dosis', sans-serif !important;
+  font-family: "Oswald", sans-serif !important;
 }
 p,
 span,
@@ -86,8 +63,11 @@ label,
 .text,
 .btn,
 .inp {
-  font-family: 'Lato', sans-serif !important;
+  font-family: "Lato", sans-serif !important;
 }
 .title {
   @apply text-4xl text-center font-bold mb-6 text-gray-800 dark:text-gray-200;
+}
+.inp {
+  @apply w-auto px-3 py-1.5;
 }

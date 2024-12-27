@@ -19,6 +19,6 @@ jobs:
       - uses: EddieHubCommunity/gh-action-community/src/welcome@main
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          issue-message: '<h1>Feeling great to have your contribution for this project</h1> Welcome to our project'
-          pr-message: '<h1>Feeling great to have your contribution for this project</h1> Welcome to our project'
-          footer: 'Our developers will respond you as soon as possible. Any questions? Let us know.'
+          issue-message: "<h1>Feeling great to have your contribution for this project</h1> Welcome to our project"
+          pr-message: "<h1>Feeling great to have your contribution for this project</h1> Welcome to our project"
+          footer: "Our developers will respond you as soon as possible. Any questions? Let us know."

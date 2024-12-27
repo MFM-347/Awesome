@@ -28,10 +28,3 @@ coverage
 *.sw?
 
 *.tsbuildinfo
-
-# User directories and files
-*.tgz
-*.zip
-*.7z
-*/tmp/*
-*.tmp.*
