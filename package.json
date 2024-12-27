@@ -14,6 +14,7 @@
     "start": "npx prettier -w . && npm run lint && cls && npm run dev"
   },
   "dependencies": {
+    "@vercel/analytics": "^1.4.1",
     "fuse.js": "^7.0.0",
     "pinia": "^2.3.0",
     "vue": "^3.5.13",

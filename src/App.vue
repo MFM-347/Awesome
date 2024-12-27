@@ -2,6 +2,7 @@
 import { ref, computed, onMounted, onUnmounted } from "vue";
 import vNav from "./components/vNav.vue";
 import vMenu from "./components/vMenu.vue";
+import { Analytics } from '@vercel/analytics/vue';
 
 const isDarkMode = ref(document.documentElement.classList.contains("dark"));
 onMounted(() => {
@@ -30,4 +31,5 @@ const icon = computed(() =>
     <RouterView />
   </main>
   <vMenu class="fixed bottom-4 right-4" />
+  <Analytics />
 </template>
