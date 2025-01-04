@@ -10,7 +10,7 @@ export const useAwesomeStore = defineStore("awesome", {
   actions: {
     search(query: string) {
       const fuse = new Fuse(this.items, {
-        keys: ["name", "category", "tags", "url"],
+        keys: ["name", "category", "tags"],
         threshold: 0.3,
       });
       this.searchResults = fuse.search(query).map((result) => result.item);

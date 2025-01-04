@@ -1,13 +1,30 @@
 <template>
-  <div>
+  <div class="container">
     <h1 class="title">Search</h1>
-    <div class="mb-6">
-      <input
-        class="rounded-md p-2.5 border border-zinc-300 bg-zinc-200 dark:bg-zinc-800 focus:ring-2 focus:ring-zinc-400 focus:outline-none w-full transition-colors duration-300 ease-in block"
-        v-model="searchQuery"
-        placeholder="Search..."
-        @input="handleSearch"
-      />
+    <div class="mb-4 lg:mb-8">
+      <div class="relative">
+        <div class="absolute top-4 left-4">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            class="size-6 stroke-foreground"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+            />
+          </svg>
+        </div>
+        <input
+          class="rounded-xl p-4 pl-12 border border-foreground bg-zinc-50 dark:bg-zinc-950 focus:ring-2 focus:border-none focus:ring-primary outline-none w-full block"
+          v-model="searchQuery"
+          placeholder="Search..."
+          @input="updateQuery"
+        />
+      </div>
     </div>
     <div
       v-if="searchResults.length > 0"
@@ -22,22 +39,38 @@
 </template>
 
 <script setup lang="ts">
-import { ref, watch } from "vue";
+import { ref, watch, onMounted } from "vue";
+import { useRoute, useRouter } from "vue-router";
 import { storeToRefs } from "pinia";
-import { useAwesomeStore } from "../stores";
+import { useAwesomeStore } from "@/stores";
+import vCard from "@/components/vCard.vue";
 
+const route = useRoute();
+const router = useRouter();
 const store = useAwesomeStore();
 const { searchResults } = storeToRefs(store);
+const searchQuery = ref(route.query.q || "");
 
-const searchQuery = ref("");
-
-const handleSearch = () => {
+const updateQuery = () => {
+  router.push({ path: "/search", query: { q: searchQuery.value } });
   store.search(searchQuery.value);
 };
 
-watch(searchQuery, () => {
-  if (searchQuery.value === "") {
-    searchResults.value = [];
+onMounted(() => {
+  if (searchQuery.value) {
+    store.search(searchQuery.value);
   }
 });
+
+watch(
+  () => route.query.q,
+  (newQuery) => {
+    searchQuery.value = newQuery || "";
+    if (newQuery) {
+      store.search(newQuery);
+    } else {
+      searchResults.value = [];
+    }
+  },
+);
 </script>

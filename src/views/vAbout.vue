@@ -1,31 +1,40 @@
 <template>
-  <div class="container">
+  <div class="container mx-auto p-8">
     <h1 class="title">About</h1>
-    <div class="p-8 border">
-      <h2 class="text-3xl font-semibold">Project Information</h2>
-      <p class="my-4">
-        Awesome List is a curated collection of awesome resources, tools, and
-        projects across various categories.
+    <div class="p-6 border rounded-lg bg-white dark:bg-zinc-900">
+      <h2 class="text-2xl font-semibold mb-4">Explore Awesome</h2>
+      <p class="text-gray-800 dark:text-gray-200 mb-6">
+        Awesome347 is your go-to platform for discovering handpicked tools,
+        resources, and guides for developers and designers. From productivity
+        boosters to stunning UI/UX design tools, find everything you need to
+        elevate your work.
       </p>
-      <h2 class="text-2xl font-semibold mb-2">Features:</h2>
-      <ul class="list-disc list-inside mb-4">
-        <li>Browse awesome resources</li>
-        <li>Search functionality using Fuse.js</li>
-        <li>Responsive design</li>
-        <li>Dark mode support</li>
+      <h3 class="text-xl font-semibold mb-2">Key Features</h3>
+      <ul class="list-disc list-inside text-gray-800 dark:text-gray-200 mb-6">
+        <li>Modern and intuitive user interface</li>
+        <li>Responsive design for all devices</li>
+        <li>Dark mode for eye comfort</li>
+        <li>Curated, quality-assured resources</li>
       </ul>
-      <h2 class="text-2xl font-semibold mb-2">Links:</h2>
-      <div class="lnks">
-        <vBtn
-          class="w-auto"
-          @click="openUrl('https://github.com/MFM-347/Awesome/')"
-        >
+      <h3 class="text-xl font-semibold mb-2">Get Started</h3>
+      <div class="flex gap-4">
+        <vBtn @click="openUrl('https://github.com/MFM-347/Awesome/')">
           Source Code
         </vBtn>
-        <vBtn class="w-auto" @click="openUrl('https://github.com/MFM-347/')">
-          Author
+        <vBtn @click="openUrl('https://awesome347.vercel.app/')">
+          Explore Now
         </vBtn>
       </div>
+      <p class="mt-6 text-sm text-gray-600 dark:text-gray-400">
+        Open-source project licensed under the
+        <a
+          href="https://github.com/MFM-347/Awesome/blob/main/LICENSE"
+          class="text-primary hover:underline"
+          target="_blank"
+        >
+          MIT License </a
+        >.
+      </p>
     </div>
   </div>
 </template>
@@ -37,9 +46,3 @@ const openUrl = (url: string) => {
   window.open(url, "_blank");
 };
 </script>
-
-<style scoped>
-.lnks {
-  @apply flex flex-row gap-4;
-}
-</style>

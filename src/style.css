@@ -4,35 +4,35 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 240 10% 3.9%;
+    --background: 0 0% 95%;
+    --background-ultra: #fbfbfb;
+    --foreground: 229 10% 3.9%;
     --card: 0 0% 100%;
-    --card-foreground: 240 10% 3.9%;
-    --primary: 239, 91%, 59%;
-    --primary-foreground: 355.7 100% 97.3%;
-    --secondary: 239 4.8% 95.9%;
-    --secondary-foreground: 239 5.9% 10%;
-    --secondary-hover: 239 4.8% 85.9%;
-    --muted-foreground: 240 3.8% 46.1%;
-    --border: 239 5.9% 90%;
-    --input: 239 5.9% 90%;
-    --ring: 242.1 76.2% 36.3%;
+    --card-foreground: 229 10% 3.9%;
+    --primary: 229, 95%, 60%;
+    --primary-foreground: 355.7 100% 97%;
+    --primary-hover: #1f3af1;
+    --secondary: 229 4.8% 85.1%;
+    --secondary-foreground: 229 5.9% 10%;
+    --border: 229 5.9% 90%;
+    --input: 229 5.9% 90%;
+    --ring: 142.1 76.2% 36.3%;
     --radius: 0.5rem;
   }
   .dark {
     --background: 20 14.3% 4.1%;
+    --background-ultra: #050404;
     --foreground: 0 0% 95%;
     --card: 24 9.8% 10%;
     --card-foreground: 0 0% 95%;
-    --primary: 239, 91%, 64%;
-    --primary-foreground: 144.9 80.4% 10%;
-    --secondary: 239 3.7% 15.9%;
+    --primary: 229, 95%, 56%;
+    --primary-foreground: 231 80.4% 93%;
+    --primary-hover: #517fff;
+    --secondary: 229 3.7% 15.9%;
     --secondary-foreground: 0 0% 98%;
-    --secondary-hover: 239 4.8% 5.9%;
-    --muted-foreground: 240 5% 64.9%;
-    --border: 234 3.7% 15.9%;
-    --input: 234 3.7% 15.9%;
-    --ring: 242.4 71.8% 29.2%;
+    --border: 229 3.7% 15.9%;
+    --input: 229 3.7% 15.9%;
+    --ring: 142.4 71.8% 29.2%;
   }
 }
 @layer base {
@@ -51,23 +51,19 @@
 h1,
 h2,
 h3,
-h4,
-h6,
-.heading,
 .title {
-  font-family: "Oswald", sans-serif !important;
+  font-family: "Fira Sans Extra Condensed", sans-serif !important;
 }
 p,
 span,
+input,
 label,
-.text,
-.btn,
-.inp {
-  font-family: "Lato", sans-serif !important;
+.btn {
+  font-family: "Raleway", sans-serif !important;
 }
 .title {
   @apply text-4xl text-center font-bold mb-6 text-gray-800 dark:text-gray-200;
 }
-.inp {
-  @apply w-auto px-3 py-1.5;
+.lnk {
+  @apply border-x border-foreground px-4 py-2 hover:underline hover:font-semibold;
 }

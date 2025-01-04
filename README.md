@@ -1,13 +1,13 @@
-# Awesome
+# Awesome347
 
-Awesome347 is a curated collection of awesome resources, tools, and projects across various categories.
+Awesome347 is your go-to platform for discovering handpicked tools, resources, and guides for developers and designers. From productivity boosters to stunning UI/UX design tools, find everything you need to elevate your work.
 
 ## Features:
 
-- Up to Date UI
-- Browse awesome resources
-- Responsive design
-- Dark mode support
+- Modern and intuitive user interface
+- Responsive design for all devices
+- Dark mode for eye comfort
+- Curated, quality-assured resources
 
 ## Contributing
 
@@ -15,7 +15,7 @@ We welcome contributions! Please check the [CONTRIBUTING.md](https://github.com/
 
 ## Credits
 
-Created with ❤️ by [@MFM-347](https://github.com/mfm-347).
+- Created with ❤️ by [@MFM-347](https://github.com/mfm-347)
 
 ## License
 

@@ -28,13 +28,14 @@ const openUrl = (url: string | undefined) => {
     </div>
     <div class="p-6 pt-0 flex-grow">
       <div class="flex flex-wrap gap-2 mb-4">
-        <div
-          class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-sm font-semibold bg-secondary dark:bg-primary text-secondary-foreground"
+        <RouterLink
+          class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-sm font-semibold bg-secondary dark:bg-secondary text-secondary-foreground cursor-pointer"
           v-for="tag in item?.tags"
           :key="tag"
+          :to="`/search?q=${tag}`"
         >
           {{ tag }}
-        </div>
+        </RouterLink>
       </div>
       <vBtn @click="openUrl(item?.url)"> Visit </vBtn>
     </div>
