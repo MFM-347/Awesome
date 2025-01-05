@@ -49,8 +49,7 @@ const route = useRoute();
 const router = useRouter();
 const store = useAwesomeStore();
 const { searchResults } = storeToRefs(store);
-const searchQuery = ref(route.query.q || "");
-
+const searchQuery = ref(typeof route.query.q === "string" ? route.query.q : "");
 const updateQuery = () => {
   router.push({ path: "/search", query: { q: searchQuery.value } });
   store.search(searchQuery.value);
@@ -61,13 +60,12 @@ onMounted(() => {
     store.search(searchQuery.value);
   }
 });
-
 watch(
   () => route.query.q,
   (newQuery) => {
-    searchQuery.value = newQuery || "";
-    if (newQuery) {
-      store.search(newQuery);
+    searchQuery.value = typeof newQuery === "string" ? newQuery : "";
+    if (searchQuery.value) {
+      store.search(searchQuery.value);
     } else {
       searchResults.value = [];
     }
