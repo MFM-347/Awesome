@@ -425,6 +425,36 @@ const raw = [
     tags: ["CSS", "Animation"],
     url: "https://animista.net/",
   },
+  {
+    name: "CSS Buttons",
+    category: "website",
+    tags: ["UI", "Button", "library"],
+    url: "https://cssbuttons.app/",
+  },
+  {
+    name: "Neumorphism Generator",
+    category: "website",
+    tags: ["CSS", "Neumorphic", "Generator"],
+    url: "https://neumorphism.io/",
+  },
+  {
+    name: "CSS Buttons",
+    category: "website",
+    tags: ["UI", "Button", "library"],
+    url: "https://cssbuttons.io/",
+  },
+  {
+    name: "CSS Bud",
+    category: "website",
+    tags: ["CSS", "Generators", "GIF", "library"],
+    url: "https://cssbud.com/",
+  },
+  {
+    name: "CSS Grid Generator",
+    category: "website",
+    tags: ["CSS", "Grid", "Generator"],
+    url: "https://cssgrid-generator.netlify.app/",
+  },
 ];
 
 raw.sort((a, b) => a.name.localeCompare(b.name));
