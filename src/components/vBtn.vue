@@ -1,13 +1,13 @@
 <template>
   <button
-    class="inline-flex items-center justify-center gap-1 whitespace-nowrap rounded-md text-sm font-semibold ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 bg-primary text-primary-foreground shadow hover:bg-primary-hover px-4 py-3 w-auto"
+    class="inline-flex items-center justify-center gap-1 whitespace-nowrap rounded-md text-sm font-semibold ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-300 focus-visible:ring-offset-2 bg-primary-600 text-primary-50 shadow hover:bg-primary-700 px-4 py-3 w-auto"
   >
     <svg
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
       viewBox="0 0 24 24"
       stroke-width="1.5"
-      class="size-4 stroke-primary-foreground"
+      class="size-4 stroke-primary-50"
     >
       <path
         stroke-linecap="round"

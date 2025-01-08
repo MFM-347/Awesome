@@ -26,7 +26,7 @@
         Open-source project licensed under the
         <a
           href="https://github.com/MFM-347/Awesome/blob/main/LICENSE"
-          class="text-primary hover:underline"
+          class="text-primary-500 hover:underline"
           target="_blank"
         >
           MIT License </a

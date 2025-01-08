@@ -19,7 +19,7 @@
           </svg>
         </div>
         <input
-          class="rounded-xl p-4 pl-12 border border-foreground bg-zinc-50 dark:bg-zinc-950 focus:ring-2 focus:border-none focus:ring-primary outline-none w-full block"
+          class="rounded-xl p-4 pl-12 border border-foreground bg-zinc-50 dark:bg-zinc-950 focus:ring focus:border-none focus:ring-primary-500 outline-none w-full block"
           v-model="searchQuery"
           placeholder="Search..."
           @input="updateQuery"

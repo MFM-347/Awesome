@@ -9,9 +9,6 @@
     --foreground: 229 10% 3.9%;
     --card: 0 0% 100%;
     --card-foreground: 229 10% 3.9%;
-    --primary: 229, 95%, 60%;
-    --primary-foreground: 355.7 100% 97%;
-    --primary-hover: #1f3af1;
     --secondary: 229 4.8% 85.1%;
     --secondary-foreground: 229 5.9% 10%;
     --border: 229 5.9% 90%;
@@ -25,9 +22,6 @@
     --foreground: 0 0% 95%;
     --card: 24 9.8% 10%;
     --card-foreground: 0 0% 95%;
-    --primary: 229, 95%, 56%;
-    --primary-foreground: 231 80.4% 93%;
-    --primary-hover: #517fff;
     --secondary: 229 3.7% 15.9%;
     --secondary-foreground: 0 0% 98%;
     --border: 229 3.7% 15.9%;
@@ -52,7 +46,7 @@ h1,
 h2,
 h3,
 .title {
-  font-family: "Fira Sans Extra Condensed", sans-serif !important;
+  font-family: "Roboto Condensed", sans-serif !important;
 }
 p,
 span,
@@ -62,8 +56,5 @@ label,
   font-family: "Source Sans 3", sans-serif !important;
 }
 .title {
-  @apply text-4xl text-center font-bold mb-6 text-gray-800 dark:text-gray-200;
-}
-.lnk {
-  @apply border-x border-foreground px-4 py-2 hover:underline hover:font-semibold;
+  @apply text-5xl text-center font-extrabold my-3 md:my-6;
 }

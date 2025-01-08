@@ -1,24 +1,75 @@
 <template>
-  <header class="py-2 px-4 bg-background-ultra border-b">
-    <nav class="flex px-2 items-center">
-      <RouterLink to="/" class="flex gap-1 items-start sm:items-center">
+  <header
+    class="sticky top-0 z-50 py-2 px-4 bg-background-ultra border-b shadow-sm backdrop-blur-sm"
+  >
+    <nav
+      class="flex flex-col sm:flex-row px-2 items-center max-w-7xl mx-auto"
+      aria-label="Main navigation"
+    >
+      <RouterLink
+        to="/"
+        class="flex gap-1 items-start sm:items-center transition-transform hover:scale-105"
+        aria-label="Home"
+      >
         <img class="sm:w-8 w-12" src="/logo.svg" alt="Awesome347 Logo" />
         <span class="text-xl sm:text-3xl font-bold">347</span>
       </RouterLink>
-      <ul class="flex gap-3 sm:gap-6 ml-auto text-base sm:text-xl capitalize">
-        <li>
-          <RouterLink to="/">Home</RouterLink>
+      <ul
+        class="flex gap-3 sm:gap-6 sm:ml-auto text-base sm:text-xl capitalize"
+        role="menubar"
+      >
+        <li role="none">
+          <RouterLink
+            to="/"
+            class="transition-colors hover:text-primary-600 focus:text-primary-600 focus:outline-none focus:ring focus:ring-primary-200 rounded-md px-2 py-1"
+            role="menuitem"
+            :class="{ 'text-primary-600': route.path === '/' }"
+          >
+            Home
+          </RouterLink>
         </li>
-        <li>
-          <RouterLink to="/search">Search</RouterLink>
+        <li role="none">
+          <RouterLink
+            to="/search"
+            class="transition-colors hover:text-primary-600 focus:text-primary-600 focus:outline-none focus:ring focus:ring-primary-200 rounded-md px-2 py-1"
+            role="menuitem"
+            :class="{ 'text-primary-600': route.path === '/search' }"
+          >
+            Browse
+          </RouterLink>
         </li>
-        <li>
-          <RouterLink to="/submit">Submit</RouterLink>
+        <li role="none">
+          <RouterLink
+            to="/submit"
+            class="transition-colors hover:text-primary-600 focus:text-primary-600 focus:outline-none focus:ring focus:ring-primary-200 rounded-md px-2 py-1"
+            role="menuitem"
+            :class="{ 'text-primary-600': route.path === '/submit' }"
+          >
+            Submit
+          </RouterLink>
         </li>
-        <li>
-          <RouterLink to="/about">About</RouterLink>
+        <li role="none">
+          <RouterLink
+            to="/about"
+            class="transition-colors hover:text-primary-600 focus:text-primary-600 focus:outline-none focus:ring focus:ring-primary-200 rounded-md px-2 py-1"
+            role="menuitem"
+            :class="{ 'text-primary-600': route.path === '/about' }"
+          >
+            About
+          </RouterLink>
         </li>
       </ul>
     </nav>
   </header>
 </template>
+
+<script setup lang="ts">
+import { useRoute } from "vue-router";
+const route = useRoute();
+</script>
+
+<style scoped>
+.router-link-active {
+  @apply text-primary-600;
+}
+</style>
