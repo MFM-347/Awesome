@@ -312,16 +312,10 @@ const raw = [
     url: "https://seoroast.co/",
   },
   {
-    name: "Animata",
-    category: "website",
-    tags: ["Tailwindcss", "Animation", "library"],
-    url: "https://animata.design/",
-  },
-  {
     name: "PixCell",
     category: "website",
     tags: ["pixel", "art", "editor"],
-    url: "https://animata.design/",
+    url: "https://pixcell.vercel.app/",
   },
   {
     name: "TLDraw",

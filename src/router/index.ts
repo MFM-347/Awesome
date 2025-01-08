@@ -15,6 +15,11 @@ const router = createRouter({
       component: () => import("../views/vSearch.vue"),
     },
     {
+      path: "/submit",
+      name: "submit",
+      component: () => import("../views/vSubmit.vue"),
+    },
+    {
       path: "/about",
       name: "about",
       component: () => import("../views/vAbout.vue"),

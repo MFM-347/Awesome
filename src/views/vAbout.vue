@@ -2,7 +2,7 @@
   <div class="container mx-auto p-8">
     <h1 class="title">About</h1>
     <div class="p-6 border rounded-lg bg-white dark:bg-zinc-900">
-      <h2 class="text-2xl font-semibold mb-4">Explore Awesome</h2>
+      <h2 class="text-2xl font-semibold mb-4">Awesome347</h2>
       <p class="text-gray-800 dark:text-gray-200 mb-6">
         Awesome347 is your go-to platform for discovering handpicked tools,
         resources, and guides for developers and designers. From productivity
@@ -20,9 +20,6 @@
       <div class="flex gap-4">
         <vBtn @click="openUrl('https://github.com/MFM-347/Awesome/')">
           Source Code
-        </vBtn>
-        <vBtn @click="openUrl('https://awesome347.vercel.app/')">
-          Explore Now
         </vBtn>
       </div>
       <p class="mt-6 text-sm text-gray-600 dark:text-gray-400">

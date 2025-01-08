@@ -34,8 +34,8 @@
       <nav class="flex flex-row">
         <RouterLink class="lnk" to="/home">Home</RouterLink>
         <RouterLink class="lnk" to="/search">Search</RouterLink>
+        <RouterLink class="lnk" to="/submit">Submit</RouterLink>
         <RouterLink class="lnk" to="/about">About</RouterLink>
-        <a class="lnk" href="https://forms.gle/JkA61GeCGHEBsToy5" target="_blank">FeedBack</a>
       </nav>
     </div>
     <div class="mt-8">

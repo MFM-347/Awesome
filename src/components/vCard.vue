@@ -15,7 +15,7 @@ const openUrl = (url: string | undefined) => {
 
 <template>
   <div
-    class="rounded-lg border bg-card text-card-foreground shadow-sm flex flex-col"
+    class="rounded-xl border bg-card text-card-foreground shadow-sm flex flex-col"
   >
     <div class="flex flex-col gap-y-1.5 p-6">
       <h3

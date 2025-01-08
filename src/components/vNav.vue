@@ -13,6 +13,9 @@
           <RouterLink to="/search">Search</RouterLink>
         </li>
         <li>
+          <RouterLink to="/submit">Submit</RouterLink>
+        </li>
+        <li>
           <RouterLink to="/about">About</RouterLink>
         </li>
       </ul>
