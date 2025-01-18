@@ -19,9 +19,7 @@
       />
     </svg>
   </div>
-  <footer
-    class="bg-primary-600 text-primary-50 px-8 py-8 grid place-items-center"
-  >
+  <footer class="bg-primary-600 text-primary-50 px-8 py-8 grid place-items-center">
     <div>
       <p>Developed with ❤️ by <span class="font-bold">MFM-347</span></p>
       <div class="font-semibold text-center">

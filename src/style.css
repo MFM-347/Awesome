@@ -46,15 +46,47 @@ h1,
 h2,
 h3,
 .title {
-  font-family: "Roboto Condensed", sans-serif !important;
+  font-family: 'Roboto Condensed', sans-serif !important;
 }
 p,
 span,
 input,
 label,
 .btn {
-  font-family: "Source Sans 3", sans-serif !important;
+  font-family: 'Source Sans 3', sans-serif !important;
 }
 .title {
   @apply text-5xl text-center font-extrabold my-3 md:my-6;
+}
+.ta {
+  /* transition all */
+  @apply transition-all duration-200 ease-out;
+}
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #d1d5db transparent;
+}
+html.dark {
+  scrollbar-color: #374151 transparent;
+}
+html::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+html::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 4px;
+}
+html.dark::-webkit-scrollbar-thumb {
+  background: #374151;
+}
+html::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
+
+html.dark::-webkit-scrollbar-thumb:hover {
+  background: #4b5563;
 }

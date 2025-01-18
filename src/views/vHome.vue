@@ -10,9 +10,7 @@
       />
       <h1 class="title">Awesome347</h1>
     </div>
-    <div
-      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8"
-    >
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8">
       <TransitionGroup name="projects" appear class="contents">
         <vCard v-for="item in items" :key="item.id" :item="item" />
         <div
@@ -40,28 +38,28 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed, onMounted, onUnmounted } from "vue";
-import { storeToRefs } from "pinia";
-import { useAwesomeStore } from "../stores";
-import vCard from "../components/vCard.vue";
+import { ref, computed, onMounted, onUnmounted } from 'vue';
+import { storeToRefs } from 'pinia';
+import { useAwesomeStore } from '../stores';
+import vCard from '../components/vCard.vue';
 
 const isDarkMode = ref(false);
 onMounted(() => {
-  const isDarkModeEnabled = localStorage.getItem("dark-mode") === "enabled";
+  const isDarkModeEnabled = localStorage.getItem('dark-mode') === 'enabled';
   isDarkMode.value = isDarkModeEnabled;
-  document.documentElement.classList.toggle("dark", isDarkMode.value);
+  document.documentElement.classList.toggle('dark', isDarkMode.value);
 
   const observer = new MutationObserver(() => {
-    isDarkMode.value = document.documentElement.classList.contains("dark");
+    isDarkMode.value = document.documentElement.classList.contains('dark');
   });
   observer.observe(document.documentElement, {
     attributes: true,
-    attributeFilter: ["class"],
+    attributeFilter: ['class'],
   });
   onUnmounted(() => observer.disconnect());
 });
 
-const mode = computed(() => (isDarkMode.value ? "dark" : "light"));
+const mode = computed(() => (isDarkMode.value ? 'dark' : 'light'));
 
 const store = useAwesomeStore();
 const { items } = storeToRefs(store);

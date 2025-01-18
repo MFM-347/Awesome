@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { ref, onMounted } from "vue";
-import vNav from "./components/vNav.vue";
-import vFoot from "./components/vFoot.vue";
-import vFloat from "./components/vFloat.vue";
-import { Analytics } from "@vercel/analytics/vue";
+import { ref, onMounted } from 'vue';
+import vNav from './components/vNav.vue';
+import vFoot from './components/vFoot.vue';
+import vFloat from './components/vFloat.vue';
+import { Analytics } from '@vercel/analytics/vue';
 
 const isLoading = ref(true);
 onMounted(() => {

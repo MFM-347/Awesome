@@ -1,20 +1,20 @@
 <script setup lang="ts">
-import { ref, onMounted } from "vue";
+import { ref, onMounted } from 'vue';
 
-const text = ref("Dark");
+const text = ref('Dark');
 const darkMode = () => {
-  const isDark = document.documentElement.classList.toggle("dark");
-  localStorage.setItem("dark-mode", isDark ? "enabled" : "disabled");
-  text.value = isDark ? "Light" : "Dark";
+  const isDark = document.documentElement.classList.toggle('dark');
+  localStorage.setItem('dark-mode', isDark ? 'enabled' : 'disabled');
+  text.value = isDark ? 'Light' : 'Dark';
 };
 
 onMounted(() => {
-  const isDarkModeEnabled = localStorage.getItem("dark-mode") === "enabled";
+  const isDarkModeEnabled = localStorage.getItem('dark-mode') === 'enabled';
   if (isDarkModeEnabled) {
-    document.documentElement.classList.add("dark");
-    text.value = "Light";
+    document.documentElement.classList.add('dark');
+    text.value = 'Light';
   } else {
-    text.value = "Dark";
+    text.value = 'Dark';
   }
 });
 </script>

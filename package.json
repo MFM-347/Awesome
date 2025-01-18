@@ -11,12 +11,14 @@
     "build-only": "vite build",
     "type-check": "vue-tsc --build",
     "lint": "eslint . --fix",
-    "start": "npx prettier -w . && npm run lint && cls && npm run dev"
+    "start": "npx prettier -w . && npm run lint && clear && npm run dev"
   },
   "dependencies": {
+    "@heroicons/vue": "^2.2.0",
     "@vercel/analytics": "^1.4.1",
     "fuse.js": "^7.0.0",
     "pinia": "^2.3.0",
+    "router": "^2.0.0",
     "vue": "^3.5.13",
     "vue-router": "^4.5.0"
   },
