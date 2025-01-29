@@ -1,66 +1,25 @@
-<template>
-  <header
-    class="sticky top-0 z-50 py-2 px-4 bg-background-ultra border-b shadow-sm backdrop-blur-sm"
-  >
-    <nav
-      class="flex flex-col sm:flex-row px-2 items-center max-w-7xl mx-auto"
-      aria-label="Main navigation"
-    >
-      <RouterLink
-        to="/"
-        class="flex gap-1 items-start sm:items-center transition-transform hover:scale-105"
-        aria-label="Home"
-      >
-        <img class="sm:w-8 w-12" src="/logo.svg" alt="Awesome347 Logo" />
-        <span class="text-xl sm:text-3xl font-bold">347</span>
-      </RouterLink>
-      <ul class="flex gap-3 sm:gap-6 sm:ml-auto text-base sm:text-xl capitalize" role="menubar">
-        <li role="none">
-          <RouterLink
-            to="/"
-            class="transition-colors hover:text-primary-500 focus:text-primary-500 rounded-md px-2 py-1"
-            role="menuitem"
-            :class="{ 'text-primary-500': route.path === '/' }"
-          >
-            Home
-          </RouterLink>
-        </li>
-        <li role="none">
-          <RouterLink
-            to="/search"
-            class="transition-colors hover:text-primary-500 focus:text-primary-500 rounded-md px-2 py-1"
-            role="menuitem"
-            :class="{ 'text-primary-500': route.path === '/search' }"
-          >
-            Browse
-          </RouterLink>
-        </li>
-        <li role="none">
-          <RouterLink
-            to="/submit"
-            class="transition-colors hover:text-primary-500 focus:text-primary-500 rounded-md px-2 py-1"
-            role="menuitem"
-            :class="{ 'text-primary-500': route.path === '/submit' }"
-          >
-            Submit
-          </RouterLink>
-        </li>
-        <li role="none">
-          <RouterLink
-            to="/about"
-            class="transition-colors hover:text-primary-500 focus:text-primary-500 rounded-md px-2 py-1"
-            role="menuitem"
-            :class="{ 'text-primary-500': route.path === '/about' }"
-          >
-            About
-          </RouterLink>
-        </li>
-      </ul>
-    </nav>
-  </header>
-</template>
-
 <script setup lang="ts">
-import { useRoute } from 'vue-router';
-const route = useRoute();
+import { MagnifyingGlassIcon, InformationCircleIcon } from '@heroicons/vue/24/solid'
 </script>
+
+<template>
+  <nav
+    class="fixed left-0 top-0 h-full w-20 border-r border-background/10 bg-background/50 backdrop-blur-xl z-50"
+  >
+    <div class="flex flex-col items-center gap-6 p-4">
+      <RouterLink to="/">
+        <img src="/logo.svg" class="w-10 h-10" alt="Awesome347" />
+      </RouterLink>
+      <div class="w-full h-px bg-foreground/10"></div>
+      <RouterLink
+        to="/search"
+        class="p-2 rounded-lg hover:bg-foreground/10 transition-colors group"
+      >
+        <MagnifyingGlassIcon class="size-6 stroke-primary-50" />
+      </RouterLink>
+      <RouterLink to="/about" class="p-2 rounded-lg hover:bg-foreground/10 transition-colors group">
+        <InformationCircleIcon class="size-6 stroke-primary-50" />
+      </RouterLink>
+    </div>
+  </nav>
+</template>

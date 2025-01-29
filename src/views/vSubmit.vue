@@ -1,7 +1,9 @@
 <template>
-  <div class="container mx-auto p-8">
+  <div class="container mx-auto py-8 px-16">
     <h1 class="title">Submit a Site</h1>
-    <div class="p-6 border rounded-lg bg-white dark:bg-zinc-900">
+    <div
+      class="p-6 rounded-2xl bg-foreground/5 border border-foreground/10 backdrop-blur-xl shadow-sm"
+    >
       <h2 class="text-2xl font-semibold mb-4">Submission Guidelines</h2>
       <p class="text-gray-800 dark:text-gray-200 mb-6">
         Interested in adding your project to Awesome347? Follow these guidelines:
@@ -27,9 +29,9 @@
 </template>
 
 <script setup lang="ts">
-import vBtn from '../components/vBtn.vue';
+import vBtn from '../components/vBtn.vue'
 
 const openUrl = (url: string) => {
-  window.open(url, '_blank');
-};
+  window.open(url, '_blank')
+}
 </script>

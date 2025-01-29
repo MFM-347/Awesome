@@ -1,20 +1,36 @@
+<script setup lang="ts">
+import { storeToRefs } from 'pinia'
+import { useAwesomeStore } from '../stores'
+import vCard from '@/components/vCard.vue'
+
+const store = useAwesomeStore()
+const { items } = storeToRefs(store)
+</script>
+
 <template>
   <div>
-    <div class="grid place-items-center w-full my-6 md:my-12">
-      <img
-        :src="`/logo-${mode}.svg`"
-        alt="Awesome347 Logo"
-        width="240"
-        height="240"
-        class="transition-all duration-300 hover:scale-110 mb-4"
-      />
-      <h1 class="title">Awesome347</h1>
-    </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8">
-      <TransitionGroup name="projects" appear class="contents">
+    <main class="ml-20">
+      <section class="relative min-h-screen flex items-center justify-center p-8">
+        <div class="max-w-4xl mx-auto text-center space-y-8">
+          <h1 class="text-5xl md:text-7xl font-bold">
+            <span
+              class="bg-clip-text text-transparent bg-gradient-to-r from-primary-400 to-purple-400"
+            >
+              Unlock Your Potential
+            </span>
+          </h1>
+          <p class="text-xl text-white/70">
+            Explore cutting-edge tools and resources for the modern web.
+          </p>
+        </div>
+      </section>
+    </main>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+      <TransitionGroup name="projects" appear>
         <vCard v-for="item in items" :key="item.id" :item="item" />
         <div
-          class="rounded-xl border bg-card text-card-foreground shadow-sm p-6 flex justify-center items-center gap-y-3 flex-col"
+          :key="'submit'"
+          class="group relative rounded-xl bg-foreground/5 border border-foreground/10 backdrop-blur-xl hover:bg-foreground/10 transition-all duration-300 hover:scale-[.98] ta shadow-sm flex justify-center items-center gap-y-3 flex-col"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -36,34 +52,6 @@
     </div>
   </div>
 </template>
-
-<script setup lang="ts">
-import { ref, computed, onMounted, onUnmounted } from 'vue';
-import { storeToRefs } from 'pinia';
-import { useAwesomeStore } from '../stores';
-import vCard from '../components/vCard.vue';
-
-const isDarkMode = ref(false);
-onMounted(() => {
-  const isDarkModeEnabled = localStorage.getItem('dark-mode') === 'enabled';
-  isDarkMode.value = isDarkModeEnabled;
-  document.documentElement.classList.toggle('dark', isDarkMode.value);
-
-  const observer = new MutationObserver(() => {
-    isDarkMode.value = document.documentElement.classList.contains('dark');
-  });
-  observer.observe(document.documentElement, {
-    attributes: true,
-    attributeFilter: ['class'],
-  });
-  onUnmounted(() => observer.disconnect());
-});
-
-const mode = computed(() => (isDarkMode.value ? 'dark' : 'light'));
-
-const store = useAwesomeStore();
-const { items } = storeToRefs(store);
-</script>
 
 <style scoped>
 .projects-move,

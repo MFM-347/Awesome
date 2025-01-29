@@ -1,6 +1,6 @@
 {
   "name": "app",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -10,33 +10,35 @@
     "preview": "vite preview",
     "build-only": "vite build",
     "type-check": "vue-tsc --build",
+    "format": "prettier -w .",
     "lint": "eslint . --fix",
-    "start": "npx prettier -w . && npm run lint && clear && npm run dev"
+    "start": "npm run lint && npm run format && clear && npm run dev"
   },
   "dependencies": {
     "@heroicons/vue": "^2.2.0",
     "@vercel/analytics": "^1.4.1",
+    "@tailwindcss/vite": "^4.0.0",
     "fuse.js": "^7.0.0",
-    "pinia": "^2.3.0",
-    "router": "^2.0.0",
+    "pinia": "^2.3.1",
+    "tailwindcss": "^4.0.0",
     "vue": "^3.5.13",
     "vue-router": "^4.5.0"
   },
   "devDependencies": {
     "@tsconfig/node22": "^22.0.0",
-    "@types/node": "^22.10.2",
+    "@types/node": "^22.10.7",
     "@vitejs/plugin-vue": "^5.2.1",
-    "@vue/eslint-config-typescript": "^14.1.3",
+    "@vue/eslint-config-prettier": "^10.1.0",
+    "@vue/eslint-config-typescript": "^14.3.0",
     "@vue/tsconfig": "^0.7.0",
-    "autoprefixer": "^10.4.20",
-    "eslint": "^9.14.0",
-    "eslint-plugin-vue": "^9.30.0",
+    "eslint": "^9.18.0",
+    "eslint-plugin-vue": "^9.32.0",
+    "jiti": "^2.4.2",
     "npm-run-all2": "^7.0.2",
-    "postcss": "^8.4.49",
-    "tailwindcss": "^3.4.17",
-    "typescript": "~5.6.3",
-    "vite": "^6.0.5",
-    "vite-plugin-vue-devtools": "^7.6.8",
-    "vue-tsc": "^2.1.10"
+    "prettier": "^3.4.2",
+    "typescript": "~5.7.3",
+    "vite": "^6.0.11",
+    "vite-plugin-vue-devtools": "^7.7.0",
+    "vue-tsc": "^2.2.0"
   }
 }

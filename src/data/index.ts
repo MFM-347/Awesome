@@ -780,12 +780,12 @@ const raw = [
     description: 'This is a list of awesome web development resources. Add more!',
     url: 'https://web-dev-resources.com/list/',
   },
-];
+]
 
-raw.sort((a, b) => a.name.localeCompare(b.name));
+raw.sort((a, b) => a.name.localeCompare(b.name))
 const data = raw.map((item, index) => ({
   ...item,
   id: index + 1,
-}));
+}))
 
-export default data;
+export default data

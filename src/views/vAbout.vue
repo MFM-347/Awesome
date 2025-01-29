@@ -1,7 +1,9 @@
 <template>
-  <div class="container mx-auto p-8">
+  <div class="container mx-auto py-8 px-16">
     <h1 class="title">About</h1>
-    <div class="p-6 border rounded-lg bg-white dark:bg-zinc-900">
+    <div
+      class="p-6 rounded-2xl bg-foreground/5 border border-foreground/10 backdrop-blur-xl shadow-sm"
+    >
       <h2 class="text-2xl font-semibold mb-4">Awesome347</h2>
       <p class="text-gray-800 dark:text-gray-200 mb-6">
         Awesome347 is your go-to platform for discovering handpicked tools, resources, and guides
@@ -34,9 +36,9 @@
 </template>
 
 <script setup lang="ts">
-import vBtn from '../components/vBtn.vue';
+import vBtn from '../components/vBtn.vue'
 
 const openUrl = (url: string) => {
-  window.open(url, '_blank');
-};
+  window.open(url, '_blank')
+}
 </script>

@@ -1,31 +1,31 @@
 <script setup lang="ts">
-import { storeToRefs } from 'pinia';
-import { useAwesomeStore } from '../stores';
-import { computed, onMounted } from 'vue';
-import { useRoute, useRouter } from 'vue-router';
-import { GlobeAltIcon, CodeBracketIcon } from '@heroicons/vue/24/solid';
+import { storeToRefs } from 'pinia'
+import { useAwesomeStore } from '../stores'
+import { computed, onMounted } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
+import { GlobeAltIcon, CodeBracketIcon } from '@heroicons/vue/24/solid'
 
-const store = useAwesomeStore();
-const { items } = storeToRefs(store);
-const route = useRoute();
-const router = useRouter();
+const store = useAwesomeStore()
+const { items } = storeToRefs(store)
+const route = useRoute()
+const router = useRouter()
 
 const item = computed(() => {
-  const id = Number(route.params.id);
-  return items.value.find((item) => item.id === id);
-});
+  const id = Number(route.params.id)
+  return items.value.find((item) => item.id === id)
+})
 
 onMounted(() => {
   if (!item.value) {
-    router.push('/404');
+    router.push('/404')
   }
-});
+})
 
 const openUrl = (url: string | undefined) => {
   if (url) {
-    window.open(url, '_blank');
+    window.open(url, '_blank')
   }
-};
+}
 </script>
 
 <template>
@@ -54,7 +54,7 @@ const openUrl = (url: string | undefined) => {
           <div class="flex flex-wrap gap-2 mt-2">
             <span class="text-base"><b>Tags:</b>&nbsp;</span>
             <RouterLink
-              class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-base font-semibold bg-secondary dark:bg-secondary text-secondary-foreground cursor-pointer"
+              class="px-3 py-1 rounded-full bg-foreground/10 text-sm ta cursor-pointer"
               v-for="tag in item?.tags"
               :key="tag"
               :to="`/search?q=${tag}`"

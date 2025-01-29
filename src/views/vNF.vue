@@ -4,7 +4,7 @@
     <p class="mb-10 text-xl sm:text-3xl">Sorry, we couldn't find this page.</p>
     <RouterLink
       to="/"
-      class="px-4 py-2 text-foreground bg-primary-500 rounded-md text-lg cursor-pointer"
+      class="px-4 py-2 text-foreground bg-primary-500/70 hover:bg-primary-400/80 ta rounded-xl text-lg cursor-pointer"
     >
       Go home
     </RouterLink>

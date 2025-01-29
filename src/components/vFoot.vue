@@ -19,7 +19,9 @@
       />
     </svg>
   </div>
-  <footer class="bg-primary-600 text-primary-50 px-8 py-8 grid place-items-center">
+  <footer
+    class="bg-primary-600 text-primary-50 px-24 md:px-8 py-8 text-base md:text-lg grid place-items-center"
+  >
     <div>
       <p>Developed with ❤️ by <span class="font-bold">MFM-347</span></p>
       <div class="font-semibold text-center">
@@ -37,11 +39,13 @@
       </nav>
     </div>
     <div class="mt-8">
-      <p class="text-base font-medium">© 2025 MFM-347. All rights reserved.</p>
+      <p class="text-sm md:text-base font-medium">© 2025 MFM-347. All rights reserved.</p>
     </div>
   </footer>
 </template>
 <style scoped>
+@reference "../style.css";
+
 .lnk {
   @apply border-x border-foreground px-4 py-2 hover:underline hover:font-semibold;
 }

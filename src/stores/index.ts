@@ -1,6 +1,6 @@
-import { defineStore } from 'pinia';
-import data from '../data';
-import Fuse from 'fuse.js';
+import { defineStore } from 'pinia'
+import data from '../data'
+import Fuse from 'fuse.js'
 
 export const useAwesomeStore = defineStore('awesome', {
   state: () => ({
@@ -12,8 +12,8 @@ export const useAwesomeStore = defineStore('awesome', {
       const fuse = new Fuse(this.items, {
         keys: ['name', 'category', 'tags'],
         threshold: 0.3,
-      });
-      this.searchResults = fuse.search(query).map((result) => result.item);
+      })
+      this.searchResults = fuse.search(query).map((result) => result.item)
     },
   },
-});
+})

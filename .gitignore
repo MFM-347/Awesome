@@ -28,3 +28,9 @@ coverage
 *.sw?
 
 *.tsbuildinfo
+
+# User directories and files
+*.tmp.*
+*.tmp
+tmp.*
+*/**/tmp

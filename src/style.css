@@ -1,47 +1,35 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+@config "../tailwind.config.js";
 
-@layer base {
-  :root {
-    --background: 0 0% 95%;
-    --background-ultra: #fbfbfb;
-    --foreground: 229 10% 3.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 229 10% 3.9%;
-    --secondary: 229 4.8% 85.1%;
-    --secondary-foreground: 229 5.9% 10%;
-    --border: 229 5.9% 90%;
-    --input: 229 5.9% 90%;
-    --ring: 142.1 76.2% 36.3%;
-    --radius: 0.5rem;
-  }
-  .dark {
-    --background: 20 14.3% 4.1%;
-    --background-ultra: #050404;
-    --foreground: 0 0% 95%;
-    --card: 24 9.8% 10%;
-    --card-foreground: 0 0% 95%;
-    --secondary: 229 3.7% 15.9%;
-    --secondary-foreground: 0 0% 98%;
-    --border: 229 3.7% 15.9%;
-    --input: 229 3.7% 15.9%;
-    --ring: 142.4 71.8% 29.2%;
-  }
+@custom-variant hover (&:hover);
+@utility container {
+  margin-inline: auto;
+  padding-inline: 2rem;
 }
-@layer base {
-  * {
-    @apply border-border;
-    font-optical-sizing: auto;
-  }
-  body {
-    @apply bg-background text-foreground;
-    max-width: 100vw;
-    min-height: 100vh;
-    overflow-x: hidden;
-  }
+*:focus-visible {
+  @apply outline-solid outline-offset-2 outline-primary-500;
 }
-
+:focus:not(:focus-visible) {
+  outline: none;
+}
+:root {
+  --background: 20 14.3% 4.1%;
+  --foreground: 0 0% 95%;
+  --border: 229 3.7% 15.9%;
+  --input: 229 3.7% 15.9%;
+  --ring: 142.4 71.8% 29.2%;
+  --radius: 0.5rem;
+}
+* {
+  @apply border-border;
+  font-optical-sizing: auto;
+}
+body {
+  @apply bg-background text-foreground;
+  max-width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
 h1,
 h2,
 h3,
@@ -59,12 +47,17 @@ label,
   @apply text-5xl text-center font-extrabold my-3 md:my-6;
 }
 .ta {
-  /* transition all */
-  @apply transition-all duration-200 ease-out;
+  @apply transition-all duration-300;
+}
+@media (max-width: 640px) {
+  html {
+    font-size: 14px;
+  }
 }
 html {
   scrollbar-width: thin;
   scrollbar-color: #d1d5db transparent;
+  scroll-behavior: smooth;
 }
 html.dark {
   scrollbar-color: #374151 transparent;
