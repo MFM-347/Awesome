@@ -32,5 +32,4 @@ coverage
 # User directories and files
 *.tmp.*
 *.tmp
-tmp.*
 */**/tmp

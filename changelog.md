@@ -19,3 +19,15 @@
 1. Recreated UI
 2. Upgraded to tailwindcss v4
 3. Updated to latest create-vue-template
+
+# 2. Update 30-1-25
+
+**Commit Name:** `Improve performance, type and clean-up SEO`
+
+**Changes:**
+
+1. New OG-Image
+2. Cleaned-up SEO
+3. Change typographic scheme from `roboto_condensed+source_sans_3` to `inter`
+4. Added `id` to data for consistent routing
+5. Added auto sitemap and robotsTxt generation

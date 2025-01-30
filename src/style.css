@@ -14,7 +14,7 @@
 }
 :root {
   --background: 20 14.3% 4.1%;
-  --foreground: 0 0% 95%;
+  --foreground: 0 95% 95%;
   --border: 229 3.7% 15.9%;
   --input: 229 3.7% 15.9%;
   --ring: 142.4 71.8% 29.2%;
@@ -30,18 +30,16 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
 }
-h1,
-h2,
-h3,
-.title {
-  font-family: 'Roboto Condensed', sans-serif !important;
-}
 p,
 span,
 input,
 label,
-.btn {
-  font-family: 'Source Sans 3', sans-serif !important;
+.btn,
+h1,
+h2,
+h3,
+.title {
+  font-family: 'Inter', sans-serif !important;
 }
 .title {
   @apply text-5xl text-center font-extrabold my-3 md:my-6;
