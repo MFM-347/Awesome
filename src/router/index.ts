@@ -15,7 +15,7 @@ const router = createRouter({
       component: () => import('../views/vNF.vue'),
     },
     {
-      path: '/item/:id',
+      path: '/i/:id',
       name: 'Items',
       component: () => import('../views/vItem.vue'),
     },

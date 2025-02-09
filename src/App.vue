@@ -13,35 +13,25 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="min-h-screen bg-background text-foreground overflow-hidden">
+  <div class="min-h-screen overflow-hidden bg-background text-foreground">
     <div id="bg">
-      <div
-        class="fixed inset-0 bg-gradient-to-br from-purple-900/20 to-primary-900/20 pointer-events-none"
-      ></div>
-      <div class="fixed top-1/4 -left-1/4 w-96 h-96 bg-primary-500/30 rounded-full blur-3xl"></div>
-      <div class="fixed top-1/2 -right-1/4 w-96 h-96 bg-purple-500/30 rounded-full blur-3xl"></div>
+      <div class="pointer-events-none fixed inset-0 bg-gradient-to-br from-purple-900/20 to-primary-900/20"></div>
+      <div class="fixed top-1/4 -left-1/4 h-96 w-96 rounded-full bg-primary-500/30 blur-3xl"></div>
+      <div class="fixed top-1/2 -right-1/4 h-96 w-96 rounded-full bg-purple-500/30 blur-3xl"></div>
     </div>
     <vNav />
-    <div
-      v-if="isLoading"
-      class="fixed inset-0 bg-background/70 backdrop-blur-sm flex items-center justify-center z-50"
-    >
+    <div v-if="isLoading" class="fixed inset-0 z-50 flex items-center justify-center bg-background/70 backdrop-blur-sm">
       <div class="flex flex-col items-center gap-4">
         <div
-          class="animate-spin rounded-full h-16 w-16 border-4 border-primary-400 border-t-transparent shadow-lg"
+          class="h-16 w-16 animate-spin rounded-full border-4 border-primary-400 border-t-transparent shadow-lg"
         ></div>
-        <p class="text-primary-600 animate-pulse">Loading...</p>
+        <p class="animate-pulse text-primary-600">Loading...</p>
       </div>
     </div>
     <main id="top">
-      <div class="container mx-auto px-4 pl-16 py-8 md:py-12 max-w-7xl">
+      <div class="container mx-auto max-w-7xl px-4 py-8 pl-16 md:py-12">
         <router-view v-slot="{ Component }">
-          <transition
-            name="page"
-            mode="out-in"
-            @before-enter="isLoading = true"
-            @after-enter="isLoading = false"
-          >
+          <transition name="page" mode="out-in" @before-enter="isLoading = true" @after-enter="isLoading = false">
             <component :is="Component" />
           </transition>
         </router-view>

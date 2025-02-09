@@ -3,7 +3,7 @@ export interface Item {
   icon?: string
   name: string
   foss: boolean
-  fossLnk?: string
+  link?: string
   category: string
   tags: string[]
   description: string

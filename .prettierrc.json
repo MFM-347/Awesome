@@ -2,5 +2,11 @@
   "$schema": "https://json.schemastore.org/prettierrc",
   "semi": false,
   "singleQuote": true,
-  "printWidth": 100
+  "tabWidth": 2,
+  "printWidth": 120,
+  "plugins": ["@nirtamir2/prettier-plugin-css-order", "prettier-plugin-tailwindcss"],
+  "tailwindStylesheet": "./src/style.css",
+  "tailwindConfig": "./tailwind.config.js",
+  "tailwindPreserveWhitespace": true,
+  "tailwindPreserveDuplicates": true
 }

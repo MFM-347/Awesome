@@ -2,12 +2,13 @@
 @config "../tailwind.config.js";
 
 @custom-variant hover (&:hover);
-@utility container {
-  margin-inline: auto;
-  padding-inline: 2rem;
+@utility ta-* {
+  transition-property: all;
+  transition-duration: calc(--value(integer, [integer]) * 1ms);
+  transition-timing-function: cubic-bezier(0.3, 0.2, 0.1, 0);
 }
 *:focus-visible {
-  @apply outline-solid outline-offset-2 outline-primary-500;
+  @apply outline-offset-2 outline-primary-500 outline-solid;
 }
 :focus:not(:focus-visible) {
   outline: none;
@@ -39,45 +40,29 @@ h1,
 h2,
 h3,
 .title {
-  font-family: 'Inter', sans-serif !important;
+  font-family: 'Fira Sans', 'Segoe UI', Roboto, Arial, sans-serif !important;
 }
 .title {
-  @apply text-5xl text-center font-extrabold my-3 md:my-6;
+  @apply my-3 text-center text-5xl font-extrabold md:my-6;
 }
-.ta {
-  @apply transition-all duration-300;
-}
-@media (max-width: 640px) {
+@layer scroll {
   html {
-    font-size: 14px;
+    scrollbar-color: #374151 transparent;
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
   }
-}
-html {
-  scrollbar-width: thin;
-  scrollbar-color: #d1d5db transparent;
-  scroll-behavior: smooth;
-}
-html.dark {
-  scrollbar-color: #374151 transparent;
-}
-html::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-}
-html::-webkit-scrollbar-track {
-  background: transparent;
-}
-html::-webkit-scrollbar-thumb {
-  background: #d1d5db;
-  border-radius: 4px;
-}
-html.dark::-webkit-scrollbar-thumb {
-  background: #374151;
-}
-html::-webkit-scrollbar-thumb:hover {
-  background: #9ca3af;
-}
-
-html.dark::-webkit-scrollbar-thumb:hover {
-  background: #4b5563;
+  html::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  html::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  html::-webkit-scrollbar-thumb {
+    background: #374151;
+    border-radius: 4px;
+  }
+  html::-webkit-scrollbar-thumb:hover {
+    background: #4b5563;
+  }
 }
