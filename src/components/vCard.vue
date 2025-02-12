@@ -17,7 +17,7 @@ const openUrl = (url: string | undefined) => {
   >
     <div class="flex flex-col gap-y-1.5 p-6">
       <RouterLink
-        :to="`/item/${item?.id}`"
+        :to="`/i/${item?.id}`"
         class="text-2xl leading-none font-bold tracking-tight"
         :title="'ID: ' + item?.id"
       >
