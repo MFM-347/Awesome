@@ -62,7 +62,7 @@ const openUrl = (url: string | undefined) => {
           </div>
           <h4 class="text-2xl font-semibold">Links:</h4>
           <div class="flex flex-wrap gap-2">
-            <button @click="openUrl(`${item?.link}?ref=Awesome347`)">
+            <button @click="openUrl(`${item?.url}?ref=Awesome347`)">
               <GlobeAltIcon
                 class="size-8 stroke-foreground ta-150 hover:stroke-primary-500 dark:hover:stroke-primary-400"
               /><span class="sr-only"> Check it out </span>
