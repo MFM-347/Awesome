@@ -904,7 +904,7 @@ const data = [
   {
     name: 'Real Favicon Generator',
     category: 'website',
-    tags: ['AI', 'Website', 'App', 'Generator'],
+    tags: ['Favicon', 'Generator'],
     foss: false,
     icon: 'https://realfavicongenerator.net/favicon.svg',
     description: 'A favicon generator to design your icons for each platform and make them look great everywhere.',
