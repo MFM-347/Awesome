@@ -1,10 +1,9 @@
 @import 'tailwindcss';
-@config "../tailwind.config.js";
 
 @custom-variant hover (&:hover);
 @utility ta-* {
   transition-property: all;
-  transition-duration: calc(--value(integer, [integer]) * 1ms);
+  transition-duration: calc(--value(integer, [integer]) * 0.9ms);
   transition-timing-function: cubic-bezier(0.3, 0.2, 0.1, 0);
 }
 *:focus-visible {
@@ -13,13 +12,24 @@
 :focus:not(:focus-visible) {
   outline: none;
 }
-:root {
-  --background: 20 14.3% 4.1%;
-  --foreground: 0 95% 95%;
-  --border: 229 3.7% 15.9%;
-  --input: 229 3.7% 15.9%;
-  --ring: 142.4 71.8% 29.2%;
-  --radius: 0.5rem;
+@theme {
+  --color-primary: hsl(230, 85%, 12%);
+  --color-primary-50: #e7f3ff;
+  --color-primary-100: #d4e9ff;
+  --color-primary-200: #b1d6ff;
+  --color-primary-300: #83b9ff;
+  --color-primary-400: #528bff;
+  --color-primary-500: #2b5fff;
+  --color-primary-600: #082dff;
+  --color-primary-700: #0024ff;
+  --color-primary-800: #0323d0;
+  --color-primary-900: #0e29a1;
+  --color-primary-950: #050d39;
+  --color-border: hsl(230 3.7% 15.9%);
+  --color-input: hsl(230 3.7% 15.9%);
+  --color-ring: hsl(142.4 71.8% 29.2%);
+  --color-background: hsl(20 14.3% 4.1%);
+  --color-foreground: hsl(230 95% 97%);
 }
 * {
   @apply border-border;

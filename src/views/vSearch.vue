@@ -3,7 +3,7 @@ import { ref, watch, onMounted } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { storeToRefs } from 'pinia'
 import { useAwesomeStore } from '@/stores'
-import { MagnifyingGlassIcon } from '@heroicons/vue/24/outline'
+import { MagnifyingGlassIcon } from '@heroicons/vue/24/solid'
 import vCard from '@/components/vCard.vue'
 
 const r = useRoute()

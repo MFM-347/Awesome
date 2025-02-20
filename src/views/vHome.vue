@@ -9,24 +9,27 @@ const { items } = storeToRefs(store)
 
 <template>
   <div>
-    <main class="ml-20">
-      <section class="relative flex min-h-screen items-center justify-center p-8">
-        <div class="mx-auto max-w-4xl space-y-8 text-center">
-          <h1 class="text-5xl font-bold md:text-7xl">
+    <main class="sm:ml-16">
+      <section class="relative flex min-h-screen items-center justify-center p-4 sm:p-8">
+        <div class="mx-auto max-w-4xl space-y-4 text-center md:space-y-6">
+          <h1 class="text-4xl font-bold md:text-6xl">
             <span class="bg-gradient-to-r from-primary-400 to-purple-400 bg-clip-text text-transparent">
-              Unlock Your Potential
+              Unlock Your Full Potential
             </span>
           </h1>
-          <p class="text-xl text-white/70">Explore cutting-edge tools and resources for the modern web.</p>
+          <p class="text-lg text-white/70 sm:text-xl">
+            Explore cutting-edge tools, apps, tutorials and resources to help you improve your productivity, solve
+            problems, and maximize efficiency.
+          </p>
         </div>
       </section>
     </main>
-    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-2">
+    <div class="grid grid-cols-1 gap-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
       <TransitionGroup name="projects" appear>
         <vCard v-for="item in items" :key="item.id" :item="item" />
         <div
           :key="'submit'"
-          class="group relative flex scale-[.99] flex-col items-center justify-center gap-y-3 rounded-xl border border-foreground/10 bg-foreground/5 shadow-sm backdrop-blur-xl ta-300 hover:scale-[1.01] hover:bg-foreground/10"
+          class="group relative flex scale-[.99] flex-col items-center justify-center gap-y-2 rounded-xl border border-foreground/10 bg-foreground/5 py-8 shadow-sm backdrop-blur-xl ta-300 hover:scale-[1.01] hover:bg-foreground/10"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

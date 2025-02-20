@@ -12,7 +12,7 @@ export default defineConfig({
     vueDevTools(),
     tailwindcss(),
     Sitemap({
-      hostname: 'https://awesome347.vercel.app/',
+      hostname: 'https://a347.vercel.app/',
       changefreq: 'weekly',
       generateRobotsTxt: true,
     }),

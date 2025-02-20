@@ -3,7 +3,7 @@ import { storeToRefs } from 'pinia'
 import { useAwesomeStore } from '../stores'
 import { computed, onMounted } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
-import { GlobeAltIcon, CodeBracketIcon } from '@heroicons/vue/24/outline'
+import { GlobeAltIcon, CodeBracketIcon } from '@heroicons/vue/24/solid'
 
 const store = useAwesomeStore()
 const { items } = storeToRefs(store)
@@ -36,7 +36,7 @@ const openUrl = (url: string | undefined) => {
     </div>
     <div class="flex justify-center p-6">
       <div
-        class="bg-card text-card-foreground w-full max-w-md overflow-hidden rounded-xl border shadow-lg max-sm:w-[100%]"
+        class="w-full max-w-md overflow-hidden rounded-xl border bg-foreground/5 text-foreground shadow-lg max-sm:w-[100%]"
       >
         <div class="space-y-4 p-6">
           <div class="flex items-center space-x-4">
@@ -47,7 +47,7 @@ const openUrl = (url: string | undefined) => {
             <h3 class="text-4xl font-bold">{{ item.name }}</h3>
           </div>
           <p class="mt-2 text-xl"><b>Description:</b> {{ item.description }}</p>
-          <p class="text-lg"><b>Category:</b> {{ item.category }}</p>
+          <p class="text-lg"><b>Type:</b> {{ item.type }}</p>
           <p class="text-lg"><b>Open Source:</b> {{ item.foss }}</p>
           <div class="mt-2 flex flex-wrap gap-2">
             <span class="text-base"><b>Tags:</b>&nbsp;</span>
@@ -64,12 +64,12 @@ const openUrl = (url: string | undefined) => {
           <div class="flex flex-wrap gap-2">
             <button @click="openUrl(`${item?.url}?ref=Awesome347`)">
               <GlobeAltIcon
-                class="size-8 stroke-foreground ta-150 hover:stroke-primary-500 dark:hover:stroke-primary-400"
+                class="size-8 fill-foreground ta-150 hover:fill-primary-500 dark:hover:fill-primary-400"
               /><span class="sr-only"> Check it out </span>
             </button>
             <button v-if="item?.foss" @click="openUrl(`${item?.link}?ref=Awesome347`)">
               <CodeBracketIcon
-                class="size-8 stroke-foreground ta-150 hover:stroke-primary-500 dark:hover:stroke-primary-400"
+                class="size-8 fill-foreground ta-150 hover:fill-primary-500 dark:hover:fill-primary-400"
               /><span class="sr-only"> Source Code </span>
             </button>
           </div>

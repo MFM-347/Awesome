@@ -29,7 +29,7 @@ onMounted(() => {
       </div>
     </div>
     <main id="top">
-      <div class="container mx-auto max-w-7xl px-4 py-8 pl-16 md:py-12">
+      <div class="container mx-auto max-w-7xl px-4 py-8 md:py-8 md:pl-16">
         <router-view v-slot="{ Component }">
           <transition name="page" mode="out-in" @before-enter="isLoading = true" @after-enter="isLoading = false">
             <component :is="Component" />

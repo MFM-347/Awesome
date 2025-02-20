@@ -23,7 +23,7 @@ const openUrl = (url: string | undefined) => {
       >
         {{ item?.name }}
       </RouterLink>
-      <p class="text-base">{{ item?.category }}</p>
+      <p class="text-base">{{ item?.type }}</p>
     </div>
     <div class="flex-grow p-4 pt-0">
       <div class="mb-4 flex flex-wrap gap-2">
@@ -36,7 +36,7 @@ const openUrl = (url: string | undefined) => {
           {{ tag }}
         </RouterLink>
       </div>
-      <vBtn @click="openUrl(`${item?.link}?ref=Awesome347`)"> Visit </vBtn>
+      <vBtn @click="openUrl(`${item?.url}?ref=Awesome347`)"> Visit </vBtn>
     </div>
   </div>
 </template>

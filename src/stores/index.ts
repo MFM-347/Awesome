@@ -10,7 +10,7 @@ export const useAwesomeStore = defineStore('awesome', {
   }),
   actions: {
     search(query: string) {
-      const fields = ['name', 'category', 'tags', 'url', 'link', 'description']
+      const fields = ['name', 'type', 'tags', 'url', 'link', 'description']
       const filters: Record<string, string[]> = {}
       const terms: string[] = []
       query.split(/\s+/).forEach((part) => {

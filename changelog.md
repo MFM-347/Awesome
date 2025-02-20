@@ -38,7 +38,22 @@
 **Changes:**
 
 1. Updated Layout
-2. Changed icons from `fill` to `outline`
-3. Upgraded search features, i.e, use x:Q where x =? ['name', 'category', 'tags', 'url', 'link', 'description']
+2. Updated icons for better UI
+3. Upgraded search features, i.e, use x:Q where x =? ['name', 'type', 'tags', 'url', 'link', 'description']
 4. Updated list
 5. Changed dynamic routing from `/item/` to `/i/` for minimal URLs
+6. Change typographic scheme from `Inter` to `Fira Sans`
+
+# 5. 20-02-25
+
+**Commit Name:** `Enhanced UI and updated SEO and list`
+
+**Changes:**
+
+1. Updated Navbar
+2. Fixed spacing and responsiveness issue
+3. Optimized SEO
+4. Updated list
+5. Changed `category` selector with `type`
+6. New OG-Image
+7. Changed URL to [a347.vercel.app](https://a347.vercel.app/)

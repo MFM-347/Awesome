@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { LinkIcon } from '@heroicons/vue/24/outline'
+import { LinkIcon } from '@heroicons/vue/24/solid'
 </script>
 
 <template>

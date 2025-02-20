@@ -1,7 +1,7 @@
 const data = [
   {
     name: '30 Seconds of Code',
-    category: 'website',
+    type: 'website',
     tags: ['Code', 'Snippets'],
     foss: true,
     link: 'https://github.com/Chalarangelo/30-seconds-of-code',
@@ -12,7 +12,7 @@ const data = [
   },
   {
     name: '3D Icons',
-    category: 'website',
+    type: 'website',
     tags: ['3D', 'Icons', 'library'],
     foss: true,
     link: 'https://github.com/realvjy/3dicons',
@@ -23,7 +23,7 @@ const data = [
   },
   {
     name: '50 Programming Languages',
-    category: 'website',
+    type: 'website',
     tags: ['Awesome', 'Programming'],
     foss: true,
     link: 'https://github.com/Alexcj10/50-Programming-Languages/',
@@ -33,7 +33,7 @@ const data = [
   },
   {
     name: "Abdullah Al Rakib's Portfolio",
-    category: 'website',
+    type: 'website',
     tags: ['Portfolio', 'animated', 'Inspirable'],
     foss: true,
     link: 'https://github.com/rakib8680/My-Portfolio',
@@ -43,7 +43,7 @@ const data = [
   },
   {
     name: 'AI Pure',
-    category: 'website',
+    type: 'website',
     tags: ['AI', 'Awesome'],
     foss: false,
     icon: 'https://aipure.ai/favicon.ico',
@@ -53,7 +53,7 @@ const data = [
   },
   {
     name: 'Android FOSS',
-    category: 'website',
+    type: 'website',
     tags: ['Awesome', 'Android'],
     foss: true,
     link: 'https://offa.github.io/android-foss/',
@@ -64,7 +64,7 @@ const data = [
   },
   {
     name: 'Animista',
-    category: 'website',
+    type: 'website',
     tags: ['CSS', 'Animation'],
     foss: false,
     description:
@@ -74,7 +74,7 @@ const data = [
   },
   {
     name: 'Awesome',
-    category: 'GitHub Repo',
+    type: 'GitHub Repo',
     tags: ['Awesome', 'of', 'Awesomes'],
     foss: true,
     link: 'https://github.com/sindresorhus/awesome/',
@@ -84,7 +84,7 @@ const data = [
   },
   {
     name: 'Awesome Automations',
-    category: 'GitHub Repo',
+    type: 'GitHub Repo',
     tags: ['Code', 'Automation', 'Awesome'],
     foss: true,
     link: 'https://github.com/Arsenic-ATG/Awesome-Automations/',
@@ -94,7 +94,7 @@ const data = [
   },
   {
     name: 'Awesome Cheatsheets',
-    category: 'GitHub Repo',
+    type: 'GitHub Repo',
     tags: ['Code', 'Cheatsheets'],
     foss: true,
     link: 'https://github.com/LeCoupa/awesome-cheatsheets/',
@@ -104,7 +104,7 @@ const data = [
   },
   {
     name: 'Awesome Illustrations for Projects',
-    category: 'GitHub Repo',
+    type: 'GitHub Repo',
     tags: ['Illustrations', 'Awesome'],
     foss: true,
     link: 'https://github.com/Awesome-Illustrations-4Projects/',
@@ -115,7 +115,7 @@ const data = [
   },
   {
     name: 'BGJar',
-    category: 'website',
+    type: 'website',
     tags: ['SVG', 'BackGround', 'Generator'],
     foss: false,
     icon: 'https://bgjar.com/bgjar.svg',
@@ -125,7 +125,7 @@ const data = [
   },
   {
     name: 'Build your own X',
-    category: 'GitHub Repo',
+    type: 'GitHub Repo',
     tags: ['Code', 'Tutorials'],
     foss: false,
     description: 'Master programming by recreating your favorite technologies from scratch.',
@@ -134,7 +134,7 @@ const data = [
   },
   {
     name: 'Chatbase',
-    category: 'website',
+    type: 'website',
     tags: ['AI', 'Chatbot', 'Builder'],
     foss: false,
     icon: 'https://www.chatbase.co/icon.ico',
@@ -145,7 +145,7 @@ const data = [
   },
   {
     name: 'ChatGPT',
-    category: 'website',
+    type: 'website',
     tags: ['AI', 'ChatBot'],
     foss: false,
     icon: 'https://www.svgrepo.com/show/306500/openai.svg',
@@ -155,7 +155,7 @@ const data = [
   },
   {
     name: 'Code IMG',
-    category: 'website',
+    type: 'website',
     tags: ['Code', 'Screenshot', 'Generator'],
     foss: false,
     icon: 'https://codeimg.io/img/logo-black-white.3a439316.svg',
@@ -165,7 +165,7 @@ const data = [
   },
   {
     name: 'Color Curves',
-    category: 'website',
+    type: 'website',
     tags: ['Colors', 'Scheme', 'Generator'],
     foss: true,
     link: 'https://github.com/mracette/color-curves-app',
@@ -176,7 +176,7 @@ const data = [
   },
   {
     name: 'Cool GIFs for GitHub',
-    category: 'GitHub Repo',
+    type: 'GitHub Repo',
     tags: ['README', 'Illustrations', 'Awesome', 'Markdown'],
     foss: true,
     link: 'https://github.com/Anmol-Baranwal/Cool-GIFs-For-GitHub/',
@@ -186,7 +186,7 @@ const data = [
   },
   {
     name: 'Cool Shapes',
-    category: 'website',
+    type: 'website',
     tags: ['UI', 'Cool', 'Shapes'],
     foss: true,
     link: 'https://github.com/realvjy/uilogos.co',
@@ -197,7 +197,7 @@ const data = [
   },
   {
     name: 'CSS Bud',
-    category: 'website',
+    type: 'website',
     tags: ['CSS', 'Generators', 'GIF', 'library'],
     foss: false,
     description:
@@ -207,7 +207,7 @@ const data = [
   },
   {
     name: 'CSS Buttons',
-    category: 'website',
+    type: 'website',
     tags: ['UI', 'Button', 'library'],
     foss: true,
     link: 'https://github.com/guivr/cssbuttons',
@@ -218,7 +218,7 @@ const data = [
   },
   {
     name: 'CSS Buttons',
-    category: 'website',
+    type: 'website',
     tags: ['UI', 'Button', 'library'],
     foss: false,
     icon: 'https://cssbuttons.io/favicon-96x96.png',
@@ -228,7 +228,7 @@ const data = [
   },
   {
     name: 'CSS Grid Generator',
-    category: 'website',
+    type: 'website',
     tags: ['CSS', 'Grid', 'Generator'],
     foss: true,
     link: 'https://github.com/sdras/cssgridgenerator',
@@ -239,7 +239,7 @@ const data = [
   },
   {
     name: 'DefProgramming',
-    category: 'website',
+    type: 'website',
     tags: ['Programming', 'Qoutes', 'Inspirable'],
     foss: true,
     link: 'https://github.com/daviferreira/defprogramming.com',
@@ -251,7 +251,7 @@ const data = [
   },
   {
     name: 'Design Hacks',
-    category: 'website',
+    type: 'website',
     tags: ['Design', 'Resources', 'Awesome'],
     foss: false,
     icon: 'https://framerusercontent.com/images/AWOpQDTBXxhPFr5I0YLyQ2qz7I.png',
@@ -261,7 +261,7 @@ const data = [
   },
   {
     name: 'Dev Docs',
-    category: 'website',
+    type: 'website',
     tags: ['Programming', 'API', 'Documentation'],
     foss: true,
     link: 'https://github.com/freeCodeCamp/devdocs',
@@ -272,7 +272,7 @@ const data = [
   },
   {
     name: 'Dev Resources',
-    category: 'website',
+    type: 'website',
     tags: ['Awesome', 'Inspirable'],
     foss: true,
     link: 'https://github.com/marcelscruz/dev-resources/',
@@ -283,7 +283,7 @@ const data = [
   },
   {
     name: 'EnjoyCSS',
-    category: 'website',
+    type: 'website',
     tags: ['CSS', 'Generator'],
     foss: false,
     link: 'https://github.com/marcelscruz/dev-resources/',
@@ -294,7 +294,7 @@ const data = [
   },
   {
     name: 'Flow Rift',
-    category: 'website',
+    type: 'website',
     tags: ['Tailwindcss', 'Components'],
     foss: false,
     icon: 'https://flowrift.com/img/favicon.png',
@@ -304,7 +304,7 @@ const data = [
   },
   {
     name: 'FontGet',
-    category: 'website',
+    type: 'website',
     tags: ['Font', 'library', 'Generator'],
     foss: false,
     icon: 'https://www.fontget.com/img/favicon-32x32.png',
@@ -314,7 +314,7 @@ const data = [
   },
   {
     name: 'FreeFace Gallery',
-    category: 'website',
+    type: 'website',
     tags: ['Font', 'Typography', 'Generator'],
     foss: false,
     icon: 'https://cdn.prod.website-files.com/63ad770767a7fcd529308e52/63fa478e4e9a8cb9136c76cc_favicon.png',
@@ -325,7 +325,7 @@ const data = [
   },
   {
     name: 'FrontEnd Checklist',
-    category: 'website',
+    type: 'website',
     tags: ['Code', 'Checklist'],
     foss: true,
     link: 'https://github.com/thedaviddias/Front-End-Checklist',
@@ -336,7 +336,7 @@ const data = [
   },
   {
     name: 'HTMLRev',
-    category: 'website',
+    type: 'website',
     tags: ['Website', 'Templates', 'boilerplates'],
     foss: false,
     icon: 'https://htmlrev.com/images/favicon.png',
@@ -347,7 +347,7 @@ const data = [
   },
   {
     name: 'HueTools',
-    category: 'website',
+    type: 'website',
     tags: ['Colors', 'ToolBox', 'Inspirable'],
     foss: true,
     link: 'https://github.com/pabueco/hue.tools',
@@ -359,7 +359,7 @@ const data = [
   },
   {
     name: 'Image Extractor',
-    category: 'website',
+    type: 'website',
     tags: ['website', 'images', 'extractor'],
     foss: false,
     icon: 'https://extract.pics/img/favicon.ico',
@@ -370,7 +370,7 @@ const data = [
   },
   {
     name: 'ImageToolbox',
-    category: 'App',
+    type: 'App',
     tags: ['Image', 'Editor', 'ToolBox'],
     foss: true,
     link: 'https://github.com/T8RIN/ImageToolbox',
@@ -381,7 +381,7 @@ const data = [
   },
   {
     name: 'IT Tools',
-    category: 'website',
+    type: 'website',
     tags: ['Tools', 'Collection'],
     foss: true,
     link: 'https://github.com/CorentinTh/it-tools',
@@ -392,7 +392,7 @@ const data = [
   },
   {
     name: 'KeyFrames',
-    category: 'website',
+    type: 'website',
     tags: ['CSS', 'Generator'],
     foss: false,
     icon: 'https://keyframes.app/img/icons/icon-192.png',
@@ -402,7 +402,7 @@ const data = [
   },
   {
     name: 'Laws of UX',
-    category: 'website',
+    type: 'website',
     tags: ['UI/UX', 'Laws'],
     foss: false,
     icon: 'https://lawsofux.com/icons/favicon.svg',
@@ -413,7 +413,7 @@ const data = [
   },
   {
     name: 'Learn UI Design',
-    category: 'website',
+    type: 'website',
     tags: ['Design', 'Tutorials', 'Tools'],
     foss: false,
     icon: 'https://www.learnui.design/favicon.ico',
@@ -423,7 +423,7 @@ const data = [
   },
   {
     name: 'Learn UI/UX',
-    category: 'website',
+    type: 'website',
     tags: ['UI', 'UX', 'Course'],
     foss: false,
     icon: 'https://framerusercontent.com/images/Ov3NPIiB70TZa8r9dhrXapV0kxg.png',
@@ -433,7 +433,7 @@ const data = [
   },
   {
     name: 'Llama Coder',
-    category: 'website',
+    type: 'website',
     tags: ['AI', 'Code Generator'],
     foss: true,
     link: 'https://github.com/nutlope/llamacoder',
@@ -444,7 +444,7 @@ const data = [
   },
   {
     name: 'LogoLab',
-    category: 'website',
+    type: 'website',
     tags: ['Logo', 'Improvements'],
     foss: false,
     icon: 'https://logolab.app/favicon.ico',
@@ -455,7 +455,7 @@ const data = [
   },
   {
     name: 'MarkDown Editor',
-    category: 'website',
+    type: 'website',
     tags: ['MarkDown', 'Text', 'Editor'],
     foss: true,
     link: 'https://github.com/jbt/markdown-editor/',
@@ -466,7 +466,7 @@ const data = [
   },
   {
     name: 'Markor',
-    category: 'App',
+    type: 'App',
     tags: ['Markdown', 'Text', 'Editor'],
     foss: true,
     link: 'https://github.com/gsantner/markor',
@@ -478,7 +478,7 @@ const data = [
   },
   {
     name: 'Method AC',
-    category: 'website',
+    type: 'website',
     tags: ['UI/UX', 'Tools', 'Games'],
     foss: false,
     icon: 'https://method.ac/icon.png',
@@ -488,7 +488,7 @@ const data = [
   },
   {
     name: 'My Calendar App',
-    category: 'website',
+    type: 'website',
     tags: ['Calendar', 'Expense Tracker', 'TODO'],
     foss: true,
     link: 'https://github.com/divyansh-2005/my-calendar-app',
@@ -499,7 +499,7 @@ const data = [
   },
   {
     name: 'Neumorphism Generator',
-    category: 'website',
+    type: 'website',
     tags: ['CSS', 'Neumorphic', 'Generator'],
     foss: true,
     link: 'https://github.com/adamgiebl/neumorphism',
@@ -511,7 +511,7 @@ const data = [
   },
   {
     name: 'Obtainium',
-    category: 'app',
+    type: 'app',
     tags: ['CleanUI', 'Downloader'],
     foss: true,
     link: 'https://github.com/ImranR98/Obtainium',
@@ -522,7 +522,7 @@ const data = [
   },
   {
     name: 'Omatsuri',
-    category: 'website',
+    type: 'website',
     tags: ['Tools', 'Collection'],
     foss: true,
     link: 'https://github.com/rtivital/omatsuri',
@@ -533,7 +533,7 @@ const data = [
   },
   {
     name: 'Pattern Pad',
-    category: 'website',
+    type: 'website',
     tags: ['Pattern', 'Generator'],
     foss: false,
     icon: 'https://patternpad.com/images/patternpad-icon.png',
@@ -543,7 +543,7 @@ const data = [
   },
   {
     name: 'PDF Pie',
-    category: 'website',
+    type: 'website',
     tags: ['PDF', 'Editor', 'Exportor'],
     foss: true,
     link: 'https://github.com/realvjy/uilogos.co',
@@ -555,7 +555,7 @@ const data = [
   },
   {
     name: 'PDF Pie',
-    category: 'website',
+    type: 'website',
     tags: ['PDF', 'Editor', 'Exportor'],
     foss: true,
     link: 'https://github.com/markodenic/web-development-resources',
@@ -565,7 +565,7 @@ const data = [
   },
   {
     name: 'PixCell',
-    category: 'website',
+    type: 'website',
     tags: ['pixel', 'art', 'editor'],
     foss: true,
     link: 'https://github.com/codse/pixcell',
@@ -575,7 +575,7 @@ const data = [
   },
   {
     name: 'PixelCraft',
-    category: 'website',
+    type: 'website',
     tags: ['pixel', 'art', 'pwa'],
     foss: true,
     link: 'https://github.com/rgab1508/PixelCraft',
@@ -586,7 +586,7 @@ const data = [
   },
   {
     name: 'Project Based Learning',
-    category: 'GitHub Repo',
+    type: 'GitHub Repo',
     tags: ['Code', 'Awesome'],
     foss: true,
     link: 'https://github.com/practical-tutorials/project-based-learning/',
@@ -597,7 +597,7 @@ const data = [
   },
   {
     name: 'Prompts',
-    category: 'website',
+    type: 'website',
     tags: ['Awesome', 'AI', 'Prompts'],
     foss: true,
     link: 'https://github.com/f/awesome-chatgpt-prompts/',
@@ -607,7 +607,7 @@ const data = [
   },
   {
     name: 'QuickRef ME',
-    category: 'website',
+    type: 'website',
     tags: ['Code', 'Cheatsheets'],
     foss: true,
     link: 'https://github.com/Fechin/reference',
@@ -618,7 +618,7 @@ const data = [
   },
   {
     name: 'README SO',
-    category: 'website',
+    type: 'website',
     tags: ['README', 'MarkDown', 'Editor'],
     foss: true,
     link: 'https://github.com/octokatherine/readme.so',
@@ -629,7 +629,7 @@ const data = [
   },
   {
     name: 'RenDroid',
-    category: 'app',
+    type: 'app',
     tags: ['CleanUI', 'Automation'],
     foss: true,
     link: 'https://github.com/MFM-347/RenDroid',
@@ -641,7 +641,7 @@ const data = [
   },
   {
     name: 'SEO Roast',
-    category: 'website',
+    type: 'website',
     tags: ['AI', 'SEO', 'Optimization'],
     foss: false,
     icon: 'https://seoroast.co/_static/favicons/favicon-32x32.png',
@@ -651,7 +651,7 @@ const data = [
   },
   {
     name: 'Simple Gallery',
-    category: 'app',
+    type: 'app',
     tags: ['Gallery', 'Photo Viewer', 'Photo Editor'],
     foss: true,
     link: 'https://github.com/SimpleMobileTools/Simple-Gallery',
@@ -662,7 +662,7 @@ const data = [
   },
   {
     name: 'StackSorted',
-    category: 'website',
+    type: 'website',
     tags: ['UI', 'Components', 'library'],
     foss: true,
     link: 'https://github.com/juxtopposed/stacksorted',
@@ -674,7 +674,7 @@ const data = [
   },
   {
     name: 'SVG Path Editor',
-    category: 'website',
+    type: 'website',
     tags: ['SVG', 'Vector', 'Graphics'],
     foss: true,
     link: 'https://yqnn.github.io/svg-path-editor',
@@ -685,7 +685,7 @@ const data = [
   },
   {
     name: 'SVG Repo',
-    category: 'website',
+    type: 'website',
     tags: ['SVG', 'Vector', 'library', 'Icons'],
     foss: false,
     description:
@@ -695,7 +695,7 @@ const data = [
   },
   {
     name: 'Tail Animista',
-    category: 'website',
+    type: 'website',
     tags: ['Tailwindcss', 'Animation', 'Generator'],
     foss: false,
     description: 'Configurable custom animation utilities generator for Tailwind CSS.',
@@ -704,7 +704,7 @@ const data = [
   },
   {
     name: 'Tailwindcss Generator',
-    category: 'website',
+    type: 'website',
     tags: ['Tailwind', 'Generator', 'Inspirable'],
     foss: false,
     icon: 'https://tailwind-generator.com/favicon.svg',
@@ -715,7 +715,7 @@ const data = [
   },
   {
     name: 'The Stocks v3',
-    category: 'website',
+    type: 'website',
     tags: ['Design', 'Awesome'],
     foss: false,
     icon: 'https://thestocks.im/favicon.png',
@@ -726,7 +726,7 @@ const data = [
   },
   {
     name: 'TLDraw',
-    category: 'website',
+    type: 'website',
     tags: ['Collaborative', 'Whiteboard'],
     foss: false,
     icon: 'https://www.tldraw.com/favicon.svg',
@@ -737,7 +737,7 @@ const data = [
   },
   {
     name: 'Toolbaz',
-    category: 'website',
+    type: 'website',
     tags: ['AI', 'Writer', 'ToolBox'],
     foss: false,
     icon: 'https://toolbaz.com/assets/img/favicon/favicon-32x32.png',
@@ -747,7 +747,7 @@ const data = [
   },
   {
     name: 'Toools Design',
-    category: 'website',
+    type: 'website',
     tags: ['Design', 'Tools', 'Awesome'],
     foss: false,
     icon: 'https://cdn.prod.website-files.com/5ce10a4c0b5f0b05f522e746/627a23b7ee96702839153720_toools-design-favicon.png',
@@ -758,7 +758,7 @@ const data = [
   },
   {
     name: 'UI Colors',
-    category: 'website',
+    type: 'website',
     tags: ['Tailwind', 'Colors', 'Generator'],
     foss: false,
     description: 'Generate, edit, save and share Tailwind CSS color shades based on a given hexcode or HSL color.',
@@ -767,7 +767,7 @@ const data = [
   },
   {
     name: 'UI Logos',
-    category: 'website',
+    type: 'website',
     tags: ['UI', 'Logo', 'Placeholders'],
     foss: true,
     link: 'https://github.com/realvjy/uilogos.co',
@@ -778,7 +778,7 @@ const data = [
   },
   {
     name: 'UI Verse',
-    category: 'website',
+    type: 'website',
     tags: ['UI', 'Components', 'library'],
     foss: false,
     icon: 'https://uiverse.io/favicon-32x32.png',
@@ -788,7 +788,7 @@ const data = [
   },
   {
     name: 'UnDraw',
-    category: 'website',
+    type: 'website',
     tags: ['illustrations', 'library'],
     foss: false,
     icon: 'https://undraw.co/apple-touch-icon.png',
@@ -799,7 +799,7 @@ const data = [
   },
   {
     name: 'v0',
-    category: 'website',
+    type: 'website',
     tags: ['AI', 'Code Generator'],
     foss: false,
     icon: 'https://raw.githubusercontent.com/lobehub/lobe-icons/refs/heads/master/packages/static-png/light/v0.png',
@@ -809,7 +809,7 @@ const data = [
   },
   {
     name: 'Vector Mixer',
-    category: 'website',
+    type: 'website',
     tags: ['SVG', 'Vector', 'Graphics'],
     foss: false,
     icon: 'https://vectormixer.com/favicon.ico',
@@ -820,7 +820,7 @@ const data = [
   },
   {
     name: 'VectorMotion',
-    category: 'App',
+    type: 'App',
     tags: ['Graphics', 'SVG', 'Editor'],
     foss: false,
     icon: 'https://play-lh.googleusercontent.com/XoOpeKUbe26a3x8Z8w1MlYYtaLKEKivtwk0iK-kEKLD18LLonP7NuuQBj9-WHFMVXA',
@@ -830,7 +830,7 @@ const data = [
   },
   {
     name: "Vijay Verma's Portfolio",
-    category: 'website',
+    type: 'website',
     tags: ['Portfolio', 'Modern', 'Inspirable'],
     foss: false,
     icon: 'https://vjy.me/favicon.ico',
@@ -840,7 +840,7 @@ const data = [
   },
   {
     name: 'Trigonometry Simulator',
-    category: 'website',
+    type: 'website',
     tags: ['Maths', 'Trigonometry', 'Simulator', 'Inspirable'],
     foss: true,
     link: 'https://github.com/KyleSmith0905/trigonometry',
@@ -852,7 +852,7 @@ const data = [
   },
   {
     name: 'SimpleNote',
-    category: 'website',
+    type: 'website',
     tags: ['Notes', 'keeper', 'inspirable'],
     foss: true,
     link: 'https://simplenote.com/developers/',
@@ -863,7 +863,7 @@ const data = [
   },
   {
     name: 'Spoo.ME',
-    category: 'website',
+    type: 'website',
     tags: ['URL', 'Shortener'],
     foss: true,
     link: 'https://github.com/spoo-me/url-shortener',
@@ -874,7 +874,7 @@ const data = [
   },
   {
     name: 'ToolFolio',
-    category: 'website',
+    type: 'website',
     tags: ['Awesome', 'of', 'Best', 'Tools'],
     foss: false,
     icon: 'https://framerusercontent.com/images/9ByHhUNaWqyS1a9DYzxwg89yFG4.jpg',
@@ -884,7 +884,7 @@ const data = [
   },
   {
     name: 'ToolFolio',
-    category: 'website',
+    type: 'website',
     tags: ['Awesome', 'of', 'Best', 'Tools'],
     foss: false,
     description: 'Beautiful AI generated stock photos for free and commercial use, made using Flux 1.1 Pro Ultra.',
@@ -893,7 +893,7 @@ const data = [
   },
   {
     name: 'Rollout AI',
-    category: 'website',
+    type: 'website',
     tags: ['AI', 'Website', 'App', 'Generator'],
     foss: false,
     description:
@@ -903,13 +903,91 @@ const data = [
   },
   {
     name: 'Real Favicon Generator',
-    category: 'website',
+    type: 'website',
     tags: ['Favicon', 'Generator'],
     foss: false,
     icon: 'https://realfavicongenerator.net/favicon.svg',
     description: 'A favicon generator to design your icons for each platform and make them look great everywhere.',
     url: 'https://realfavicongenerator.net/',
     id: 86,
+  },
+  {
+    name: 'SVG Viewer',
+    type: 'website',
+    tags: ['SVG', 'Editor', 'Viewer'],
+    foss: false,
+    icon: 'https://www.svgviewer.dev/images/logo.svg',
+    description: 'SVG Viewer is an online tool to view, edit and optimize SVG graphics.',
+    url: 'https://www.svgviewer.dev/',
+    id: 87,
+  },
+  {
+    name: 'Shots',
+    type: 'website',
+    tags: ['Mockups', 'Generator'],
+    foss: false,
+    icon: 'https://shots.so/image/favicon.png',
+    description:
+      'The ultimate screenshot and mockup tool for instantly creating stunning previews of your apps, websites, or products.',
+    url: 'https://shots.so/',
+    id: 88,
+  },
+  {
+    name: 'CSS HD Gradients',
+    type: 'website',
+    tags: ['CSS', 'HD', 'Gradients', 'Generator'],
+    foss: false,
+    icon: 'https://gradient.style/favicon.ico',
+    description:
+      'It is a gradient generator that supports wide-gamut, Color 4-compliant gradients using color spaces like Oklab, Oklch, etc',
+    url: 'https://gradient.style/',
+    id: 89,
+  },
+  {
+    name: 'OpenNote Compose',
+    type: 'app',
+    tags: ['MarkDown', 'Editor', 'Notes', 'App'],
+    foss: true,
+    link: 'https://github.com/YangDai2003/OpenNote-Compose/',
+    icon: 'https://raw.githubusercontent.com/YangDai2003/OpenNote-Compose/refs/heads/master/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp',
+    description:
+      'It is a modern Android markdown editor and note-taking application entirely built with Jetpack Compose.',
+    url: 'https://github.com/YangDai2003/OpenNote-Compose/releases/latest/',
+    id: 90,
+  },
+  {
+    name: 'EasyNotes',
+    type: 'app',
+    tags: ['MarkDown', 'Notes', 'Taking'],
+    foss: true,
+    link: 'https://github.com/Kin69/EasyNotes/',
+    icon: 'https://raw.githubusercontent.com/Kin69/EasyNotes/refs/heads/master/metadata/en-US/images/icon.png',
+    description:
+      'Jetpack Compose MVVM App for seamless note-taking. Effortless creation, editing, and organization of Notes.',
+    url: 'https://github.com/Kin69/EasyNotes/releases/latest/',
+    id: 91,
+  },
+  {
+    name: 'Gallery',
+    type: 'app',
+    tags: ['Gallery', 'Images'],
+    foss: true,
+    link: 'https://github.com/IacobIonut01/Gallery/',
+    icon: 'https://raw.githubusercontent.com/IacobIonut01/Gallery/refs/heads/main/fastlane/metadata/android/en-US/images/icon.png',
+    description: 'Media Gallery for managing your photos, videos, GIFs built with Jetpack Compose.',
+    url: 'https://github.com/IacobIonut01/Gallery/releases/latest/',
+    id: 92,
+  },
+  {
+    name: 'EasyDiary',
+    type: 'app',
+    tags: ['Powerful', 'Diary', 'App'],
+    foss: true,
+    link: 'https://github.com/hanjoongcho/aaf-easydiary/',
+    icon: 'https://raw.githubusercontent.com/hanjoongcho/aaf-easydiary/master/screenshots/ic_launcher.png',
+    description: 'A powerful diary application optimized for user experience.',
+    url: 'https://github.com/hanjoongcho/aaf-easydiary/releases/latest/',
+    id: 93,
   },
 ]
 

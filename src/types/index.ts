@@ -4,7 +4,7 @@ export interface Item {
   name: string
   foss: boolean
   link?: string
-  category: string
+  type: string
   tags: string[]
   description: string
   url: string
