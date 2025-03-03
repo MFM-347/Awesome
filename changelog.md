@@ -65,14 +65,12 @@
 **Changes:**
 
 1. Moved to Nuxt
-2. Updated search functionality, i.e, use x:Q where x =? ['id', 'name', 'type', 'tags', 'foss', 'url', 'link', 'description']. Search types:
+2. Updated search functionality, i.e, use x:Q where x =? ['id', 'name', 'type', 'tags', 'foss', 'oslink', 'description', 'url']. Search Shortcut types:
 ```js
-export interface SearchShortcuts {
   id: number
-  icon?: string
   name: string
   foss: boolean // isOpenSource
-  osLink?: string // source code link
+  osLink: string // source code link
   type: string
   tags: string[]
   description: string
