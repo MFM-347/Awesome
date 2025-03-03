@@ -1,6 +1,7 @@
-name: Question
-description: Ask a question related to this project.
-labels: question
+name: "Question"
+description: "Ask a question related to this project."
+labels: ["question", "support"]
+
 body:
   - type: markdown
     attributes:
@@ -9,16 +10,16 @@ body:
   - type: input
     id: title
     attributes:
-      label: Question title
-      description: A brief summary of your question.
-      placeholder: Question about {feature}
+      label: "Question title"
+      description: "A brief summary of your question."
+      placeholder: "Question about {feature}"
     validations:
       required: true
   - type: textarea
     id: details
     attributes:
-      label: Question details
-      description: A little Elaboration of your question.
-      placeholder: Provide additional detailed information.
+      label: "Question details"
+      description: "A detailed elaboration of your question."
+      placeholder: "Provide additional detailed information."
     validations:
       required: true

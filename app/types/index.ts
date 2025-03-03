@@ -3,9 +3,9 @@ export interface Item {
   icon?: string
   name: string
   foss: boolean
-  link?: string
+  osLink?: string // opensource link
   type: string
   tags: string[]
   description: string
-  url: string
+  url: string // main link
 }

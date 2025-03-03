@@ -3,10 +3,9 @@
   "semi": false,
   "singleQuote": true,
   "tabWidth": 2,
-  "printWidth": 120,
+  "printWidth": 100,
   "plugins": ["@nirtamir2/prettier-plugin-css-order", "prettier-plugin-tailwindcss"],
-  "tailwindStylesheet": "./src/style.css",
-  "tailwindConfig": "./tailwind.config.js",
+  "tailwindStylesheet": "./app/style.css",
   "tailwindPreserveWhitespace": true,
   "tailwindPreserveDuplicates": true
 }

@@ -1,18 +1,8 @@
 {
-  "editor.fontSize": 13,
-  "editor.fontFamily": "JetBrains Mono, Hack, Monaco, Consolas, 'Courier New', monospace",
-  "editor.fontWeight": 500,
-  "editor.trimAutoWhitespace": true,
-  "editor.lineNumbers": "on",
-  "editor.tabSize": 2,
   "editor.autoIndent": "full",
   "editor.detectIndentation": true,
-  "editor.wordWrapColumn": 120,
   "files.autoSave": "afterDelay",
   "files.autoSaveDelay": 1000,
-  "files.insertFinalNewline": true,
-  "files.encoding": "utf8",
-  "editor.insertSpaces": true,
   "explorer.fileNesting.enabled": true,
   "explorer.fileNesting.patterns": {
     "tsconfig.json": "tsconfig.*.json, env.d.ts",

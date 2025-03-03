@@ -19,21 +19,35 @@
       />
     </svg>
   </div>
-  <footer class="grid place-items-center bg-primary-600 px-4 py-8 text-base text-primary-50 md:px-8 md:text-lg">
+  <footer
+    class="grid place-items-center bg-primary-600 px-4 py-8 text-base text-primary-50 md:px-8 md:text-lg"
+  >
     <div>
       <p>Developed with ❤️ by <span class="font-bold">MFM-347</span></p>
       <div class="text-center font-semibold">
-        <a class="hover:underline" href="https://github.com/MFM-347/">Github</a>
+        <a
+          title="My Github profile"
+          aria-label="My Github profile"
+          class="hover:underline"
+          href="https://github.com/MFM-347/"
+          >Github</a
+        >
         <span class="mx-4">/</span>
-        <a class="hover:underline" href="mailto:madnifm347@outlook.com">Mail</a>
+        <a
+          title="My Email"
+          aria-label="My Email"
+          class="hover:underline"
+          href="https://xyzdev.vercel.app/"
+          >Portfolio</a
+        >
       </div>
     </div>
     <div class="mt-4">
       <nav class="flex flex-row">
-        <RouterLink class="lnk" to="/home">Home</RouterLink>
-        <RouterLink class="lnk" to="/search">Browse</RouterLink>
-        <RouterLink class="lnk" to="/submit">Submit</RouterLink>
-        <RouterLink class="lnk" to="/about">About</RouterLink>
+        <NuxtLink class="lnk" to="/">Home</NuxtLink>
+        <NuxtLink class="lnk" to="/search">Browse</NuxtLink>
+        <NuxtLink class="lnk" to="/submit">Submit</NuxtLink>
+        <NuxtLink class="lnk" to="/about">About</NuxtLink>
       </nav>
     </div>
     <div class="mt-8">
@@ -42,7 +56,7 @@
   </footer>
 </template>
 <style scoped>
-@reference "../style.css";
+@reference "@/style.css";
 
 .lnk {
   @apply border-x border-foreground px-4 py-2 ta-100 hover:font-semibold hover:underline;

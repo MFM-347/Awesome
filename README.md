@@ -2,7 +2,7 @@
 ![Github Repo Size](https://img.shields.io/github/repo-size/MFM-347/Awesome?style=for-the-badge) <!-- Just for having extra focus on app size -->
 ![Stars](https://img.shields.io/github/stars/MFM-347/Awesome?color=blue&style=for-the-badge)
 
-# Awesome347 v1
+# Awesome347 v2
 
 Awesome347 is your go-to platform for discovering handpicked tools, resources, and guides for developers and designers. From productivity boosters to stunning UI/UX design tools, find everything you need to elevate your work.
 

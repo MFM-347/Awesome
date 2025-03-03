@@ -1,14 +1,7 @@
 <script setup lang="ts">
-import { type Item } from '../types'
-import vBtn from './vBtn.vue'
+import { type Item } from '@/types'
 
 defineProps<{ item: Item }>()
-
-const openUrl = (url: string | undefined) => {
-  if (url) {
-    window.open(url, '_blank')
-  }
-}
 </script>
 
 <template>
@@ -16,27 +9,42 @@ const openUrl = (url: string | undefined) => {
     class="group relative flex flex-col rounded-xl bg-foreground/5 p-1 shadow-xs backdrop-blur-lg ta-200 hover:scale-[.98] hover:bg-foreground/15 hover:backdrop-blur-xl"
   >
     <div class="flex flex-col gap-y-1.5 p-6">
-      <RouterLink
+      <h2
         :to="`/i/${item?.id}`"
         class="text-2xl leading-none font-bold tracking-tight"
         :title="'ID: ' + item?.id"
       >
         {{ item?.name }}
-      </RouterLink>
+      </h2>
       <p class="text-base">{{ item?.type }}</p>
     </div>
     <div class="flex-grow p-4 pt-0">
       <div class="mb-4 flex flex-wrap gap-2">
-        <RouterLink
+        <NuxtLink
           class="cursor-pointer rounded-full bg-foreground/10 px-3 py-1 text-sm ta-200 hover:bg-foreground/15"
           v-for="tag in item?.tags"
           :key="tag"
           :to="`/search?q=${tag}`"
         >
           {{ tag }}
-        </RouterLink>
+        </NuxtLink>
       </div>
-      <vBtn @click="openUrl(`${item?.url}?ref=Awesome347`)"> Visit </vBtn>
+      <div class="flex flex-row gap-x-2">
+        <NuxtLink
+          :to="`/i/${item?.id}`"
+          :title="`Learn more about ${item?.name}`"
+          :aria-label="`Learn more about ${item?.name}`"
+        >
+          <vBtn> Learn more </vBtn>
+        </NuxtLink>
+        <a
+          :title="`Check out ${item?.name}`"
+          :aria-label="`Check out ${item?.name}`"
+          :href="`${item?.url}?ref=Awesome347&utm_source=Awesome347`"
+        >
+          <vBtn :sec="true"> Visit </vBtn>
+        </a>
+      </div>
     </div>
   </div>
 </template>

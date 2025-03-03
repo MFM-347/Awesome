@@ -57,3 +57,29 @@
 5. Changed `category` selector with `type`
 6. New OG-Image
 7. Changed URL to [a347.vercel.app](https://a347.vercel.app/)
+
+# 6. 3-3-25
+
+**Commit Name:** `Enhanced UI, Search and SEO and updated list`
+
+**Changes:**
+
+1. Moved to Nuxt
+2. Updated search functionality, i.e, use x:Q where x =? ['id', 'name', 'type', 'tags', 'foss', 'url', 'link', 'description']. Search types:
+```js
+export interface SearchShortcuts {
+  id: number
+  icon?: string
+  name: string
+  foss: boolean // isOpenSource
+  osLink?: string // source code link
+  type: string
+  tags: string[]
+  description: string
+  url: string // main link
+}
+```
+3. Enhanced SEO
+4. Updated list
+5. Fixed UI
+6. Optimized Performance

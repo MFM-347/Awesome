@@ -1,6 +1,7 @@
-name: Bug Report
-description: Report a bug or an issue with this project.
-labels: bug
+name: "Bug Report"
+description: "Report a bug or an issue with this project."
+labels: ["bug", "support"]
+
 body:
   - type: markdown
     attributes:
@@ -9,26 +10,26 @@ body:
   - type: input
     id: title
     attributes:
-      label: Short description
-      description: A simple title for the issue.
-      placeholder: Bug - Something is not working
+      label: "Short description"
+      description: "A simple title for the issue."
+      placeholder: "Bug - Something is not working"
     validations:
       required: true
   - type: textarea
     id: description
     attributes:
-      label: Description
-      description: Provide a detailed description of the bug, you found.
-      placeholder: Steps to recreate or reproduce expected behavior, actual behavior.
+      label: "Description"
+      description: "Provide a detailed description of the bug you found."
+      placeholder: "Steps to recreate or reproduce, expected behavior, actual behavior."
     validations:
       required: true
   - type: dropdown
     id: severity
     attributes:
-      label: Severity
-      description: How severe is the issue?
+      label: "Severity"
+      description: "How severe is the issue?"
       options:
-        - Low
-        - Medium
-        - High
-        - Critical
+        - "Low"
+        - "Medium"
+        - "High"
+        - "Critical"

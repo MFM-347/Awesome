@@ -1,7 +1,7 @@
 import { defineStore } from 'pinia'
-import data from '../data'
+import data from '@/data'
 import Fuse from 'fuse.js'
-import { type Item } from '../types'
+import { type Item } from '@/types'
 
 export const useAwesomeStore = defineStore('awesome', {
   state: () => ({
@@ -10,7 +10,7 @@ export const useAwesomeStore = defineStore('awesome', {
   }),
   actions: {
     search(query: string) {
-      const fields = ['name', 'type', 'tags', 'url', 'link', 'description']
+      const fields = ['id', 'name', 'type', 'tags', 'foss', 'url', 'oslink', 'description']
       const filters: Record<string, string[]> = {}
       const terms: string[] = []
       query.split(/\s+/).forEach((part) => {
@@ -36,7 +36,12 @@ export const useAwesomeStore = defineStore('awesome', {
         })
       })
       if (terms.length) {
-        const fuse = new Fuse(items, { keys: fields, includeMatches: true, minMatchCharLength: 3, threshold: 0.4 })
+        const fuse = new Fuse(items, {
+          keys: fields,
+          includeMatches: true,
+          minMatchCharLength: 3,
+          threshold: 0.4,
+        })
         this.results = fuse.search(terms.join(' ')).map((res) => res.item)
       } else {
         this.results = items
