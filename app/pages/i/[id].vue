@@ -124,7 +124,8 @@ useHead({
             <a
               :title="`Check out ${item.name}`"
               :aria-label="`Check out ${item.name}`"
-              :href="`${item?.url}?ref=Awesome347&utm_source=Awesome347`"
+              rel="nofollow noopener"
+              :href="`${item?.url}?ref=a347.vercel.app&utm_source=a347.vercel.app`"
             >
               <GlobeAltIcon
                 class="size-8 fill-foreground ta-150 hover:fill-primary-500 dark:hover:fill-primary-400"
@@ -133,6 +134,7 @@ useHead({
             <a
               :title="`Source Code of ${item.name}`"
               :aria-label="`Source Code of ${item.name}`"
+              rel="nofollow noopener"
               v-if="item?.foss"
               :href="item?.osLink"
             >

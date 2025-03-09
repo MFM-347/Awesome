@@ -17,18 +17,30 @@ import {
           loading="lazy"
           height="48"
           width="48"
-          class="ta-200 hover:scale-110"
+          class="ta-150 hover:scale-110"
           alt="Awesome347"
         />
       </NuxtLink>
       <div class="invisible h-px w-full bg-foreground/10 md:visible"></div>
-      <NuxtLink to="/search" aria-label="Search" class="group rounded-lg p-2 ta-75 hover:bg-foreground/10">
+      <NuxtLink
+        to="/search"
+        aria-label="Search"
+        class="group rounded-lg p-2 ta-100 hover:bg-foreground/10"
+      >
         <MagnifyingGlassIcon class="size-6 stroke-primary-50" />
       </NuxtLink>
-      <NuxtLink to="/submit" aria-label="Submit" class="group rounded-lg p-2 ta-75 hover:bg-foreground/10">
+      <NuxtLink
+        to="/submit"
+        aria-label="Submit"
+        class="group rounded-lg p-2 ta-100 hover:bg-foreground/10"
+      >
         <DocumentCheckIcon class="size-6 stroke-primary-50" />
       </NuxtLink>
-      <NuxtLink to="/about" aria-label="About" class="group rounded-lg p-2 ta-75 hover:bg-foreground/10">
+      <NuxtLink
+        to="/about"
+        aria-label="About"
+        class="group rounded-lg p-2 ta-100 hover:bg-foreground/10"
+      >
         <InformationCircleIcon class="size-6 stroke-primary-50" />
       </NuxtLink>
     </div>

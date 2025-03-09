@@ -1,6 +1,6 @@
-name: "Project Submission"
-description: "Submit your project for review"
-labels: ["submission", "review"]
+name: 'Project Submission'
+description: 'Submit your project for review'
+labels: ['submission', 'review']
 
 body:
   - type: markdown
@@ -11,35 +11,35 @@ body:
   - type: checkboxes
     id: conditions
     attributes:
-      label: "Project Conditions"
+      label: 'Project Conditions'
       options:
-        - label: "Ensure your project is free to use and accessible for everyone."
+        - label: 'Ensure your project is free to use and accessible for everyone.'
         - label: "If it's open-source, make sure it's hosted on a platform that encourages contributions (e.g., GitHub)."
-        - label: "Your project should not promote piracy or violate copyright laws."
-        - label: "Make sure your project is respectful and inclusive for users of all ages."
-        - label: "Your project must be actively maintained or in a stable state."
-  
+        - label: 'Your project should not promote piracy or violate copyright laws.'
+        - label: 'Make sure your project is respectful and inclusive for users of all ages.'
+        - label: 'Your project must be actively maintained or in a stable state.'
+
   - type: input
     id: website_url
     attributes:
-      label: "Website URL"
+      label: 'Website URL'
       description: "Enter the URL of your project's website."
-      placeholder: "https://yourproject.com"
-  
+      placeholder: 'https://yourproject.com'
+
   - type: input
     id: github_link
     attributes:
-      label: "GitHub Repository"
-      description: "Enter the link to the GitHub repository."
-      placeholder: "https://github.com/yourproject"
-  
+      label: 'GitHub Repository'
+      description: 'Enter the link to the GitHub repository.'
+      placeholder: 'https://github.com/yourproject'
+
   - type: input
     id: logo_icon
     attributes:
-      label: "Logo/Icon Link"
+      label: 'Logo/Icon Link'
       description: "Provide a link to your project's logo or icon."
-      placeholder: "https://yourproject.com/logo.png"
-  
+      placeholder: 'https://yourproject.com/logo.png'
+
   - type: markdown
     attributes:
       value: |

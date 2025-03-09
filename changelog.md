@@ -66,7 +66,8 @@
 
 1. Moved to Nuxt
 2. Updated search functionality, i.e, use x:Q where x =? ['id', 'name', 'type', 'tags', 'foss', 'oslink', 'description', 'url']. Search Shortcut types:
-```js
+
+```ts
   id: number
   name: string
   foss: boolean // isOpenSource
@@ -75,8 +76,8 @@
   tags: string[]
   description: string
   url: string // main link
-}
 ```
+
 3. Enhanced SEO
 4. Updated list
 5. Fixed UI

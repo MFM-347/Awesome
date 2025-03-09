@@ -45,7 +45,7 @@ useHead({
   script: [
     {
       type: 'application/ld+json',
-      children: JSON.stringify({
+      value: JSON.stringify({
         '@context': 'https://schema.org',
         '@type': 'WebSite',
         inLanguage: 'en',
@@ -53,7 +53,6 @@ useHead({
         description: meta.description,
         url: meta.url,
         logo: meta.logo,
-        dateModified: new Date(meta.date).toISOString,
         publisher: {
           '@type': 'Person',
           name: 'Farhan Madni',
@@ -89,7 +88,7 @@ onMounted(() => {
         <div
           class="h-16 w-16 animate-spin rounded-full border-4 border-primary-400 border-t-transparent shadow-lg"
         ></div>
-        <p class="animate-pulse text-primary-600">Loading...</p>
+        <p class="animate-pulse text-primary-600">Loading Awesome Things...</p>
       </div>
     </div>
     <NuxtLayout>

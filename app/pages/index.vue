@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { storeToRefs } from "pinia";
-import { meta } from "@/data";
-import { ref, onMounted } from "vue";
+import { storeToRefs } from 'pinia'
+import { meta } from '@/data'
+import { ref, onMounted } from 'vue'
 
 useSeoMeta({
   title: meta.title,
@@ -11,45 +11,21 @@ useSeoMeta({
   ogUrl: meta.url,
   twitterTitle: meta.title,
   twitterDescription: meta.description,
-});
+})
 useHead({
   titleTemplate: null,
-  link: [{ rel: "canonical", href: meta.url }],
-  script: [
-    {
-      type: "application/ld+json",
-      children: JSON.stringify({
-        type: "WebPage",
-        title: meta.title,
-        description: meta.description,
-        url: meta.url,
-        image: `${meta.url}${meta.image}`,
-        publisher: {
-          "@type": "Person",
-          name: "Farhan Madni",
-          url: "https://xyzdev.vercel.app/",
-        },
-        sameAs: [
-          "https://github.com/mfm-347",
-          "https://dev.to/mfm-347",
-          "https://codepen.io/mfm-347/",
-          "https://twitter.com/@mfm347",
-          "https://xyzdev.vercel.app/",
-        ],
-      }),
-    },
-  ],
-});
+  link: [{ rel: 'canonical', href: meta.url }],
+})
 
-const store = ref<any>(null);
-const items = ref([]);
+const store = ref<any>(null)
+const items = ref([])
 
 onMounted(async () => {
-  const { useAwesomeStore } = await import("../stores");
-  store.value = useAwesomeStore();
-  const { items: storeItems } = storeToRefs(store.value);
-  items.value = storeItems.value;
-});
+  const { useAwesomeStore } = await import('../stores')
+  store.value = useAwesomeStore()
+  const { items: storeItems } = storeToRefs(store.value)
+  items.value = storeItems.value
+})
 </script>
 
 <template>
@@ -76,7 +52,7 @@ onMounted(async () => {
         <vCard v-for="item in items" :key="item.id" :item="item" />
         <div
           :key="'submit'"
-          class="group relative flex scale-[.99] flex-col items-center justify-center gap-y-2 rounded-xl border border-foreground/10 bg-foreground/5 py-8 shadow-sm backdrop-blur-xl ta-300 hover:scale-[1.01] hover:bg-foreground/10"
+          class="group relative flex scale-[.99] flex-col items-center justify-center gap-y-2 rounded-xl border border-foreground/10 bg-foreground/5 py-8 shadow-sm backdrop-blur-xl ta-175 hover:scale-[1.01] hover:bg-foreground/10"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

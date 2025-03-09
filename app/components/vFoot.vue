@@ -59,6 +59,6 @@
 @reference "@/style.css";
 
 .lnk {
-  @apply border-x border-foreground px-4 py-2 ta-100 hover:font-semibold hover:underline;
+  @apply border-x border-foreground px-4 py-2 ta-125 hover:font-semibold hover:underline;
 }
 </style>

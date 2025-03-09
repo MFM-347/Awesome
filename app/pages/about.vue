@@ -18,30 +18,7 @@ useHead({
   script: [
     {
       type: 'application/ld+json',
-      children: JSON.stringify({
-        type: 'WebPage',
-        title: 'About - Awesome347',
-        description:
-          'Learn about Awesome347 and the technologies behind this curated list of tools and resources.',
-        url: `${meta.url}/about`,
-        image: `${meta.url}${meta.image}`,
-        publisher: {
-          '@type': 'Person',
-          name: 'Farhan Madni',
-          url: 'https://xyzdev.vercel.app/',
-        },
-        sameAs: [
-          'https://github.com/mfm-347',
-          'https://dev.to/mfm-347',
-          'https://codepen.io/mfm-347/',
-          'https://twitter.com/@mfm347',
-          'https://xyzdev.vercel.app/',
-        ],
-      }),
-    },
-    {
-      type: 'application/ld+json',
-      children: JSON.stringify({
+      value: JSON.stringify({
         '@context': 'https://schema.org',
         '@type': 'BreadcrumbList',
         itemListElement: [
@@ -91,6 +68,7 @@ useHead({
         <ul class="list-inside list-disc text-gray-800 dark:text-gray-200">
           <li v-for="tech in meta.techs" :key="tech.id">
             <a
+              rel="noopener nofollow"
               class="underline hover:no-underline"
               :title="tech.name"
               :aria-label="tech.name"

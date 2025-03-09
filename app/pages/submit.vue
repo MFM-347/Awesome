@@ -15,29 +15,7 @@ useHead({
   script: [
     {
       type: 'application/ld+json',
-      children: JSON.stringify({
-        type: 'WebPage',
-        title: 'Submit - Awesome347',
-        description: 'Guidelines and rules for submiting your site or project to Awesome347',
-        url: `${meta.url}/submit`,
-        image: `${meta.url}${meta.image}`,
-        publisher: {
-          '@type': 'Person',
-          name: 'Farhan Madni',
-          url: 'https://xyzdev.vercel.app/',
-        },
-        sameAs: [
-          'https://github.com/mfm-347',
-          'https://dev.to/mfm-347',
-          'https://codepen.io/mfm-347/',
-          'https://twitter.com/@mfm347',
-          'https://xyzdev.vercel.app/',
-        ],
-      }),
-    },
-    {
-      type: 'application/ld+json',
-      children: JSON.stringify({
+      value: JSON.stringify({
         '@context': 'https://schema.org',
         '@type': 'BreadcrumbList',
         itemListElement: [
@@ -90,6 +68,7 @@ useHead({
       </ul>
       <div class="flex gap-4">
         <a
+          rel="noopener nofollow"
           title="Submit your project"
           aria-label="Submit your project"
           href="https://spoo.me/a347?ref=Awesome347&utm_source=Awesome347"

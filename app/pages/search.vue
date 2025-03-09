@@ -42,29 +42,7 @@ useHead({
   script: [
     {
       type: 'application/ld+json',
-      children: JSON.stringify({
-        type: 'WebPage',
-        title: 'Search - Awesome347',
-        description: `Searching ${q.value} from curated collection of Awesome347`,
-        url: `${meta.url}/search`,
-        image: `${meta.url}${meta.image}`,
-        publisher: {
-          '@type': 'Person',
-          name: 'Farhan Madni',
-          url: 'https://xyzdev.vercel.app/',
-        },
-        sameAs: [
-          'https://github.com/mfm-347',
-          'https://dev.to/mfm-347',
-          'https://codepen.io/mfm-347/',
-          'https://twitter.com/@mfm347',
-          'https://xyzdev.vercel.app/',
-        ],
-      }),
-    },
-    {
-      type: 'application/ld+json',
-      children: JSON.stringify({
+      value: JSON.stringify({
         '@context': 'https://schema.org',
         '@type': 'BreadcrumbList',
         itemListElement: [

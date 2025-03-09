@@ -131,7 +131,8 @@ const data = [
     name: 'Build your own X',
     type: 'GitHub Repo',
     tags: ['Code', 'Tutorials'],
-    foss: false,
+    foss: true,
+    osLink: 'https://github.com/codecrafters-io/build-your-own-x/',
     description: 'Master programming by recreating your favorite technologies from scratch.',
     url: 'https://github.com/codecrafters-io/build-your-own-x/',
     id: 13,
@@ -1077,7 +1078,7 @@ export const meta = {
   logo: '/logo-light.svg',
   image: '/og-image.webp',
   alt: 'Awesome347 Logo',
-  date: '3/2/25',
+  date: '3/9/25',
   techs: [
     {
       id: 1,

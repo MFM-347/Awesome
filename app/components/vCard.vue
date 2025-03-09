@@ -6,7 +6,7 @@ defineProps<{ item: Item }>()
 
 <template>
   <div
-    class="group relative flex flex-col rounded-xl bg-foreground/5 p-1 shadow-xs backdrop-blur-lg ta-200 hover:scale-[.98] hover:bg-foreground/15 hover:backdrop-blur-xl"
+    class="group relative flex flex-col rounded-xl bg-foreground/5 p-1 shadow-xs backdrop-blur-lg ta-150 hover:scale-[.98] hover:bg-foreground/15 hover:backdrop-blur-xl"
   >
     <div class="flex flex-col gap-y-1.5 p-6">
       <h2
@@ -21,7 +21,7 @@ defineProps<{ item: Item }>()
     <div class="flex-grow p-4 pt-0">
       <div class="mb-4 flex flex-wrap gap-2">
         <NuxtLink
-          class="cursor-pointer rounded-full bg-foreground/10 px-3 py-1 text-sm ta-200 hover:bg-foreground/15"
+          class="cursor-pointer rounded-full bg-foreground/10 px-3 py-1 text-sm ta-150 hover:bg-foreground/15"
           v-for="tag in item?.tags"
           :key="tag"
           :to="`/search?q=${tag}`"
@@ -40,7 +40,8 @@ defineProps<{ item: Item }>()
         <a
           :title="`Check out ${item?.name}`"
           :aria-label="`Check out ${item?.name}`"
-          :href="`${item?.url}?ref=Awesome347&utm_source=Awesome347`"
+          rel="nofollow noopener"
+          :href="`${item?.url}?ref=a347.vercel.app&utm_source=a347.vercel.app`"
         >
           <vBtn :sec="true"> Visit </vBtn>
         </a>
