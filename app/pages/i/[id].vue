@@ -10,25 +10,27 @@ const store = useAwesomeStore()
 const { items } = storeToRefs(store)
 const route = useRoute()
 const router = useRouter()
-
 const item = computed(() => {
   const id = Number(route.params.id)
   return items.value.find((item) => item.id === id)
 })
-
 onMounted(() => {
   if (!item.value) {
     router.push('/404')
   }
 })
-
 useSeoMeta({
-  title: item.value?.name,
+  title: `${item.value?.name} | ${item.value?.id}`,
   description: `Learn about ${item.value?.name} at Awesome347, a curated collection of items.`,
-  ogTitle: `${item.value?.name} - Awesome347`,
+  ogTitle: `${item.value?.name} | ${item.value?.id} - Awesome347`,
   ogDescription: `Learn about ${item.value?.name} at Awesome347, a curated collection of items.`,
   ogUrl: `${meta.url}/submit`,
-  twitterTitle: `${item.value?.name} - Awesome347`,
+  ogImage: item.value?.icon,
+  ogImageAlt: `${item.value?.name} Logo`,
+  twitterImage: item.value?.icon,
+  twitterCard: 'summary',
+  twitterImageAlt: `${item.value?.name} Logo`,
+  twitterTitle: `${item.value?.name} | ${item.value?.id} - Awesome347`,
   twitterDescription: `Learn about ${item.value?.name} at Awesome347, a curated collection of items.`,
 })
 useHead({
@@ -36,9 +38,9 @@ useHead({
   script: [
     {
       type: 'application/ld+json',
-      children: JSON.stringify({
+      value: JSON.stringify({
         type: 'WebPage',
-        title: `${item.value?.name} - Awesome347`,
+        title: `${item.value?.name} | ${item.value?.id} - Awesome347`,
         description: `Learn about ${item.value?.name} at Awesome347, a curated collection of items.`,
         url: `${meta.url}/i/${item.value?.id}`,
         image: `${meta.url}${meta.image}`,
@@ -58,7 +60,7 @@ useHead({
     },
     {
       type: 'application/ld+json',
-      children: JSON.stringify({
+      value: JSON.stringify({
         '@context': 'https://schema.org',
         '@type': 'BreadcrumbList',
         itemListElement: [
@@ -89,7 +91,7 @@ useHead({
     </div>
     <div class="flex justify-center p-6">
       <div
-        class="w-full max-w-md overflow-hidden rounded-xl border bg-foreground/5 text-foreground shadow-lg max-sm:w-[100%]"
+        class="w-full max-w-md overflow-hidden rounded-xl border bg-foreground/5 text-foreground shadow-lg ta-150 hover:border-foreground/25 hover:bg-foreground/7.5 max-sm:w-[100%]"
       >
         <div class="space-y-4 p-6">
           <div class="flex items-center space-x-4">
@@ -101,7 +103,6 @@ useHead({
                 :alt="`${item.name} Icon`"
                 class="size-full rounded-md"
               />
-              <img v-else src="/ph.svg" alt="Placeholder Icon" class="h-full w-full rounded-md" />
             </div>
             <h3 class="text-4xl font-bold">{{ item.name }}</h3>
           </div>

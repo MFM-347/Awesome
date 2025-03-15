@@ -6,9 +6,9 @@ defineProps<{ item: Item }>()
 
 <template>
   <div
-    class="group relative flex flex-col rounded-xl bg-foreground/5 p-1 shadow-xs backdrop-blur-lg ta-150 hover:scale-[.98] hover:bg-foreground/15 hover:backdrop-blur-xl"
+    class="group relative flex flex-col rounded-xl bg-foreground/5 p-1 shadow-xs backdrop-blur-lg ta-150 hover:scale-[.98] hover:border-1 hover:border-foreground/25 hover:bg-foreground/10 hover:backdrop-blur-xl"
   >
-    <div class="flex flex-col gap-y-1.5 p-6">
+    <div class="flex flex-col gap-y-2 p-6">
       <h2
         :to="`/i/${item?.id}`"
         class="text-2xl leading-none font-bold tracking-tight"
@@ -30,20 +30,15 @@ defineProps<{ item: Item }>()
         </NuxtLink>
       </div>
       <div class="flex flex-row gap-x-2">
-        <NuxtLink
-          :to="`/i/${item?.id}`"
-          :title="`Learn more about ${item?.name}`"
-          :aria-label="`Learn more about ${item?.name}`"
-        >
-          <vBtn> Learn more </vBtn>
+        <NuxtLink role="link" rel="nofollow noopener" :to="`/i/${item?.id}`">
+          <vBtn :ariaLabel="`Learn more about ${item?.name}`"> Learn more </vBtn>
         </NuxtLink>
         <a
-          :title="`Check out ${item?.name}`"
-          :aria-label="`Check out ${item?.name}`"
+          role="link"
           rel="nofollow noopener"
           :href="`${item?.url}?ref=a347.vercel.app&utm_source=a347.vercel.app`"
         >
-          <vBtn :sec="true"> Visit </vBtn>
+          <vBtn :ariaLabel="`Check out ${item?.name}`" sec> Visit </vBtn>
         </a>
       </div>
     </div>

@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /404
 
 Sitemap: https://a347.vercel.app/sitemap.xml

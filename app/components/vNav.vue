@@ -25,21 +25,21 @@ import {
       <NuxtLink
         to="/search"
         aria-label="Search"
-        class="group rounded-lg p-2 ta-100 hover:bg-foreground/10"
+        class="rounded-lg p-2 ta-100 hover:bg-foreground/10 focus:bg-foreground/5"
       >
         <MagnifyingGlassIcon class="size-6 stroke-primary-50" />
       </NuxtLink>
       <NuxtLink
         to="/submit"
         aria-label="Submit"
-        class="group rounded-lg p-2 ta-100 hover:bg-foreground/10"
+        class="rounded-lg p-2 ta-100 hover:bg-foreground/10 focus:bg-foreground/5"
       >
         <DocumentCheckIcon class="size-6 stroke-primary-50" />
       </NuxtLink>
       <NuxtLink
         to="/about"
         aria-label="About"
-        class="group rounded-lg p-2 ta-100 hover:bg-foreground/10"
+        class="rounded-lg p-2 ta-100 hover:bg-foreground/10 focus:bg-foreground/5"
       >
         <InformationCircleIcon class="size-6 stroke-primary-50" />
       </NuxtLink>

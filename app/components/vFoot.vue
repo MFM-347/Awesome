@@ -44,10 +44,10 @@
     </div>
     <div class="mt-4">
       <nav class="flex flex-row">
-        <NuxtLink class="lnk" to="/">Home</NuxtLink>
-        <NuxtLink class="lnk" to="/search">Browse</NuxtLink>
-        <NuxtLink class="lnk" to="/submit">Submit</NuxtLink>
-        <NuxtLink class="lnk" to="/about">About</NuxtLink>
+        <a class="lnk" target="_self" href="/">Home</a>
+        <a class="lnk" target="_self" href="/search">Browse</a>
+        <a class="lnk" target="_self" href="/submit">Submit</a>
+        <a class="lnk" target="_self" href="/about">About</a>
       </nav>
     </div>
     <div class="mt-8">

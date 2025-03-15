@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
 import { Analytics } from '@vercel/analytics/vue'
-import { meta } from '@/data'
 
+const isProd = process.env.NODE_ENV === 'production'
 useSeoMeta({
   charset: 'utf-8',
   viewport: 'width=device-width, initial-scale=1',
@@ -10,11 +10,9 @@ useSeoMeta({
   robots: 'index,follow,max-image-preview:large',
   ogLocale: 'en_US',
   ogType: 'website',
-  ogImage: `${meta.url}${meta.image}`,
-  ogImageAlt: meta.alt,
-  twitterImage: `${meta.url}${meta.image}`,
-  twitterImageAlt: meta.alt,
+  ogImage: '/og-image.webp',
   twitterCard: 'summary_large_image',
+  twitterImage: '/og-image.webp',
   twitterCreator: '@mfm347',
   mobileWebAppCapable: 'yes',
   appleMobileWebAppCapable: 'yes',
@@ -28,46 +26,7 @@ useHead({
   htmlAttrs: {
     lang: 'en',
   },
-  link: [
-    { rel: 'icon', type: 'image/svg+xml', href: '/logo-light.svg' },
-    { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous' },
-    { rel: 'preconnect', href: 'https://fonts.googleapis.com', crossorigin: 'anonymous' },
-    {
-      rel: 'preload',
-      as: 'style',
-      href: 'https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap',
-    },
-    {
-      rel: 'stylesheet',
-      href: 'https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap',
-    },
-  ],
-  script: [
-    {
-      type: 'application/ld+json',
-      value: JSON.stringify({
-        '@context': 'https://schema.org',
-        '@type': 'WebSite',
-        inLanguage: 'en',
-        name: 'Awesome347',
-        description: meta.description,
-        url: meta.url,
-        logo: meta.logo,
-        publisher: {
-          '@type': 'Person',
-          name: 'Farhan Madni',
-          url: 'https://xyzdev.vercel.app/',
-        },
-        sameAs: [
-          'https://github.com/mfm-347',
-          'https://dev.to/mfm-347',
-          'https://codepen.io/mfm-347/',
-          'https://twitter.com/@mfm347',
-          'https://xyzdev.vercel.app/',
-        ],
-      }),
-    },
-  ],
+  link: [{ rel: 'icon', type: 'image/svg+xml', href: '/logo-light.svg' }],
 })
 
 const isLoading = ref(true)
@@ -103,7 +62,7 @@ onMounted(() => {
         </transition>
       </NuxtPage>
     </NuxtLayout>
-    <Analytics />
+    <Analytics v-if="isProd" />
   </div>
 </template>
 

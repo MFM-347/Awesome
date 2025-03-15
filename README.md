@@ -1,5 +1,4 @@
 ![GitHub code size](https://img.shields.io/github/languages/code-size/MFM-347/Awesome?style=for-the-badge) <!-- Just for having extra focus on app size -->
-![Github Repo Size](https://img.shields.io/github/repo-size/MFM-347/Awesome?style=for-the-badge) <!-- Just for having extra focus on app size -->
 ![Stars](https://img.shields.io/github/stars/MFM-347/Awesome?color=blue&style=for-the-badge)
 
 # Awesome347 v2

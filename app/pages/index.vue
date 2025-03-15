@@ -9,6 +9,8 @@ useSeoMeta({
   ogTitle: meta.title,
   ogDescription: meta.description,
   ogUrl: meta.url,
+  ogImageAlt: meta.alt,
+  twitterImageAlt: meta.alt,
   twitterTitle: meta.title,
   twitterDescription: meta.description,
 })
@@ -66,9 +68,7 @@ onMounted(async () => {
               d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
             />
           </svg>
-          <RouterLink to="/submit" class="font-bold hover:underline">
-            Submit your Project
-          </RouterLink>
+          <a to="/submit" target="_self" class="font-bold hover:underline"> Submit your Project </a>
         </div>
       </TransitionGroup>
     </div>

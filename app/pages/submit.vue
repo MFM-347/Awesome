@@ -70,10 +70,9 @@ useHead({
         <a
           rel="noopener nofollow"
           title="Submit your project"
-          aria-label="Submit your project"
           href="https://spoo.me/a347?ref=Awesome347&utm_source=Awesome347"
         >
-          <vBtn>Submit</vBtn>
+          <vBtn aria-label="Submit your project">Submit</vBtn>
         </a>
       </div>
     </div>

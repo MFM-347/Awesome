@@ -82,3 +82,15 @@
 4. Updated list
 5. Fixed UI
 6. Optimized Performance
+
+# 7. 15-3-25
+
+**Commit Names:** [`fixed search , smoothened transitions and uodated dependencies`, `update:colors, typography, list, ui`]
+
+1. Fixed Search Functionality
+2. Smoothened transitions
+3. Fixed SEO
+4. Updated list
+5. Added prerendering for all routes
+6. Change typographic scheme from `Fira Sans` to `Exo 2`
+7. Updated Colors

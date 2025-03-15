@@ -1054,6 +1054,100 @@ const data = [
     url: 'https://github.com/ripienaar/free-for-dev/',
     id: 97,
   },
+  {
+    name: 'FluxLura',
+    type: 'website',
+    tags: ['Free', 'File', 'Converter'],
+    foss: true,
+    osLink: 'https://github.com/AayushBharti/Flux-Lura/',
+    icon: 'https://fluxlura.vercel.app/favicon.ico',
+    description:
+      'Convert your files instantly, for free without any limits. Transform your images, audio, and videos effortlessly with it!',
+    url: 'https://fluxlura.vercel.app/',
+    id: 98,
+  },
+  {
+    name: 'PKG Stats',
+    type: 'website',
+    tags: ['npm', 'stats', 'checker'],
+    foss: true,
+    osLink: 'https://github.com/pkgstats/pkgstats.com/',
+    icon: 'https://www.pkgstats.com/favicon.ico',
+    description:
+      'Quickly browse and discover the best packages on npm for your next project or application.',
+    url: 'https://pkgstats.com/',
+    id: 99,
+  },
+  {
+    name: 'PomoTroid',
+    type: 'website',
+    tags: ['configurable', 'Pomodoro', 'timer'],
+    foss: true,
+    osLink: 'https://github.com/Splode/pomotroid/',
+    icon: 'https://splode.github.io/pomotroid/favicon.ico',
+    description:
+      'Pomotroid is a simple and configurable Pomodoro timer. It aims to provide a reliable way to track productivity.',
+    url: 'https://splode.github.io/pomotroid/',
+    id: 100,
+  },
+  {
+    name: 'Free For Geeks',
+    type: 'website',
+    tags: ['free', 'programming', 'resources'],
+    foss: true,
+    osLink: 'https://github.com/JuanPabloDiaz/freeForGeeks/',
+    icon: 'https://freeforgeeks.jpdiaz.dev/favicon.ico',
+    description:
+      'A collection of free resources and tools for developers. It includes everything from Frontend and Backend to DevSecOps and more.',
+    url: 'http://freeforgeeks.jpdiaz.dev/',
+    id: 101,
+  },
+  {
+    name: 'NPM Charts',
+    type: 'website',
+    tags: ['npm', 'downloads', 'visualizer'],
+    foss: true,
+    osLink: 'https://github.com/atinux/npm-chart/',
+    description:
+      'Visualize npm downloads in a beautiful chart, ready to be shared with your community.',
+    url: 'https://npm.chart.dev/',
+    id: 102,
+  },
+  {
+    name: 'Awesome ChatGPT',
+    type: 'GitHub Repo',
+    tags: ['AI', 'Awesome', 'ChatGPT'],
+    foss: true,
+    osLink: 'https://github.com/sindresorhus/awesome-chatgpt/',
+    description:
+      '🤖 Awesome list for ChatGPT — an artificial intelligence chatbot developed by OpenAI.',
+    url: 'https://github.com/sindresorhus/awesome-chatgpt/',
+    id: 103,
+  },
+  {
+    name: 'Cobalt',
+    type: 'Website',
+    tags: ['Media', 'File', 'Downloader'],
+    foss: true,
+    osLink: 'https://github.com/imputnet/cobalt',
+    icon: 'https://cobalt.tools/favicon.png',
+    description:
+      'Cobalt lets you save what you love without ads, tracking, paywalls or other nonsense. just paste the link and enjoy!',
+    url: 'https://cobalt.tools/',
+    id: 104,
+  },
+  {
+    name: 'FlatNotes',
+    type: 'Website',
+    tags: ['Notes', 'Taking', 'Inspirable'],
+    foss: true,
+    osLink: 'https://github.com/dullage/flatnotes',
+    icon: 'https://demo.flatnotes.io/assets/apple-touch-icon-CoW-5gd0.png',
+    description:
+      'A self-hosted, database-less note taking web app that utilises a flat folder of markdown files for storage.',
+    url: 'https://demo.flatnotes.io/',
+    id: 105,
+  },
 ]
 function ops() {
   // console.log(JSON.stringify(data))
@@ -1062,10 +1156,12 @@ function ops() {
   if (data.length !== data.at(-1).id) {
     console.error('Error: Mistake in item IDs')
   }
-  let x
-  for (x in data) {
+  for (const x of data) {
+    if (!x.icon) {
+      x.icon = '/ph.svg'
+    }
     if (x.foss && !x.osLink) {
-      console.error('Error: no opensource link for opensource item with id:' + x.id)
+      console.error(`Error: no opensource link for opensource item with id: ${x.id}`)
     }
   }
 }

@@ -4,14 +4,19 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
-  nitro: {
-    compressPublicAssets: true,
-  },
-  css: ['@/style.css'],
   future: {
     compatibilityVersion: 4,
   },
-  modules: ['@pinia/nuxt', '@nuxtjs/sitemap', 'nuxt-schema-org'],
+  nitro: {
+    compressPublicAssets: true,
+    prerender: {
+      failOnError: false,
+      crawlLinks: true,
+      routes: ['/'],
+    },
+  },
+  css: ['@/style.css'],
+  modules: ['@pinia/nuxt', '@nuxtjs/sitemap', 'nuxt-schema-org', '@nuxt/fonts'],
   vite: {
     plugins: [tailwindcss()],
     build: {
@@ -49,9 +54,6 @@ export default defineNuxtConfig({
       ],
     },
   },
-  sitemap: {
-    sources: ['/api/__sitemap__/urls'],
-  },
   features: {
     inlineStyles: true,
   },
@@ -60,11 +62,12 @@ export default defineNuxtConfig({
     renderJsonPayloads: true,
   },
   routeRules: {
-    '/': { prerender: true, sitemap: { changefreq: 'weekly', priority: 1.0 } },
-    '/search': { prerender: true, sitemap: { changefreq: 'weekly', priority: 0.9 } },
-    '/submit': { prerender: true, sitemap: { changefreq: 'monthly', priority: 0.8 } },
-    '/about': { sitemap: { changefreq: 'monthly', priority: 0.75 } },
-    '/**/*.{css, svg, webp}': {
+    '/': { sitemap: { changefreq: 'weekly', priority: 1.0 } },
+    '/search': { sitemap: { changefreq: 'weekly', priority: 0.9 } },
+    '/i/*': { sitemap: { changefreq: 'weekly', priority: 0.8 } },
+    '/submit': { sitemap: { changefreq: 'monthly', priority: 0.75 } },
+    '/about': { sitemap: { changefreq: 'monthly', priority: 0.7 } },
+    '/**/*.{css,svg,jpg,jpeg,png,webp}': {
       headers: {
         'Cache-Control': 'public, max-age=31536000, immutable',
       },

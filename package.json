@@ -13,11 +13,12 @@
   },
   "dependencies": {
     "@heroicons/vue": "^2.2.0",
-    "@nuxtjs/sitemap": "^7.2.6",
+    "@nuxt/fonts": "^0.11.0",
+    "@nuxtjs/sitemap": "^7.2.9",
     "@pinia/nuxt": "^0.10.1",
     "@vercel/analytics": "^1.5.0",
     "nuxt": "^3.16.0",
-    "nuxt-schema-org": "^5.0.0",
+    "nuxt-schema-org": "^5.0.4",
     "pinia": "^3.0.1",
     "vue": "latest",
     "vue-router": "latest"
