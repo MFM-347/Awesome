@@ -1,3 +1,5 @@
+name: Welcome New Contributors
+
 on:
   fork:
   push:
@@ -15,8 +17,8 @@ jobs:
   welcome:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - uses: EddieHubCommunity/gh-action-community/src/welcome@main
+      - uses: actions/checkout@v4
+      - uses: EddieHubCommunity/github-action-community@main
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           issue-message: '<h1>Feeling great to have your contribution for this project</h1> Welcome to our project'
