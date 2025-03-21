@@ -1152,6 +1152,19 @@ const data = [
 function ops() {
   // console.log(JSON.stringify(data))
   // console.log(data.length);
+//   const toMD = (items: Item[]) => {
+//     return items
+//       .map(
+//         (item) => `### ${item.id}. ${item.name}\n
+// [![${item.id}](https://img.shields.io/badge/ID-${item.id}-28d?style=for-the-badge)](https://a347.vercel.app/search/?q=id:${item.id}) ![Open Source](https://img.shields.io/badge/opensource-${item.foss ? 'Yes' : 'No'}-38e?style=for-the-badge&logo=github) ![Type](https://img.shields.io/badge/Type-${encodeURIComponent(item.type)}-48f?style=for-the-badge)\n
+// **Tags:** ${item.tags.join(', ')}\n
+// **Description:** ${item.description}\n
+// ${item.osLink ? `[![GitHub Link](https://img.shields.io/badge/Github%20Link-35f?style=for-the-badge)](${item.osLink}) ` : ''}
+// [![Website Link](https://img.shields.io/badge/Website%20Link-35f?style=for-the-badge)](${item.url}?ref=awesome347&utm_source=awesome347)`,
+//       )
+//       .join('\n\n')
+//   }
+//   console.log(toMD(data))
   data.at(-1)
   if (data.length !== data.at(-1).id) {
     console.error('Error: Mistake in item IDs')
