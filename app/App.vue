@@ -38,7 +38,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="min-h-screen overflow-hidden bg-background text-foreground">
+  <div>
     <div
       v-if="isLoading"
       class="fixed inset-0 z-50 flex items-center justify-center bg-background/70 backdrop-blur-sm"
@@ -47,7 +47,7 @@ onMounted(() => {
         <div
           class="h-16 w-16 animate-spin rounded-full border-4 border-primary-400 border-t-transparent shadow-lg"
         ></div>
-        <p class="animate-pulse text-primary-600">Loading Awesome Things...</p>
+        <p class="animate-pulse text-primary-500">Loading Awesome Things...</p>
       </div>
     </div>
     <NuxtLayout>
@@ -67,14 +67,6 @@ onMounted(() => {
 </template>
 
 <style>
-.page-enter-active,
-.page-leave-active {
-  transition: opacity 0.3s ease;
-}
-.page-enter-from,
-.page-leave-to {
-  opacity: 0;
-}
 .loading-enter-active,
 .loading-leave-active {
   transition: opacity 0.5s ease;

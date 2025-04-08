@@ -1,14 +1,26 @@
 import { defineStore } from 'pinia'
-import data from '@/data'
 import Fuse from 'fuse.js'
 import { type Item } from '@/types'
 
 export const useAwesomeStore = defineStore('awesome', {
   state: () => ({
-    items: data,
+    items: [] as Item[],
     results: [] as Item[],
   }),
+
   actions: {
+    async loadItems() {
+      const { data, error } = await useFetch<Item[]>('/api/data')
+
+      if (error.value) {
+        console.error('Failed to fetch items:', error.value)
+        return
+      }
+
+      this.items = data.value || []
+      this.results = this.items
+    },
+
     search(query: string) {
       const fields = ['id', 'name', 'type', 'tags', 'foss', 'url', 'oslink', 'description']
       const filters: Record<string, (string | boolean | number)[]> = {}

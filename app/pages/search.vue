@@ -8,9 +8,11 @@ import { meta } from '@/data'
 
 const r = useRoute()
 const router = useRouter()
-const store = useAwesomeStore()
-const { results } = storeToRefs(store)
 const q = ref(typeof r.query.q === 'string' ? r.query.q : '')
+const store = useAwesomeStore()
+
+await store.loadItems()
+const { results } = storeToRefs(store)
 
 const update = () => {
   router.push({ path: '/search', query: { q: q.value } })
@@ -20,7 +22,6 @@ const update = () => {
 onMounted(() => {
   if (q.value) store.search(q.value)
 })
-
 watch(
   () => r.query.q,
   (newQ) => {
@@ -85,8 +86,8 @@ useHead({
       v-if="results.length"
       class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 md:gap-2 lg:grid-cols-4"
     >
-      <vCard v-for="item in results" :key="item.id" :item="item" />
+      <LazyVCard v-for="item in results" :key="item.id" :item="item" />
     </div>
-    <div v-else-if="q" class="text-center text-gray-500">No results found for "{{ q }}"</div>
+    <div v-else-if="q" class="text-center text-gray-400">No results found for "{{ q }}"</div>
   </div>
 </template>

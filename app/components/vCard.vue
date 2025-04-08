@@ -6,7 +6,7 @@ defineProps<{ item: Item }>()
 
 <template>
   <div
-    class="group relative flex flex-col rounded-xl bg-foreground/5 p-1 shadow-xs backdrop-blur-lg ta-150 hover:scale-[.98] hover:border-1 hover:border-foreground/25 hover:bg-foreground/10 hover:backdrop-blur-xl"
+    class="relative flex flex-col rounded-xl bg-foreground/5 p-1 shadow-xs backdrop-blur-lg ta-150 hover:scale-[.98] hover:border-1 hover:border-foreground/25 hover:bg-foreground/10 hover:backdrop-blur-xl sm:p-2"
   >
     <div class="flex flex-col gap-y-2 p-6">
       <h2
@@ -24,7 +24,7 @@ defineProps<{ item: Item }>()
           class="cursor-pointer rounded-full bg-foreground/10 px-3 py-1 text-sm ta-150 hover:bg-foreground/15"
           v-for="tag in item?.tags"
           :key="tag"
-          :to="`/search?q=${tag}`"
+          :to="`/search?q=${tag.toLowerCase()}`"
         >
           {{ tag }}
         </NuxtLink>

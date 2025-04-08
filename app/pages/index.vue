@@ -1,7 +1,12 @@
 <script setup lang="ts">
 import { storeToRefs } from 'pinia'
+import { useAwesomeStore } from '@/stores'
 import { meta } from '@/data'
-import { ref, onMounted } from 'vue'
+
+const store = useAwesomeStore()
+await store.loadItems()
+
+const { items } = storeToRefs(store)
 
 useSeoMeta({
   title: meta.title,
@@ -17,16 +22,6 @@ useSeoMeta({
 useHead({
   titleTemplate: null,
   link: [{ rel: 'canonical', href: meta.url }],
-})
-
-const store = ref<any>(null)
-const items = ref([])
-
-onMounted(async () => {
-  const { useAwesomeStore } = await import('../stores')
-  store.value = useAwesomeStore()
-  const { items: storeItems } = storeToRefs(store.value)
-  items.value = storeItems.value
 })
 </script>
 
@@ -50,11 +45,11 @@ onMounted(async () => {
       </section>
     </main>
     <div class="grid grid-cols-1 gap-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-      <TransitionGroup name="projects" appear>
-        <vCard v-for="item in items" :key="item.id" :item="item" />
+      <TransitionGroup name="projects" tag="div" class="contents" appear>
+        <LazyVCard v-for="item in items" :key="item.id" :item="item" />
         <div
           :key="'submit'"
-          class="group relative flex scale-[.99] flex-col items-center justify-center gap-y-2 rounded-xl border border-foreground/10 bg-foreground/5 py-8 shadow-sm backdrop-blur-xl ta-175 hover:scale-[1.01] hover:bg-foreground/10"
+          class="group relative flex flex-col items-center justify-center gap-y-2 rounded-xl border border-foreground/10 bg-foreground/5 p-1 shadow-xs backdrop-blur-lg ta-150 hover:scale-[.98] hover:border-1 hover:border-foreground/25 hover:bg-foreground/10 hover:backdrop-blur-xl sm:p-2"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -76,19 +71,13 @@ onMounted(async () => {
 </template>
 
 <style scoped>
-.projects-move,
 .projects-enter-active,
 .projects-leave-active {
   transition: all 0.5s ease;
 }
-
 .projects-enter-from,
 .projects-leave-to {
   opacity: 0;
   transform: translateY(30px);
-}
-
-.projects-leave-active {
-  position: absolute;
 }
 </style>

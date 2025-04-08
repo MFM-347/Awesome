@@ -1,11 +1,14 @@
 <template>
   <div class="overflow-hidden">
     <svg
+      role="img"
+      aria-labelledby="descr"
       preserveAspectRatio="none"
       viewBox="0 0 1200 120"
       xmlns="http://www.w3.org/2000/svg"
       class="h-12 w-[125%] rotate-180 fill-primary-600 md:h-18"
     >
+      <desc id="descr">Wavy pattern in the background</desc>
       <path
         d="M0 0v46.29c47.79 22.2 103.59 32.17 158 28 70.36-5.37 136.33-33.31 206.8-37.5 73.84-4.36 147.54 16.88 218.2 35.26 69.27 18 138.3 24.88 209.4 13.08 36.15-6 69.85-17.84 104.45-29.34C989.49 25 1113-14.29 1200 52.47V0z"
         opacity=".25"
@@ -34,8 +37,8 @@
         >
         <span class="mx-4">/</span>
         <a
-          title="My Email"
-          aria-label="My Email"
+          title="My Portfolio"
+          aria-label="My Portfolio"
           class="hover:underline"
           href="https://xyzdev.vercel.app/"
           >Portfolio</a
@@ -43,11 +46,11 @@
       </div>
     </div>
     <div class="mt-4">
-      <nav class="flex flex-row">
-        <a class="lnk" target="_self" href="/">Home</a>
-        <a class="lnk" target="_self" href="/search">Browse</a>
-        <a class="lnk" target="_self" href="/submit">Submit</a>
-        <a class="lnk" target="_self" href="/about">About</a>
+      <nav class="flex flex-row" aria-label="Main footer navigation">
+        <a class="lnk" target="_self" href="/" aria-label="Go to homepage">Home</a>
+        <a class="lnk" target="_self" href="/search" aria-label="Browse content">Browse</a>
+        <a class="lnk" target="_self" href="/submit" aria-label="Submit new content">Submit</a>
+        <a class="lnk" target="_self" href="/about" aria-label="About this website">About</a>
       </nav>
     </div>
     <div class="mt-8">
@@ -55,10 +58,11 @@
     </div>
   </footer>
 </template>
+
 <style scoped>
 @reference "@/style.css";
 
 .lnk {
-  @apply border-x border-foreground px-4 py-2 ta-125 hover:font-semibold hover:underline;
+  @apply border-x border-foreground px-4 py-2 font-semibold ta-125 hover:underline;
 }
 </style>
