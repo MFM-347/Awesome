@@ -1149,83 +1149,13 @@ const data = [
     id: 105,
   },
 ]
-function ops() {
-  // console.log(JSON.stringify(data))
-  // console.log(data.length);
-  //   const toMD = (items: Item[]) => {
-  //     return items
-  //       .map(
-  //         (item) => `### ${item.id}. ${item.name}\n
-  // [![${item.id}](https://img.shields.io/badge/ID-${item.id}-28d?style=for-the-badge)](https://a347.vercel.app/search/?q=id:${item.id}) ![Open Source](https://img.shields.io/badge/opensource-${item.foss ? 'Yes' : 'No'}-38e?style=for-the-badge&logo=github) ![Type](https://img.shields.io/badge/Type-${encodeURIComponent(item.type)}-48f?style=for-the-badge)\n
-  // **Tags:** ${item.tags.join(', ')}\n
-  // **Description:** ${item.description}\n
-  // ${item.osLink ? `[![GitHub Link](https://img.shields.io/badge/Github%20Link-35f?style=for-the-badge)](${item.osLink}) ` : ''}
-  // [![Website Link](https://img.shields.io/badge/Website%20Link-35f?style=for-the-badge)](${item.url}?ref=awesome347&utm_source=awesome347)`,
-  //       )
-  //       .join('\n\n')
-  //   }
-  //   console.log(toMD(data))
-  data.at(-1)
-  if (data.length !== data.at(-1).id) {
-    console.error('Error: Mistake in item IDs')
+data.forEach((item) => {
+  if (!item.icon) {
+    item.icon = '/ph.svg'
   }
-  for (const x of data) {
-    if (!x.icon) {
-      x.icon = '/ph.svg'
-    }
-    if (x.foss && !x.osLink) {
-      console.error(`Error: no opensource link for opensource item with id: ${x.id}`)
-    }
-  }
-}
-ops()
-export const meta = {
-  title: 'Awesome347 - Best Tools & Resources',
-  description:
-    'Explore cutting-edge tools, apps, tutorials and resources to help you improve your productivity and solve problems.',
-  url: 'https://a347.vercel.app',
-  logo: '/logo-light.svg',
-  image: '/og-image.webp',
-  alt: 'Awesome347 Logo',
-  date: '3/9/25',
-  techs: [
-    {
-      id: 1,
-      name: 'Nuxt',
-      url: 'https://nuxt.com',
-      description: 'An intuitive and powerful Framework.',
-    },
-    {
-      id: 2,
-      name: 'VueJS',
-      url: 'https://vuejs.org',
-      description: 'A Progressive web framework.',
-    },
-    {
-      id: 3,
-      name: 'TailwindCSS',
-      url: 'https://tailwindcss.com',
-      description: 'An utility-first CSS framework.',
-    },
-    {
-      id: 4,
-      name: 'HeroIcons',
-      url: 'https://heroicons.com/',
-      description: 'Beautiful hand-crafted SVG icons.',
-    },
-    {
-      id: 5,
-      name: 'Fuse.JS',
-      url: 'https://www.fusejs.io/',
-      description: 'Lightweight Searching library.',
-    },
-    {
-      id: 5,
-      name: 'Pinia',
-      url: 'https://pinia.vuejs.org/',
-      description: 'State Management for Vue.js.',
-    },
-  ],
-}
+  item.tags = item.tags.map((tag) => tag.replace(' ', '-'))
+})
 
-export default data
+export default defineEventHandler(() => {
+  return data
+})
