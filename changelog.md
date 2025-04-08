@@ -1,4 +1,6 @@
-# 1. 18-01-25
+# Changelogs
+
+## 1. 18-01-25
 
 **Commit Name:** `Upgrade list, UI and seo and add dynamic routes`
 
@@ -10,7 +12,7 @@
 4. Update list
 5. Add dynamic routes for each item in list
 
-# 2. 29-01-25
+## 2. 29-01-25
 
 **Commit Name:** `Upgrade tailwindcss and recreate UI`
 
@@ -19,7 +21,7 @@
 1. Recreated UI
 2. Upgraded to tailwindcss v4
 
-# 3. 30-01-25
+## 3. 30-01-25
 
 **Commit Name:** `Improve performance, type and clean-up SEO`
 
@@ -31,7 +33,7 @@
 4. Added `id` to data for consistent routing
 5. Added auto sitemap and robotsTxt generation
 
-# 4. 09-02-25
+## 4. 09-02-25
 
 **Commit Name:** `Upgraded features, UI, routing and list`
 
@@ -44,7 +46,7 @@
 5. Changed dynamic routing from `/item/` to `/i/` for minimal URLs
 6. Change typographic scheme from `Inter` to `Fira Sans`
 
-# 5. 20-02-25
+## 5. 20-02-25
 
 **Commit Name:** `Enhanced UI and updated SEO and list`
 
@@ -58,7 +60,7 @@
 6. New OG-Image
 7. Changed URL to [a347.vercel.app](https://a347.vercel.app/)
 
-# 6. 3-3-25
+## 6. 3-3-25
 
 **Commit Name:** `Enhanced UI, Search and SEO and updated list`
 
@@ -83,7 +85,7 @@
 5. Fixed UI
 6. Optimized Performance
 
-# 7. 15-3-25
+## 7. 15-3-25
 
 **Commit Names:** [`fixed search , smoothened transitions and uodated dependencies`, `update:colors, typography, list, ui`]
 
@@ -94,3 +96,14 @@
 5. Added prerendering for all routes
 6. Change typographic scheme from `Fira Sans` to `Exo 2`
 7. Updated Colors
+
+## 8. 7-4-25
+
+**Commit Names:** [`Add everything to README`, `Update data`, `update(docs): generalized format`, `fix(docs)`, `fix(docs) | update(deps)`, `feat(api): added api route with pre-rendering for /i/* routes`, `perf: utilized api and added lazy loads and optimized links and UI/UX`]
+
+1. Added data to README for better accessiblity
+2. Updated website's UI/UX and accessbility
+3. Added api route for having data on server-side
+4. Add lazy-loads for better performance
+5. Fixed links according NuxtSEO's requirements
+6. Added prerendering for dynamic routes `/i/*`

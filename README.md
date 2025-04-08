@@ -7,6 +7,8 @@ Awesome347 is platform that lets you explore cutting-edge tools, apps, tutorials
 
 ## Tools & Resources
 
+> **Note:** if website and github URLs are same then only one will be displayed
+
 ### 1. 30 Seconds of Code
 
 **ID:** [i1](https://a347.vercel.app/search/?q=id:1)<br>
