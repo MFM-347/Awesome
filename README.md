@@ -59,7 +59,7 @@ Awesome347 is platform that lets you explore cutting-edge tools, apps, tutorials
 **Type:** website<br>
 **Tags:** Awesome, Android<br>
 **Description:** A list of Free and Open Source Software (FOSS) for Android – saving Freedom and Privacy.<br>
-[Website Link](https://offa.github.io/android-foss/)
+[Website Link](https://offa.github.io/android-foss/) | [GitHub Link](https://offa.github.io/android-foss/)
 
 ### 7. Animista
 
@@ -257,7 +257,7 @@ Awesome347 is platform that lets you explore cutting-edge tools, apps, tutorials
 **Type:** website<br>
 **Tags:** CSS, Generator<br>
 **Description:** EnjoyCSS is an advanced CSS3 generator that saves your time.<br>
-[Website Link](https://enjoycss.com/) | [GitHub Link](https://github.com/marcelscruz/dev-resources/)
+[Website Link](https://enjoycss.com/)
 
 ### 29. Flow Rift
 
@@ -581,7 +581,7 @@ Awesome347 is platform that lets you explore cutting-edge tools, apps, tutorials
 **Type:** website<br>
 **Tags:** SVG, Vector, Graphics<br>
 **Description:** Online editor to create and manipulate SVG paths<br>
-[Website Link](https://yqnn.github.io/svg-path-editor/)
+[Website Link](https://yqnn.github.io/svg-path-editor/) | [GitHub Link](https://yqnn.github.io/svg-path-editor)
 
 ### 65. SVG Repo
 
@@ -734,7 +734,7 @@ Awesome347 is platform that lets you explore cutting-edge tools, apps, tutorials
 **Type:** website<br>
 **Tags:** Notes, keeper, inspirable<br>
 **Description:** A Light, simple, clean, opensource and cross-plateform notes taking application.<br>
-[Website Link](https://simplenote.com/)
+[Website Link](https://simplenote.com/) | [GitHub Link](https://simplenote.com/developers/)
 
 ### 82. Spoo.ME
 

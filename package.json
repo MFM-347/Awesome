@@ -8,16 +8,18 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "format": "prettier -w .",
-    "start": "npm run format && cls && npm run dev"
+    "format": "prettier -w **/*.vue **/*.ts *.md **/*.css",
+    "start": "npm run format && clear && npm run dev",
+    "test": "npm run build && npm run preview"
   },
   "dependencies": {
     "@heroicons/vue": "^2.2.0",
-    "@nuxt/fonts": "^0.11.0",
-    "@nuxtjs/sitemap": "^7.2.9",
+    "@nuxt/fonts": "^0.11.1",
+    "@nuxtjs/sitemap": "^7.2.10",
     "@pinia/nuxt": "^0.10.1",
     "@vercel/analytics": "^1.5.0",
-    "nuxt": "^3.16.0",
+    "nuxt": "^3.16.2",
+    "nuxt-link-checker": "^4.3.0",
     "nuxt-schema-org": "^5.0.4",
     "pinia": "^3.0.1",
     "vue": "latest",
