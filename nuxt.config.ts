@@ -41,12 +41,7 @@ export default defineNuxtConfig({
   },
 
   sitemap: {
-    strictNuxtContentPaths: true,
-    xslColumns: [
-      { label: 'URL', width: '50%' },
-      { label: 'Last Modified', select: 'sitemap:lastmod', width: '25%' },
-      { label: 'Priority', select: 'sitemap:priority', width: '25%' },
-    ],
+    xsl: false,
   },
 
   schemaOrg: {
