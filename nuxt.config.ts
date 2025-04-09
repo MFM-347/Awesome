@@ -10,11 +10,9 @@ export default defineNuxtConfig({
   nitro: {
     prerender: {
       crawlLinks: true,
-      routes: ['/', ...Array.from({ length: 105 }, (_, x) => `/i/${x}`)],
+      routes: ['/', '/i/*'],
     },
   },
-
-  render: { asyncScripts: true, http2: { push: true } },
 
   vite: {
     plugins: [tailwindcss()],

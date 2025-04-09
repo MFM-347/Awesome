@@ -3,11 +3,11 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare",
+    "build": "nuxi build",
+    "dev": "nuxi dev",
+    "generate": "nuxi generate",
+    "preview": "nuxi preview",
+    "postinstall": "nuxi prepare",
     "format": "prettier -w **/*.vue **/*.ts *.md **/*.css",
     "start": "npm run format && clear && npm run dev",
     "test": "npm run build && npm run preview"
@@ -28,6 +28,7 @@
   "devDependencies": {
     "@nirtamir2/prettier-plugin-css-order": "^0.0.1",
     "@tailwindcss/vite": "latest",
+    "nuxi": "^3.24.1",
     "prettier": "^3.5.3",
     "prettier-plugin-tailwindcss": "^0.6.11",
     "tailwindcss": "latest"

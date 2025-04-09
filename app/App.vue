@@ -9,6 +9,7 @@ useSeoMeta({
   author: 'Farhan Madni',
   robots: 'index,follow,max-image-preview:large',
   ogLocale: 'en_US',
+  ogSiteName: 'Awesome347',
   ogType: 'website',
   ogImage: '/og-image.webp',
   twitterCard: 'summary_large_image',
