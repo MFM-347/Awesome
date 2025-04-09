@@ -24,7 +24,7 @@ defineProps<{ item: Item }>()
           class="cursor-pointer rounded-full bg-foreground/10 px-3 py-1 text-sm ta-150 hover:bg-foreground/15"
           v-for="tag in item?.tags"
           :key="tag"
-          :to="`/search?q=${tag.toLowerCase()}`"
+          :to="`/search?q=${tag}`"
         >
           {{ tag }}
         </NuxtLink>

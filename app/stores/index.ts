@@ -18,10 +18,15 @@ export const useAwesomeStore = defineStore('awesome', {
       }
 
       this.items = data.value || []
-      this.results = this.items
+      this.results = [...this.items]
     },
 
     search(query: string) {
+      if (!query.trim()) {
+        this.results = [...this.items]
+        return
+      }
+
       const fields = ['id', 'name', 'type', 'tags', 'foss', 'url', 'oslink', 'description']
       const filters: Record<string, (string | boolean | number)[]> = {}
       const terms: string[] = []
@@ -70,17 +75,18 @@ export const useAwesomeStore = defineStore('awesome', {
         })
       })
 
-      if (terms.length) {
-        const fuse = new Fuse(items, {
-          keys: ['name', 'type', 'tags', 'url', 'oslink', 'description'],
-          includeMatches: true,
-          minMatchCharLength: 3,
-          threshold: 0.4,
-        })
-        this.results = fuse.search(terms.join(' ')).map((res) => res.item)
-      } else {
+      if (!terms.length) {
         this.results = items
+        return
       }
+
+      const fuse = new Fuse(items, {
+        keys: ['name', 'type', 'tags', 'url', 'oslink', 'description'],
+        includeMatches: true,
+        minMatchCharLength: 3,
+        threshold: 0.4,
+      })
+      this.results = fuse.search(terms.join(' ')).map((res) => res.item)
     },
   },
 })

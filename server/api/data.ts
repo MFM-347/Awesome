@@ -1153,7 +1153,7 @@ data.forEach((item) => {
   if (!item.icon) {
     item.icon = '/ph.svg'
   }
-  item.tags = item.tags.map((tag) => tag.replace(' ', '-'))
+  item.tags = item.tags.map((tag) => tag.toLowerCase().replace(/\s+/g, '-'))
 })
 
 export default defineEventHandler(() => {

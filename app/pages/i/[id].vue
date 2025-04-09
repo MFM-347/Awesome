@@ -115,7 +115,7 @@ useHead({
               class="cursor-pointer rounded-full bg-foreground/10 px-3 py-1 text-sm ta-100 hover:scale-105 hover:bg-foreground/20"
               v-for="tag in item?.tags"
               :key="tag"
-              :to="`/search?q=${tag.toLowerCase()}`"
+              :to="`/search?q=${tag}`"
             >
               {{ tag }}
             </RouterLink>
