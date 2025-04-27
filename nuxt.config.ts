@@ -60,6 +60,12 @@ export default defineNuxtConfig({
     },
   },
 
+  ogImage: {
+    defaults: {
+      cacheMaxAgeSeconds: 60 * 60 * 24 * 7,
+    },
+  },
+
   features: {
     inlineStyles: true,
   },

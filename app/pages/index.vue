@@ -1,12 +1,17 @@
 <script setup lang="ts">
 import { storeToRefs } from 'pinia'
-import { useAwesomeStore } from '@/stores'
 import { meta } from '@/data'
+import { ref, onMounted } from 'vue'
 
-const store = useAwesomeStore()
-await store.loadItems()
+const store = ref<any>(null)
+const items = ref([])
 
-const { items } = storeToRefs(store)
+onMounted(async () => {
+  const { useAwesomeStore } = await import('../stores')
+  store.value = useAwesomeStore()
+  const { items: storeItems } = storeToRefs(store.value)
+  items.value = storeItems.value
+})
 
 useSeoMeta({
   title: meta.title,
@@ -22,6 +27,10 @@ useSeoMeta({
 useHead({
   titleTemplate: null,
   link: [{ rel: 'canonical', href: meta.url }],
+})
+defineOgImageComponent('a347', {
+  title: meta.title,
+  description: meta.description,
 })
 </script>
 

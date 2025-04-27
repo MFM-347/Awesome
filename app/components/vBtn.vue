@@ -6,7 +6,7 @@ defineProps({
     type: Boolean,
     default: false,
   },
-  ariaLabel: {
+  vLabel: {
     type: String,
     default: 'Link Button',
   },
@@ -21,11 +21,11 @@ defineProps({
         ? 'border border-gray-500/40 bg-gray-500/15 text-gray-100 hover:border-gray-500/60 hover:bg-gray-500/35 focus:border-none focus:bg-gray-500/25 focus:ring-gray-400/70'
         : 'bg-primary-500 text-primary-100 hover:bg-primary-400 focus:ring-primary-500',
     ]"
-    :aria-label="ariaLabel"
+    :aria-label="vLabel"
     role="button"
   >
     <LinkIcon :class="`mt-0.5 mr-1 size-4 stroke-primary-50`" />
-    <span class="sr-only">{{ ariaLabel }}</span>
+    <span class="sr-only">{{ vLabel }}</span>
     <slot />
   </button>
 </template>

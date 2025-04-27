@@ -36,6 +36,10 @@ useHead({
     },
   ],
 })
+defineOgImageComponent('a347', {
+  title: 'Submit - Awesome347',
+  description: 'Guidelines and rules for submiting your site or project to Awesome347.',
+})
 </script>
 
 <template>
@@ -72,7 +76,7 @@ useHead({
           title="Submit your project"
           href="https://spoo.me/a347?ref=Awesome347&utm_source=Awesome347"
         >
-          <vBtn aria-label="Submit your project">Submit</vBtn>
+          <LazyVBtn vLabel="Submit your project">Submit</LazyVBtn>
         </a>
       </div>
     </div>

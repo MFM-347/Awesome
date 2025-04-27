@@ -2,7 +2,6 @@
 import { ref, onMounted } from 'vue'
 import { Analytics } from '@vercel/analytics/vue'
 
-const isProd = process.env.NODE_ENV === 'production'
 useSeoMeta({
   charset: 'utf-8',
   viewport: 'width=device-width, initial-scale=1',
@@ -11,15 +10,12 @@ useSeoMeta({
   ogLocale: 'en_US',
   ogSiteName: 'Awesome347',
   ogType: 'website',
-  ogImage: '/og-image.webp',
   twitterCard: 'summary_large_image',
-  twitterImage: '/og-image.webp',
   twitterCreator: '@mfm347',
   mobileWebAppCapable: 'yes',
   appleMobileWebAppCapable: 'yes',
   appleMobileWebAppTitle: 'Awesome347',
-  appleMobileWebAppStatusBarStyle: 'black-translucent',
-  themeColor: '#0063ff',
+  themeColor: '#1f59ff',
   googleSiteVerification: '9C3mmoooLN2NLh5PUEVgr98hTKYWPIarhqp7Efdfwuo',
 })
 useHead({
@@ -30,6 +26,7 @@ useHead({
   link: [{ rel: 'icon', type: 'image/svg+xml', href: '/logo-light.svg' }],
 })
 
+const isProd = process.env.NODE_ENV === 'production'
 const isLoading = ref(true)
 onMounted(() => {
   setTimeout(() => {
