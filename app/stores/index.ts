@@ -1,29 +1,28 @@
 import { defineStore } from 'pinia'
+import { data } from '@/data'
 import Fuse from 'fuse.js'
 import { type Item } from '@/types'
 
 export const useAwesomeStore = defineStore('awesome', {
   state: () => ({
-    items: [] as Item[],
+    items: data,
     results: [] as Item[],
+    fuse: null as Fuse<Item> | null,
   }),
-
   actions: {
-    async loadItems() {
-      const { data, error } = await useFetch<Item[]>('/api/data')
-
-      if (error.value) {
-        console.error('Failed to fetch items:', error.value)
-        return
+    initializeFuse() {
+      if (!this.fuse) {
+        this.fuse = new Fuse(this.items, {
+          keys: ['name', 'type', 'tags', 'url', 'oslink', 'description'],
+          includeMatches: true,
+          minMatchCharLength: 3,
+          threshold: 0.4,
+        })
       }
-
-      this.items = data.value || []
-      this.results = [...this.items]
     },
-
     search(query: string) {
       if (!query.trim()) {
-        this.results = [...this.items]
+        this.results = this.items
         return
       }
 
@@ -31,62 +30,60 @@ export const useAwesomeStore = defineStore('awesome', {
       const filters: Record<string, (string | boolean | number)[]> = {}
       const terms: string[] = []
 
-      query.split(/\s+/).forEach((part) => {
+      for (const part of query.trim().split(/\s+/)) {
         const match = part.match(/^(\w+):(.+)$/)
         if (match) {
           const [, key, value] = match
           if (fields.includes(key)) {
             if (key === 'id') {
-              const numValue = Number(value)
-              if (!isNaN(numValue)) {
-                filters[key] = filters[key] || []
-                filters[key].push(numValue)
+              const num = Number(value)
+              if (!isNaN(num)) {
+                ;(filters[key] ||= []).push(num)
               }
             } else if (key === 'foss') {
               filters[key] = [value.toLowerCase() === 'true']
             } else {
-              filters[key] = filters[key] || []
-              filters[key].push(value.toLowerCase())
+              ;(filters[key] ||= []).push(value.toLowerCase())
             }
           }
         } else {
           terms.push(part)
         }
-      })
-
-      let items = this.items
-      Object.entries(filters).forEach(([key, values]) => {
-        items = items.filter((item) => {
-          const val = item[key as keyof Item]
-          if (val === undefined || val === null) return false
-
-          if (key === 'id' && typeof val === 'number') {
-            return values.includes(val)
-          }
-          if (key === 'foss' && typeof val === 'boolean') {
-            return values.includes(val)
-          }
-          if (Array.isArray(val)) {
-            return val.some((v) => typeof v === 'string' && values.includes(v.toLowerCase()))
-          }
-          return (
-            typeof val === 'string' && values.some((value) => val.toLowerCase().includes(value))
-          )
-        })
-      })
-
-      if (!terms.length) {
-        this.results = items
-        return
       }
 
-      const fuse = new Fuse(items, {
-        keys: ['name', 'type', 'tags', 'url', 'oslink', 'description'],
-        includeMatches: true,
-        minMatchCharLength: 3,
-        threshold: 0.4,
-      })
-      this.results = fuse.search(terms.join(' ')).map((res) => res.item)
+      let filtered = this.items
+
+      if (Object.keys(filters).length > 0) {
+        filtered = filtered.filter((item) => {
+          return Object.entries(filters).every(([key, values]) => {
+            const val = item[key as keyof Item]
+            if (val == null) return false
+
+            if (key === 'id' && typeof val === 'number') {
+              return values.includes(val)
+            }
+            if (key === 'foss' && typeof val === 'boolean') {
+              return values.includes(val)
+            }
+            if (Array.isArray(val)) {
+              return val.some((v) => typeof v === 'string' && values.includes(v.toLowerCase()))
+            }
+            if (typeof val === 'string') {
+              return values.some((value) => val.toLowerCase().includes(value))
+            }
+            return false
+          })
+        })
+      }
+
+      if (terms.length > 0) {
+        this.initializeFuse()
+        const fuseResults = this.fuse!.search(terms.join(' '))
+        const filteredIds = new Set(filtered.map((item) => item.id))
+        this.results = fuseResults.map((r) => r.item).filter((item) => filteredIds.has(item.id))
+      } else {
+        this.results = filtered
+      }
     },
   },
 })

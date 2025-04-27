@@ -31,14 +31,14 @@ defineProps<{ item: Item }>()
       </div>
       <div class="flex flex-row gap-x-2">
         <NuxtLink role="link" rel="nofollow noopener" :to="`/i/${item?.id}`">
-          <vBtn :ariaLabel="`Learn more about ${item?.name}`"> Learn more </vBtn>
+          <LazyVBtn :vLabel="`Learn more about ${item?.name}`"> Learn more </LazyVBtn>
         </NuxtLink>
         <a
           role="link"
           rel="nofollow noopener"
           :href="`${item?.url}?ref=a347.vercel.app&utm_source=a347.vercel.app`"
         >
-          <vBtn :ariaLabel="`Check out ${item?.name}`" sec> Visit </vBtn>
+          <LazyVBtn :vLabel="`Check out ${item?.name}`" sec> Visit </LazyVBtn>
         </a>
       </div>
     </div>

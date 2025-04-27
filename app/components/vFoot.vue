@@ -48,7 +48,7 @@
     <div class="mt-4">
       <nav class="flex flex-row" aria-label="Main footer navigation">
         <a class="lnk" target="_self" href="/" aria-label="Go to homepage">Home</a>
-        <a class="lnk" target="_self" href="/search" aria-label="Browse content">Browse</a>
+        <a class="lnk" target="_self" href="/search" aria-label="Search content">Search</a>
         <a class="lnk" target="_self" href="/submit" aria-label="Submit new content">Submit</a>
         <a class="lnk" target="_self" href="/about" aria-label="About this website">About</a>
       </nav>

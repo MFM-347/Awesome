@@ -3,9 +3,8 @@ import tailwindcss from '@tailwindcss/vite'
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
-  future: {
-    compatibilityVersion: 4,
-  },
+
+  future: { compatibilityVersion: 4 },
 
   nitro: {
     prerender: {
@@ -16,19 +15,22 @@ export default defineNuxtConfig({
 
   vite: {
     plugins: [tailwindcss()],
+    build: {
+      cssMinify: true,
+      minify: 'terser',
+      terserOptions: {
+        compress: {
+          drop_console: true,
+        },
+      },
+    },
   },
 
   css: ['@/style.css'],
 
   devtools: { enabled: true },
 
-  modules: [
-    '@pinia/nuxt',
-    '@nuxtjs/sitemap',
-    'nuxt-schema-org',
-    '@nuxt/fonts',
-    'nuxt-link-checker',
-  ],
+  modules: ['@pinia/nuxt', '@nuxt/fonts', '@nuxtjs/seo'],
 
   site: {
     url: 'https://a347.vercel.app',
@@ -58,9 +60,16 @@ export default defineNuxtConfig({
     },
   },
 
+  ogImage: {
+    defaults: {
+      cacheMaxAgeSeconds: 60 * 60 * 24 * 7,
+    },
+  },
+
   features: {
     inlineStyles: true,
   },
+
   experimental: {
     viewTransition: true,
     renderJsonPayloads: true,

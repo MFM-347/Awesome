@@ -39,6 +39,11 @@ useHead({
     },
   ],
 })
+defineOgImageComponent('a347', {
+  title: 'About - Awesome347',
+  description:
+    'Learn about Awesome347 and the technologies behind this curated list of tools and resources.',
+})
 </script>
 
 <template>

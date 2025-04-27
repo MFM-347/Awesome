@@ -8,11 +8,9 @@ import { meta } from '@/data'
 
 const r = useRoute()
 const router = useRouter()
-const q = ref(typeof r.query.q === 'string' ? r.query.q : '')
 const store = useAwesomeStore()
-
-await store.loadItems()
 const { results } = storeToRefs(store)
+const q = ref(typeof r.query.q === 'string' ? r.query.q : '')
 
 const update = () => {
   router.push({ path: '/search', query: { q: q.value } })
@@ -22,6 +20,7 @@ const update = () => {
 onMounted(() => {
   if (q.value) store.search(q.value)
 })
+
 watch(
   () => r.query.q,
   (newQ) => {
@@ -31,12 +30,18 @@ watch(
 )
 useSeoMeta({
   title: 'Search',
-  description: `Searching ${q.value} from curated collection of Awesome347`,
+  description: q.value
+    ? `Searching ${q.value} from curated collection of Awesome347`
+    : 'Search something from curated collection of Awesome347',
   ogTitle: 'Search - Awesome347',
-  ogDescription: `Searching ${q.value} from curated collection of Awesome347`,
+  ogDescription: q.value
+    ? `Searching ${q.value} from curated collection of Awesome347`
+    : 'Search something from curated collection of Awesome347',
   ogUrl: `${meta.url}/search`,
   twitterTitle: 'Search - Awesome347',
-  twitterDescription: `Searching ${q.value} from curated collection of Awesome347`,
+  twitterDescription: q.value
+    ? `Searching ${q.value} from curated collection of Awesome347`
+    : 'Search something from curated collection of Awesome347',
 })
 useHead({
   link: [{ rel: 'canonical', href: `${meta.url}/search` }],
@@ -63,6 +68,10 @@ useHead({
       }),
     },
   ],
+})
+defineOgImageComponent('a347', {
+  title: 'Search - Awesome347',
+  description: 'Search something from curated collection of Awesome347',
 })
 </script>
 

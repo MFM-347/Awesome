@@ -3,30 +3,27 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "nuxi build",
     "dev": "nuxi dev",
-    "generate": "nuxi generate",
+    "build": "nuxi build",
     "preview": "nuxi preview",
     "postinstall": "nuxi prepare",
-    "format": "prettier -w **/*.vue **/*.ts *.md **/*.css",
+    "format": "prettier -w app",
     "start": "npm run format && clear && npm run dev",
     "test": "npm run build && npm run preview"
   },
   "dependencies": {
     "@heroicons/vue": "^2.2.0",
-    "@nuxt/fonts": "^0.11.1",
-    "@nuxtjs/sitemap": "^7.2.10",
-    "@pinia/nuxt": "^0.10.1",
     "@vercel/analytics": "^1.5.0",
     "nuxt": "^3.16.2",
-    "nuxt-link-checker": "^4.3.0",
-    "nuxt-schema-org": "^5.0.4",
     "pinia": "^3.0.1",
-    "vue": "latest",
-    "vue-router": "latest"
+    "vue": "3.5.13",
+    "vue-router": "4.5.1"
   },
   "devDependencies": {
     "@nirtamir2/prettier-plugin-css-order": "^0.0.1",
+    "@nuxt/fonts": "^0.11.1",
+    "@nuxtjs/seo": "3.0.3",
+    "@pinia/nuxt": "^0.10.1",
     "@tailwindcss/vite": "latest",
     "nuxi": "^3.24.1",
     "prettier": "^3.5.3",
