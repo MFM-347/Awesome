@@ -558,14 +558,14 @@ Awesome347 is platform that lets you explore cutting-edge tools, apps, tutorials
 **Description:** See where your SEO stands in 15 minutes.
 [Website Link](https://seoroast.co/)
 
-### 62. Simple Gallery
+### 62. Gallery
 
 **ID:** [i62](https://a347.vercel.app/search/?q=id:62)
-**FOSS:** Yes | [Source Code](https://github.com/SimpleMobileTools/Simple-Gallery)
+**FOSS:** Yes | [Source Code](https://github.com/FossifyOrg/Gallery)
 **Type:** app
 **Tags:** gallery, photo-viewer, photo-editor
-**Description:** A premium ad-free app for managing and editing your photos, videos, GIFs.
-[Website Link](https://github.com/SimpleMobileTools/Simple-Gallery/releases/latest/)
+**Description:** An ad-free app for managing and editing your photos, videos, GIFs.
+[Website Link](https://github.com/FossifyOrg/Gallery/releases/latest/)
 
 ### 63. StackSorted
 
@@ -756,12 +756,12 @@ Awesome347 is platform that lets you explore cutting-edge tools, apps, tutorials
 **Description:** A platform that helps you find the best tools for productivity, creativity, and design.
 [Website Link](https://toolfolio.io/)
 
-### 84. ToolFolio
+### 84. Stock Photo AI
 
 **ID:** [i84](https://a347.vercel.app/search/?q=id:84)
 **FOSS:** No
 **Type:** website
-**Tags:** awesome, of, best, tools
+**Tags:** ai, generated, stock, photos
 **Description:** Beautiful AI generated stock photos for free and commercial use, made using Flux 1.1 Pro Ultra.
 [Website Link](https://www.stockphotoai.com/)
 
@@ -953,6 +953,51 @@ Awesome347 is platform that lets you explore cutting-edge tools, apps, tutorials
 **Tags:** notes, taking, inspirable
 **Description:** A self-hosted, database-less note taking web app that utilises a flat folder of markdown files for storage.
 [Website Link](https://demo.flatnotes.io/) | [GitHub Link](https://github.com/dullage/flatnotes)
+
+### 106. CSS Snippets
+
+**ID:** [i106](https://a347.vercel.app/search/?q=id:106)
+**FOSS:** No
+**Type:** Website
+**Tags:** ui, components, library
+**Description:** Explore a vast collection of free, ready-to-use HTML, React, CSS, and Tailwind CSS code snippets for web components.
+[Website Link](https://cssnippets.shefali.dev/)
+
+### 107. Colorable
+
+**ID:** [i107](https://a347.vercel.app/search/?q=id:107)
+**FOSS:** Yes | [Source Code](https://github.com/jxnblk/colorable)
+**Type:** Website
+**Tags:** color, contrast, checker
+**Description:** Take a set color palette and get contrast values for finding safe color combinations according to WCAG guidelines.
+[Website Link](https://colorable.jxnblk.com/) | [GitHub Link](https://github.com/jxnblk/colorable)
+
+### 108. StackEdit
+
+**ID:** [i108](https://a347.vercel.app/search/?q=id:108)
+**FOSS:** Yes | [Source Code](https://github.com/benweet/stackedit)
+**Type:** Website
+**Tags:** markdown, text, editor
+**Description:** Full-featured, open-source Markdown editor based on PageDown, the Markdown library.
+[Website Link](https://stackedit.io/) | [GitHub Link](https://github.com/benweet/stackedit)
+
+### 109. A1 Gallery
+
+**ID:** [i109](https://a347.vercel.app/search/?q=id:109)
+**FOSS:** No
+**Type:** Website
+**Tags:** awesome, of, best, websites
+**Description:** A collection of the best websites found across the World Wide Web. Design inspiration for all designers, developers and creatives.
+[Website Link](https://www.a1.gallery/)
+
+### 110. Minimal Gallery
+
+**ID:** [i110](https://a347.vercel.app/search/?q=id:110)
+**FOSS:** No
+**Type:** Website
+**Tags:** awesome, of, inspirable, websites
+**Description:** A collection of the Hand-picked websites design inspiration for all designers and developers.
+[Website Link](https://minimal.gallery/)
 
 ## Contributing
 

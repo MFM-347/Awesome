@@ -1,14 +1,6 @@
-<script setup lang="ts">
-import {
-  MagnifyingGlassIcon,
-  InformationCircleIcon,
-  DocumentCheckIcon,
-} from '@heroicons/vue/24/outline'
-</script>
-
 <template>
   <nav
-    class="fixed top-0 left-0 z-50 h-16 w-full border-0 border-background/10 bg-background/50 backdrop-blur-xl md:h-full md:w-20 md:border-r"
+    class="fixed top-0 left-0 z-10 h-16 w-full border-0 border-background/10 bg-background/50 backdrop-blur-xl md:h-full md:w-20 md:border-r"
   >
     <div class="flex flex-row items-center gap-4 px-3 py-2 sm:gap-6 sm:p-4 md:flex-col">
       <NuxtLink aria-label="Home" to="/">
@@ -25,23 +17,23 @@ import {
       <NuxtLink
         to="/search"
         aria-label="Search"
-        class="rounded-lg p-2 ta-100 hover:bg-foreground/10 focus:bg-foreground/5"
+        class="rounded-lg p-2 pb-px ta-120 hover:bg-foreground/10 focus:bg-foreground/5"
       >
-        <MagnifyingGlassIcon class="size-6 stroke-primary-50" />
+        <VIcon name="carbon:search" class="size-6 text-primary-50" />
       </NuxtLink>
       <NuxtLink
         to="/submit"
         aria-label="Submit"
-        class="rounded-lg p-2 ta-100 hover:bg-foreground/10 focus:bg-foreground/5"
+        class="rounded-lg p-2 pb-px ta-120 hover:bg-foreground/10 focus:bg-foreground/5"
       >
-        <DocumentCheckIcon class="size-6 stroke-primary-50" />
+        <VIcon name="carbon:document-requirements" class="size-6 text-primary-50" />
       </NuxtLink>
       <NuxtLink
         to="/about"
         aria-label="About"
-        class="rounded-lg p-2 ta-100 hover:bg-foreground/10 focus:bg-foreground/5"
+        class="rounded-lg p-2 pb-px ta-120 hover:bg-foreground/10 focus:bg-foreground/5"
       >
-        <InformationCircleIcon class="size-6 stroke-primary-50" />
+        <VIcon name="carbon:information" class="size-6 text-primary-50" />
       </NuxtLink>
     </div>
   </nav>

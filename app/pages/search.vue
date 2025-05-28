@@ -3,7 +3,6 @@ import { ref, watch, onMounted } from 'vue'
 import { useRoute, useRouter } from '#imports'
 import { storeToRefs } from 'pinia'
 import { useAwesomeStore } from '@/stores'
-import { MagnifyingGlassIcon } from '@heroicons/vue/24/solid'
 import { meta } from '@/data'
 
 const r = useRoute()
@@ -87,7 +86,7 @@ defineOgImageComponent('a347', {
           @input="update"
         />
         <div class="absolute top-2 left-3 py-2">
-          <MagnifyingGlassIcon class="size-6 stroke-foreground" />
+          <VIcon name="carbon:search" class="size-6 stroke-foreground" />
         </div>
       </div>
     </div>

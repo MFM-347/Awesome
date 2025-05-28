@@ -7,7 +7,7 @@ const store = ref<any>(null)
 const items = ref([])
 
 onMounted(async () => {
-  const { useAwesomeStore } = await import('../stores')
+  const { useAwesomeStore } = await import('@/stores')
   store.value = useAwesomeStore()
   const { items: storeItems } = storeToRefs(store.value)
   items.value = storeItems.value

@@ -30,7 +30,14 @@ export default defineNuxtConfig({
 
   devtools: { enabled: true },
 
-  modules: ['@pinia/nuxt', '@nuxt/fonts', '@nuxtjs/seo'],
+  modules: ['@pinia/nuxt', '@nuxt/fonts', '@nuxtjs/seo', '@nuxt/icon'],
+
+  fonts: {
+    defaults: {
+      weights: [300, 400, 500, 600, 700],
+      styles: ['normal', 'italic'],
+    },
+  },
 
   site: {
     url: 'https://a347.vercel.app',
@@ -64,6 +71,15 @@ export default defineNuxtConfig({
     defaults: {
       cacheMaxAgeSeconds: 60 * 60 * 24 * 7,
     },
+  },
+
+  icon: {
+    componentName: 'VIcon',
+    size: '24px',
+    class: 'icon',
+    mode: 'css',
+    cssLayer: 'base',
+    serverBundle: 'auto',
   },
 
   features: {

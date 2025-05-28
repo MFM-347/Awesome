@@ -1,61 +1,84 @@
 @import 'tailwindcss';
 
+@custom-variant dark (&:where(.dark, .dark *));
 @custom-variant hover (&:hover);
 
 @utility ta-* {
-  transition-property: all;
+  transition-property:
+    color,
+    background-color,
+    border-color,
+    text-decoration-color,
+    fill,
+    stroke,
+    opacity,
+    box-shadow,
+    transform,
+    translate,
+    scale,
+    rotate,
+    filter,
+    -webkit-backdrop-filter,
+    backdrop-filter;
   transition-duration: calc(--value(integer, [integer]) * 0.9ms);
   transition-timing-function: ease;
 
-  @media (prefers-reduced-motion: reduce) {
-    transition-duration: calc(--value(integer, [integer]) * 0.7ms);
+  @media (prefers-reduced-motion: reduced) {
+    transition-duration: calc(--value(integer, [integer]) * 0.675ms);
   }
 }
+
 @theme {
-  --color-primary: hsl(229, 94%, 10%);
-  --color-primary-50: #e6f4ff;
-  --color-primary-100: #d1eaff;
-  --color-primary-200: #add5ff;
-  --color-primary-300: #7bb8ff;
-  --color-primary-400: #4889ff;
-  --color-primary-500: #1f59ff;
-  --color-primary-600: #0030ff;
-  --color-primary-700: #0033ff;
-  --color-primary-800: #002cda;
-  --color-primary-900: #0626a9;
-  --color-primary-950: #020a31;
+  --color-primary: hsl(220, 95%, 5%);
+  --color-primary-50: #eff5ff;
+  --color-primary-100: #dee9ff;
+  --color-primary-200: #b5d4ff;
+  --color-primary-300: #73b1ff;
+  --color-primary-400: #2a8aff;
+  --color-primary-500: #0069f9;
+  --color-primary-600: #0050d6;
+  --color-primary-700: #003ead;
+  --color-primary-800: #00368e;
+  --color-primary-900: #052e75;
+  --color-primary-950: #010919;
   --color-background: hsl(20 14.3% 4.1%);
   --color-foreground: hsl(230 90% 96%);
   --color-border: hsl(230 3.7% 15.9%);
   --default-ring-color: hsl(230 71.8% 30%);
-  --font-sans: 'Fira Sans', 'Segoe UI', Roboto, sans-serif;
 }
 
 @layer base {
+  *:focus-visible {
+    @apply outline-2 outline-offset-2 outline-primary-500;
+  }
+  :focus:not(:focus-visible) {
+    outline: none;
+  }
   *,
   ::after,
   ::before {
     @apply border-border ta-150;
   }
-  :focus-visible {
-    @apply outline-offset-2 outline-primary-400 outline-solid;
-  }
-  :focus:not(:focus-visible) {
-    outline: none;
-  }
   body {
-    @apply bg-background font-sans text-foreground antialiased;
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Fira Sans', 'Segoe UI', Roboto, sans-serif;
     font-optical-sizing: auto;
+    font-feature-settings: normal;
+    font-variation-settings: normal;
     text-rendering: optimizeLegibility;
-    max-width: 100vw;
     min-height: 100vh;
+    max-width: 100vw;
     overflow-x: hidden;
   }
+  html {
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+  }
+  button {
+    cursor: pointer;
+  }
 }
-.title {
-  @apply my-3 text-center text-5xl font-extrabold md:my-6;
-}
-html {
-  scroll-behavior: smooth;
-  scrollbar-width: thin;
+
+@utility title {
+  @apply my-2.5 text-center text-5xl font-bold md:my-5;
 }

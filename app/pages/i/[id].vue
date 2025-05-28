@@ -3,7 +3,6 @@ import { storeToRefs } from 'pinia'
 import { useAwesomeStore } from '@/stores'
 import { computed, onMounted } from 'vue'
 import { useRoute, useRouter } from '#imports'
-import { GlobeAltIcon, CodeBracketIcon } from '@heroicons/vue/24/solid'
 import { meta } from '@/data'
 
 const store = useAwesomeStore()
@@ -43,7 +42,6 @@ useHead({
         title: `${item.value?.id}. ${item.value?.name} - Awesome347`,
         description: `Learn about ${item.value?.name} at Awesome347, a curated collection of items.`,
         url: `${meta.url}/i/${item.value?.id}`,
-        image: `${meta.url}${meta.image}`,
         publisher: {
           '@type': 'Person',
           name: 'Farhan Madni',
@@ -135,8 +133,9 @@ defineOgImage({
               rel="nofollow noopener"
               :href="`${item?.url}?ref=a347.vercel.app&utm_source=a347.vercel.app`"
             >
-              <GlobeAltIcon
-                class="size-8 fill-foreground ta-150 hover:fill-primary-500 dark:hover:fill-primary-400"
+              <VIcon
+                name="carbon:earth-filled"
+                class="size-8 text-foreground ta-150 hover:text-primary-500 dark:hover:text-primary-400"
               /><span class="sr-only"> Check it out </span>
             </a>
             <a
@@ -146,8 +145,9 @@ defineOgImage({
               v-if="item?.foss"
               :href="item?.osLink"
             >
-              <CodeBracketIcon
-                class="size-8 fill-foreground ta-150 hover:fill-primary-500 dark:hover:fill-primary-400"
+              <VIcon
+                name="carbon:logo-github"
+                class="size-8 text-foreground ta-150 hover:text-primary-500 dark:hover:text-primary-400"
               /><span class="sr-only"> Source Code </span>
             </a>
           </div>

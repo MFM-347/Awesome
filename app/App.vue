@@ -12,9 +12,6 @@ useSeoMeta({
   ogType: 'website',
   twitterCard: 'summary_large_image',
   twitterCreator: '@mfm347',
-  mobileWebAppCapable: 'yes',
-  appleMobileWebAppCapable: 'yes',
-  appleMobileWebAppTitle: 'Awesome347',
   themeColor: '#1f59ff',
   googleSiteVerification: '9C3mmoooLN2NLh5PUEVgr98hTKYWPIarhqp7Efdfwuo',
 })
@@ -22,6 +19,7 @@ useHead({
   titleTemplate: '%s - Awesome347',
   htmlAttrs: {
     lang: 'en',
+    class: 'dark',
   },
   link: [{ rel: 'icon', type: 'image/svg+xml', href: '/logo-light.svg' }],
 })

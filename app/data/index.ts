@@ -662,14 +662,14 @@ export const data = [
     id: 61,
   },
   {
-    name: 'Simple Gallery',
+    name: 'Gallery',
     type: 'app',
     tags: ['Gallery', 'Photo Viewer', 'Photo Editor'],
     foss: true,
-    osLink: 'https://github.com/SimpleMobileTools/Simple-Gallery',
-    icon: 'https://raw.githubusercontent.com/SimpleMobileTools/Simple-Gallery/master/graphics/icon.png',
-    description: 'A premium ad-free app for managing and editing your photos, videos, GIFs.',
-    url: 'https://github.com/SimpleMobileTools/Simple-Gallery/releases/latest/',
+    osLink: 'https://github.com/FossifyOrg/Gallery',
+    icon: 'https://raw.githubusercontent.com/FossifyOrg/Gallery/refs/heads/master/graphics/icon.svg',
+    description: 'An ad-free app for managing and editing your photos, videos, GIFs.',
+    url: 'https://github.com/FossifyOrg/Gallery/releases/latest/',
     id: 62,
   },
   {
@@ -900,9 +900,9 @@ export const data = [
     id: 83,
   },
   {
-    name: 'ToolFolio',
+    name: 'Stock Photo AI',
     type: 'website',
-    tags: ['Awesome', 'of', 'Best', 'Tools'],
+    tags: ['AI', 'Generated', 'Stock', 'Photos'],
     foss: false,
     description:
       'Beautiful AI generated stock photos for free and commercial use, made using Flux 1.1 Pro Ultra.',
@@ -1147,6 +1147,63 @@ export const data = [
       'A self-hosted, database-less note taking web app that utilises a flat folder of markdown files for storage.',
     url: 'https://demo.flatnotes.io/',
     id: 105,
+  },
+  {
+    name: 'CSS Snippets',
+    type: 'Website',
+    tags: ['UI', 'Components', 'library'],
+    foss: false,
+    icon: 'https://cssnippets.shefali.dev/favicon.ico',
+    description:
+      'Explore a vast collection of free, ready-to-use HTML, React, CSS, and Tailwind CSS code snippets for web components.',
+    url: 'https://cssnippets.shefali.dev/',
+    id: 106,
+  },
+  {
+    name: 'Colorable',
+    type: 'Website',
+    tags: ['Color', 'Contrast', 'Checker'],
+    foss: true,
+    osLink: 'https://github.com/jxnblk/colorable',
+    icon: 'https://colorable.jxnblk.com/favicon.png',
+    description:
+      'Take a set color palette and get contrast values for finding safe color combinations according to WCAG guidelines.',
+    url: 'https://colorable.jxnblk.com/',
+    id: 107,
+  },
+  {
+    name: 'StackEdit',
+    type: 'Website',
+    tags: ['Markdown', 'Text', 'Editor'],
+    foss: true,
+    osLink: 'https://github.com/benweet/stackedit',
+    icon: 'https://github.com/benweet/stackedit/static/landing/favicon.ico',
+    description:
+      'Full-featured, open-source Markdown editor based on PageDown, the Markdown library.',
+    url: 'https://stackedit.io/',
+    id: 108,
+  },
+  {
+    name: 'A1 Gallery',
+    type: 'Website',
+    tags: ['Awesome', 'of', 'Best', 'Websites'],
+    foss: false,
+    icon: 'https://cdn.prod.website-files.com/65a42762661153944abe7a54/677d319b4ec3658adea40e82_a1-favicon-2025.png',
+    description:
+      'A collection of the best websites found across the World Wide Web. Design inspiration for all designers, developers and creatives.',
+    url: 'https://www.a1.gallery/',
+    id: 109,
+  },
+  {
+    name: 'Minimal Gallery',
+    type: 'Website',
+    tags: ['Awesome', 'of', 'Inspirable', 'Websites'],
+    foss: false,
+    icon: 'https://minimal.gallery/wp-content/themes/minimalgallery/assets/favicon/apple-touch-icon.png',
+    description:
+      'A collection of the Hand-picked websites design inspiration for all designers and developers.',
+    url: 'https://minimal.gallery/',
+    id: 110,
   },
 ]
 

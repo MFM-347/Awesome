@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { LinkIcon } from '@heroicons/vue/24/solid'
-
 defineProps({
   sec: {
     type: Boolean,
@@ -24,7 +22,7 @@ defineProps({
     :aria-label="vLabel"
     role="button"
   >
-    <LinkIcon :class="`mt-0.5 mr-1 size-4 stroke-primary-50`" />
+    <VIcon name="carbon:link" class="mt-0.5 mr-1 size-4 text-primary-50" />
     <span class="sr-only">{{ vLabel }}</span>
     <slot />
   </button>

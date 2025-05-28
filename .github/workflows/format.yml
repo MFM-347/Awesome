@@ -1,0 +1,39 @@
+name: format
+
+on:
+  push:
+    paths:
+      - '**/*'
+    branches:
+      - main
+  pull_request:
+    paths:
+      - '**/*'
+    branches:
+      - main
+
+jobs:
+  format:
+    if: github.event.head_commit.message != 'format'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: npm i
+
+      - name: Run Prettier to format source files
+        run: |
+          npx prettier -w "**/*.{css,html,js,json,md}"
+
+      - name: Commit and push formatted files
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          git add .
+          git diff --cached --quiet || git commit -m "format"
+          git push

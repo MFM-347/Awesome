@@ -102,17 +102,25 @@
 **Commit Names:** [`Add everything to README`, `Update data`, `update(docs): generalized format`, `fix(docs)`, `fix(docs) | update(deps)`, `feat(api): added api route with pre-rendering for /i/* routes`, `perf: utilized api and added lazy loads and optimized links and UI/UX`]
 
 1. Added data to README for better accessiblity
-2. Updated website's UI/UX and accessbility
+2. Updated website's UI/UX and accessiblity
 3. Add lazy-loads for better performance
 4. Fixed links according NuxtSEO's requirements
 5. Added prerendering for dynamic routes `/i/*`
 
 ## 9. 27-4-25
 
-**Commit Names:** [`update(deps)`,`update(SEO): Added OG Images & fix(data)`, update(docs)]
+**Commit Names:** [`update(deps)`,`update(SEO): Added OG Images & fix(data)`, `update(docs)`]
 
 1. Removed `/api` due to issues
-2. Updated website's accessbility
+2. Updated website's accessiblity
 3. Add lazy-loads for better performance
 4. Added NuxtSEO v3 for SEO handling
 5. Added opengraph images for each route
+
+## 10. 28-5-25
+
+**Commit Names:** [`update(list, ui)`]
+
+1. Updated List
+2. Enhanced UI
+3. Fixed accessiblity issues

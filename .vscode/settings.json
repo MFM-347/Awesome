@@ -1,19 +1,17 @@
 {
-  "editor.autoIndent": "full",
-  "editor.detectIndentation": true,
-  "files.autoSave": "afterDelay",
-  "files.autoSaveDelay": 1000,
-  "explorer.fileNesting.enabled": true,
-  "explorer.fileNesting.patterns": {
-    "README.md": "LICENSE, CONTRIBUTING.md, CODE_OF_CONDUCT.md",
-    ".gitignore": ".git*,",
-    "package.json": "package-lock.json, .prettier*, .editorconfig"
-  },
   "editor.codeActionsOnSave": {
-    "source.fixAll": "explicit"
+    "source.fixAll": "always"
   },
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.patterns": {
+    "tsconfig.json": "tsconfig*, env.d.ts",
+    "nuxt.config.ts": "*.config.ts, *.config.js, .prettier*, .editorconfig",
+    "package.json": "package-lock.json",
+    ".gitignore": ".git*",
+    "README.md": "*.md"
+  },
   "IDX.aI.enableInlineCompletion": true,
   "IDX.aI.enableCodebaseIndexing": true
 }
