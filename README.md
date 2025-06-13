@@ -540,14 +540,14 @@ Awesome347 is platform that lets you explore cutting-edge tools, apps, tutorials
 **Description:** Use readme.so's markdown editor and templates to easily create a ReadMe for your projects
 [Website Link](https://readme.so/) | [GitHub Link](https://github.com/octokatherine/readme.so)
 
-### 60. RenDroid
+### 60. Minimal Gallery
 
 **ID:** [i60](https://a347.vercel.app/search/?q=id:60)
-**FOSS:** Yes | [Source Code](https://github.com/MFM-347/RenDroid)
-**Type:** app
-**Tags:** cleanui, automation
-**Description:** A fast, customizable file renaming app for Android. It offers a fast, customizable renaming experience, ideal for organizing files quickly on your Android device.
-[Website Link](https://github.com/MFM-347/RenDroid/releases/latest/)
+**FOSS:** No
+**Type:** Website
+**Tags:** awesome, of, inspirable, websites
+**Description:** A collection of the Hand-picked websites design inspiration for all designers and developers.
+[Website Link](https://minimal.gallery/)
 
 ### 61. SEO Roast
 
@@ -989,15 +989,6 @@ Awesome347 is platform that lets you explore cutting-edge tools, apps, tutorials
 **Tags:** awesome, of, best, websites
 **Description:** A collection of the best websites found across the World Wide Web. Design inspiration for all designers, developers and creatives.
 [Website Link](https://www.a1.gallery/)
-
-### 110. Minimal Gallery
-
-**ID:** [i110](https://a347.vercel.app/search/?q=id:110)
-**FOSS:** No
-**Type:** Website
-**Tags:** awesome, of, inspirable, websites
-**Description:** A collection of the Hand-picked websites design inspiration for all designers and developers.
-[Website Link](https://minimal.gallery/)
 
 ## Contributing
 

@@ -640,15 +640,14 @@ export const data = [
     id: 59,
   },
   {
-    name: 'RenDroid',
-    type: 'app',
-    tags: ['CleanUI', 'Automation'],
-    foss: true,
-    osLink: 'https://github.com/MFM-347/RenDroid',
-    icon: 'https://raw.githubusercontent.com/MFM-347/RenDroid/refs/heads/main/app/src/main/res/mipmap-xxxhdpi/ic_launcher_rounded.png',
+    name: 'Minimal Gallery',
+    type: 'Website',
+    tags: ['Awesome', 'of', 'Inspirable', 'Websites'],
+    foss: false,
+    icon: 'https://minimal.gallery/wp-content/themes/minimalgallery/assets/favicon/apple-touch-icon.png',
     description:
-      'A fast, customizable file renaming app for Android. It offers a fast, customizable renaming experience, ideal for organizing files quickly on your Android device.',
-    url: 'https://github.com/MFM-347/RenDroid/releases/latest/',
+      'A collection of the Hand-picked websites design inspiration for all designers and developers.',
+    url: 'https://minimal.gallery/',
     id: 60,
   },
   {
@@ -1193,17 +1192,6 @@ export const data = [
       'A collection of the best websites found across the World Wide Web. Design inspiration for all designers, developers and creatives.',
     url: 'https://www.a1.gallery/',
     id: 109,
-  },
-  {
-    name: 'Minimal Gallery',
-    type: 'Website',
-    tags: ['Awesome', 'of', 'Inspirable', 'Websites'],
-    foss: false,
-    icon: 'https://minimal.gallery/wp-content/themes/minimalgallery/assets/favicon/apple-touch-icon.png',
-    description:
-      'A collection of the Hand-picked websites design inspiration for all designers and developers.',
-    url: 'https://minimal.gallery/',
-    id: 110,
   },
 ]
 
